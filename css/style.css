@@ -9,19 +9,24 @@
     border: 1px solid black;
 }
 
-header {
-    display: block;
+nav {
     width: 100%;
-    height: 600px;
+    height: 50px;
     border: 1px solid black;
 }
 
-.header,
-.header-wrapper {
-    background-position: 50% 0;
-    background-size: cover;
-    position: relative;
-    transition: background-color .3s, opacity .3s;
+nav ul {
     width: 100%;
-    z-index: 30;
+}
+
+nav ul li {
+    position: relative;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-left: 7%;
+    float: left;
+}
+
+nav ul li a {
+    text-decoration: none;
 }
