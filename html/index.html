@@ -5,41 +5,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Bai tap lon">
-    <title>Shop Dong Ho</title>
+    <title>Do an cuoi ky</title>
+    <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/bootstrap.js"></script>
 </head>
 
 <body>
-    <div class="outer">
-        <nav>
-            <ul>
-                <li>
-                    <a href="">BÁN CHẠY</a>
-                </li>
-                <li>
-                    <a href="">THƯƠNG HIỆU </a>
-                </li>
-                <li>
-                    <a href="">NAM</a>
-                </li>
-                <li>
-                    <a href="">NỮ</a>
-                </li>
-                <li>
-                    <a href="">ĐÔI</a>
-                </li>
-                <li>
-                    <a href="">TREO TƯỜNG</a>
-                </li>
-                <li>
-                    <a href="">SỬA CHỮA</a>
-                </li>
-                <li>
-                    <a href="">LIÊN HỆ</a>
-                </li>
-            </ul>
+    <!-- Build Nav using boostrap -->
+    <div class="container-fluid">
+        <!-- Nav -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="collapse navbar-collapse mx-auto">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>BÁN CHẠY</b>
+                        </a>
+                        <div class="dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>THƯƠNG HIỆU</b>
+                        </a>
+                        <div class="dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <B>NAM</B>
+                        </a>
+                        <div class="dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <B>NỮ</B>
+                        </a>
+                        <div class="dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <a class="navbar-brand" href="/html/index.html">
+                    <img width="300" height="40" src="/img/logo.png" alt="">
+                </a>
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <B>DÂY DA</B>
+                        </a>
+                        <div class="dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">DÂY DA ZRC</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">DÂY DA PERCENT</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <B>SỮA CHỮA</B>
+                        </a>
+                        <div class="dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Thay Pin</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Thay Kính</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Lau Dầu</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Vệ Sinh Đồng Hồ</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Sữa Chữa Máy</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Đánh Bóng</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Bảng Giá</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><b>LIÊN HỆ</b></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 pull-right">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" size="20">
+                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
         </nav>
+        <!-- Video intro auto play -->
+        <video muted autoplay loop src="/img/intro.mp4" type="video/mp4" loop class="w-100 h-75">
+        </video>
+        <!-- Done Header -->
+        <!-- Continue right here -->
     </div>
     <p>123</p>
 </body>
