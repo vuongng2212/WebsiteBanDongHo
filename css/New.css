@@ -5963,6 +5963,16 @@ blockquote {
     content: "";
     display: table
 }
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+  }
+@media screen and (max-width: 768px) {
+  .responsive-img {
+    max-width: 50%;
+  }
+}
+  
 
 @media(max-width: 549px) {
     .hide-for-small,[data-show=hide-for-small] {
