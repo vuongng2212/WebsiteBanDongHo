@@ -165,3 +165,12 @@ header.sticky #main-menu li a span{
 .btn:hover:after {
     width: 100%;
 }
+/* css hover new */
+.new-hover {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.new-hover:hover{
+    filter: grayscale(0);
+}
