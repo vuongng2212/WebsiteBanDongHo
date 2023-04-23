@@ -10042,3 +10042,26 @@ li.wc-layered-nav-rating .star-rating {
 .stars a.star-5:after {
     content: ""
 }
+/* css hover new */
+.new-hover {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.new-hover:hover{
+    filter: grayscale(0);
+}
+.new-hover {
+    -webkit-transition:all 0.5s ease-out;
+    -moz-transition:all 0.5s ease-out;
+    -ms-transition:all 0.5s ease-out;
+    -o-transition:all 0.5s ease-out;
+    transition:all 0.5s ease-out;
+    }
+.new-hover:hover {
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transform:rotate(360deg);
+}
