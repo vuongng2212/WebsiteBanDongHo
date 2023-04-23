@@ -160,7 +160,7 @@ header.sticky #main-menu li a span{
 .btn-dtl:hover:after {
     width: 100%;
 }
-<<<<<<< HEAD
+
 .login-form{
     padding: 20px;
 }
@@ -169,8 +169,7 @@ header.sticky #main-menu li a span{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-=======
-/* css hover new */
+}/* css hover new */
 .new-hover {
     width: 100%;
     cursor: pointer;
@@ -178,5 +177,4 @@ header.sticky #main-menu li a span{
 }
 .new-hover:hover{
     filter: grayscale(0);
->>>>>>> 4882df00b769cdc6fbdfe44a7438cd6b9e197dd6
 }
