@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Nhap</title>
+    <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
+    <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/New.css">
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $('#toggle').click(function () {
+            $('nav').slideToggle();
+        });
+    });
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop()) {
+                $('header').addClass('sticky');
+            }
+        });
+    });
+</script>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div id="toggle">
+                <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+            </div>
+            <nav class="container">
+                <ul id="main-menu">
+                    <li>
+                        <a href="">BÁN CHẠY</a>
+                    </li>
+                    <li>
+                        <a href="">THƯƠNG HIỆU</a>
+                    </li>
+                    <li>
+                        <a href="">NAM</a>
+                    </li>
+                    <li>
+                        <a href="">NỮ</a>
+                    </li>
+
+                    <a id="logo" href="../html/index.html">
+                        <img src="../img/logo.png" alt="Logo Shopdongho">
+                    </a>
+
+                    <li>
+                        <a href="">LIÊN HỆ</a>
+                    </li>
+                    <li style="padding-top: 20px; padding-left: 20px;">
+                        <div class="row">
+                            <a href="" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
+                            <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
+                            <a href="" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div style="height: 75px;"></div>
+        <div class="container-login" style="padding-top: 10%;">
+            <form action="">
+                <div class="form-group row">
+                    <div class="col-4"></div>
+                    <div class="col-4"><label for="">Username*</label>
+                        <input type="text" name="" id="" class="form-control">
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4"></div>
+                    <div class="col-4"><label for="">Password*</label>
+                        <input type="password" name="" id="" class="form-control">
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                <div class="form-check row">
+                    <div class="col-4"></div>
+                    <div class="col-4  ml-3">
+                        <input type="checkbox" name="" id="" class="form-check-input mt-2">
+                        <label for="" class="form-check-label">Lưu đăng nhập</label>
+                        <a href="" class="float-right" style="color: rgb(51, 168, 218);">Quên mật khẩu?</a>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4 form-check">
+                        <button class="btn btn-primary mt-3">Đăng nhập</button>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
