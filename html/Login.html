@@ -19,8 +19,6 @@
         $('#toggle').click(function () {
             $('nav').slideToggle();
         });
-    });
-    $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop()) {
                 $('header').addClass('sticky');
@@ -73,23 +71,31 @@
         <div style="height: 75px;"></div>
         <div class="container-login" style="padding-top: 10%; min-height: 650px;">
             <form action="">
-                <div class="form-group row">
+                <div class="row">
                     <div class="col-4"></div>
-                    <div class="col-4"><label for="">Username*</label>
-                        <input type="text" name="" id="" class="form-control">
+                    <div class="col-4 form-group">
+                        <label for="">Username*</label>
+                        <div class="row form-group">
+                            <i class="fa-solid fa-user fa-2x col-2 mt-1"></i>
+                            <input type="text" name="" id="" class="form-control col-10" style="border-radius: 3rem;" required>
+                        </div>
+                        
                     </div>
                     <div class="col-4"></div>
                 </div>
-                <div class="form-group row">
+                <div class="row">
                     <div class="col-4"></div>
                     <div class="col-4"><label for="">Password*</label>
-                        <input type="password" name="" id="" class="form-control">
+                        <div class="row form-group">
+                            <i class="fa fa-key fa-2x col-2 mt-1" aria-hidden="true"></i>
+                            <input type="password" name="" id="" class="form-control col-10" style="border-radius: 3rem;" required>
+                        </div>
                     </div>
                     <div class="col-4"></div>
                 </div>
-                <div class="form-check row">
+                <div class=" row">
                     <div class="col-4"></div>
-                    <div class="col-4  ml-3">
+                    <div class="form-check col-4 ml-3">
                         <input type="checkbox" name="" id="" class="form-check-input mt-2">
                         <label for="" class="form-check-label">Lưu đăng nhập</label>
                         <a href="" class="float-right" style="color: rgb(51, 168, 218);">Quên mật khẩu?</a>
@@ -98,7 +104,7 @@
                 </div>
                 <div class="row">
                     <div class="col-4"></div>
-                    <div class="col-4 form-check">
+                    <div class="col-4 form-group">
                         <button class="btn btn-primary mt-3">Đăng nhập</button>
                     </div>
                     <div class="col-4"></div>

@@ -19,8 +19,6 @@
         $('#toggle').click(function () {
             $('nav').slideToggle();
         });
-    });
-    $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop()) {
                 $('header').addClass('sticky');
@@ -78,12 +76,12 @@
                     <div class="col-3"></div>
                     <div class="row col-6">
                         <div class="col-6">
-                            <label for="">First name</label>
-                            <input type="text" name="" id="" class="form-control">
+                            <label for="">First name*</label>
+                            <input type="text" name="" id="" class="form-control" required>
                         </div>
                         <div class="col-6">
-                            <label for="">Last name</label>
-                            <input type="text" name="" id="" class="form-control">
+                            <label for="">Last name*</label>
+                            <input type="text" name="" id="" class="form-control" required>
                         </div>
                     </div>
                     <div class="col-3"></div>
@@ -92,8 +90,8 @@
                     <div class="col-3"></div>
                     <div class="row col-6">
                         <div class="col-12 form-group">
-                            <label for="">Email*</label>
-                            <input type="email" name="" id="">
+                            <label for="email">Email*</label>
+                            <input type="email" name="" id="" required type="email">
                         </div>
                     </div>
                     <div class="col-3"></div>
@@ -103,7 +101,7 @@
                     <div class="row col-6">
                         <div class="col-12 form-group">
                             <label for="">User name*</label>
-                            <input type="password" name="" id="">
+                            <input type="password" name="" id="" required>
                         </div>
                     </div>
                     <div class="col-3"></div>
@@ -113,7 +111,17 @@
                     <div class="row col-6">
                         <div class="col-12 form-group">
                             <label for="">Password*</label>
-                            <input type="password" name="" id="">
+                            <input type="password" name="" id="" required>
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-12 form-group">
+                            <label for="">Comfirm Password*</label>
+                            <input type="password" name="" id="" required>
                         </div>
                     </div>
                     <div class="col-3"></div>
@@ -160,7 +168,7 @@
                     </div>
                     <div class="col-3"></div>
                 </div>
-                <div class="form-group row">
+                <div class="row">
                     <div class="col-3"></div>
                     <div class="row col-6">
                         <div class="col-12 form-group">

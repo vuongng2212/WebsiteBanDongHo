@@ -160,3 +160,6 @@ header.sticky #main-menu li a span{
 .btn-dtl:hover:after {
     width: 100%;
 }
+.form-rounded {
+    border-radius: 1rem;
+}
