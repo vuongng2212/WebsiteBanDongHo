@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dang Nhap</title>
     <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
+    <script src="../js/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/New.css">
     <script src="../js/bootstrap.js"></script>
-    <script src="../js/jquery-3.5.1.js"></script>
 </head>
 <script>
     $(document).ready(function () {
@@ -26,6 +26,12 @@
         });
     });
 </script>
+<style>
+    .absolute-footer,
+    html {
+        background-color: #ffffff;
+    }
+</style>
 
 <body>
     <div class="wrapper">
@@ -33,13 +39,23 @@
             <div id="toggle">
                 <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
             </div>
-            <nav class="container">
+            <nav class="navbar container">
                 <ul id="main-menu">
                     <li>
                         <a href="">BÁN CHẠY</a>
                     </li>
-                    <li>
-                        <a href="">THƯƠNG HIỆU</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Casio</a>
+                            <a class="dropdown-item" href="#">Pierre nannier</a>
+                            <a class="dropdown-item" href="#">Tudor</a>
+                            <a class="dropdown-item" href="#">Tissot</a>
+                            <a class="dropdown-item" href="#">G-shock</a>
+                            <a class="dropdown-item" href="#">Orient</a>
+                            <a class="dropdown-item" href="#">Citizen</a>
+                        </div>
                     </li>
                     <li>
                         <a href="">NAM</a>
@@ -47,11 +63,9 @@
                     <li>
                         <a href="">NỮ</a>
                     </li>
-
-                    <a id="logo" href="../html/index.html">
+                    <a id="logo" href="../html/index.html" class="">
                         <img src="../img/logo.png" alt="Logo Shopdongho">
                     </a>
-
                     <li>
                         <a href="">LIÊN HỆ</a>
                     </li>
@@ -66,10 +80,11 @@
                         <a href=""><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
                     </li>
                 </ul>
+
             </nav>
         </header>
         <div style="height: 75px;"></div>
-        <div class="container-login" style="padding-top: 10%; min-height: 650px;">
+        <div class="container-login" style="padding-top: 10%;">
             <form action="">
                 <div class="row">
                     <div class="col-4"></div>
@@ -77,9 +92,10 @@
                         <label for="">Username*</label>
                         <div class="row form-group">
                             <i class="fa-solid fa-user fa-2x col-2 mt-1"></i>
-                            <input type="text" name="" id="" class="form-control col-10" style="border-radius: 3rem;" required>
+                            <input type="text" name="" id="" class="form-control col-10" style="border-radius: 3rem;"
+                                required>
                         </div>
-                        
+
                     </div>
                     <div class="col-4"></div>
                 </div>
@@ -88,7 +104,8 @@
                     <div class="col-4"><label for="">Password*</label>
                         <div class="row form-group">
                             <i class="fa fa-key fa-2x col-2 mt-1" aria-hidden="true"></i>
-                            <input type="password" name="" id="" class="form-control col-10" style="border-radius: 3rem;" required>
+                            <input type="password" name="" id="" class="form-control col-10"
+                                style="border-radius: 3rem;" required>
                         </div>
                     </div>
                     <div class="col-4"></div>
