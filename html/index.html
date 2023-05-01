@@ -7,20 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Do an cuoi ky</title>
   <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
+  <script src="../js/jquery-3.5.1.js"></script>
+  <script src="../js/bootstrap.js"></script>
   <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
   <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/New.css">
-  <script src="../js/bootstrap.js"></script>
-  <script src="../js/jquery-3.5.1.js"></script>
 </head>
 <script>
   $(document).ready(function () {
     $('#toggle').click(function () {
       $('nav').slideToggle();
     });
-  });
-  $(document).ready(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop()) {
         $('header').addClass('sticky');
@@ -35,13 +33,23 @@
       <div id="toggle">
         <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
       </div>
-      <nav class="container">
+      <nav class="navbar container">
         <ul id="main-menu">
           <li>
             <a href="">BÁN CHẠY</a>
           </li>
-          <li>
-            <a href="">THƯƠNG HIỆU</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Casio</a>
+              <a class="dropdown-item" href="#">Pierre nannier</a>
+              <a class="dropdown-item" href="#">Tudor</a>
+              <a class="dropdown-item" href="#">Tissot</a>
+              <a class="dropdown-item" href="#">G-shock</a>
+              <a class="dropdown-item" href="#">Orient</a>
+              <a class="dropdown-item" href="#">Citizen</a>
+            </div>
           </li>
           <li>
             <a href="">NAM</a>
@@ -49,11 +57,9 @@
           <li>
             <a href="">NỮ</a>
           </li>
-
-          <a id="logo" href="../html/index.html">
+          <a id="logo" href="../html/index.html" class="">
             <img src="../img/logo.png" alt="Logo Shopdongho">
           </a>
-
           <li>
             <a href="">LIÊN HỆ</a>
           </li>
@@ -99,7 +105,8 @@
               </style>
             </div>
             <div class="text-center">
-              <div class="is-divider divider clearfix" style="max-width: 60px; height: 3px; background-color: red;"></div>
+              <div class="is-divider divider clearfix" style="max-width: 60px; height: 3px; background-color: red;">
+              </div>
             </div>
           </div>
           <style>
