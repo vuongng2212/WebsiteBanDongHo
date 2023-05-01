@@ -10042,6 +10042,11 @@ li.wc-layered-nav-rating .star-rating {
 .stars a.star-5:after {
     content: ""
 }
+.button.pale-yellow {
+    border: 1px #91ba9c solid !important;
+    font-weight: 400;
+    color: #000 !important;
+}
 /* css hover new */
 @-webkit-keyframes hvr-bob {
     0% {
