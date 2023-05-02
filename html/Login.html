@@ -8,20 +8,57 @@
     <title>Dang Nhap</title>
     <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
     <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/New.css">
-    <script src="../js/bootstrap.js"></script>
 </head>
 <script>
+    function LogOut(){
+        localStorage.setItem('LoginStatus', 0);
+        $("#formDN").css("display", "list-item");
+        $("#AccountInfo").css("display", "none");
+    }
     $(document).ready(function () {
+        var loginSts = localStorage.getItem('LoginStatus');
+        if(loginSts == '1'){
+            $("#formDN").css("display", "none");
+            $("#AccountInfo").css("display", "list-item");
+        }
+        else {
+            $("#formDN").css("display", "list-item");
+            $("#AccountInfo").css("display", "none");
+        }
         $('#toggle').click(function () {
             $('nav').slideToggle();
         });
         $(window).scroll(function () {
             if ($(this).scrollTop()) {
                 $('header').addClass('sticky');
+            }
+        });
+        $("#btnLogin").click(function (e) {
+            let localStorageLogin = 'LoginStatus'; 
+            let user = $("#txtUser").val();
+            let pwd = $("#txtPwd").val();
+            var UserData = localStorage.getItem('User');
+            var PwdData =  localStorage.getItem('Password');
+            // console.log(user);
+            // console.log(pwd);
+            // console.log(UserData);
+            // console.log(PwdData);
+            if(user == UserData && pwd == PwdData){
+                localStorage.setItem(localStorageLogin,1);
+                
+                // localStorage.getItem('FirstName');
+                // localStorage.getItem('LastName');
+                alert("Đăng nhập thành công");
+                location.replace("index.html")
+            }
+            else{
+                localStorage.setItem(localStorageLogin, 0);
+                alert("Không tồn tại tài khoản!");
             }
         });
     });
@@ -69,11 +106,21 @@
                     <li>
                         <a href="">LIÊN HỆ</a>
                     </li>
-                    <li style="padding-top: 20px; padding-left: 20px;">
+                    <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
                         <div class="row">
                             <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
                             <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
                             <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" id="AccountInfo">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">NgyenVong</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                            <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                            <a class="dropdown-item" href="#">Thiết lập</a>
+                            <a class="dropdown-item" href="index.html" onclick="LogOut()">Đăng xuất</a>
                         </div>
                     </li>
                     <li>
@@ -92,7 +139,7 @@
                         <label for="">Username*</label>
                         <div class="row form-group">
                             <i class="fa-solid fa-user fa-2x col-2 mt-1"></i>
-                            <input type="text" name="" id="" class="form-control col-10" style="border-radius: 3rem;"
+                            <input type="text" name="" id="txtUser" class="form-control col-10" style="border-radius: 3rem;"
                                 required>
                         </div>
 
@@ -104,7 +151,7 @@
                     <div class="col-4"><label for="">Password*</label>
                         <div class="row form-group">
                             <i class="fa fa-key fa-2x col-2 mt-1" aria-hidden="true"></i>
-                            <input type="password" name="" id="" class="form-control col-10"
+                            <input type="password" name="" id="txtPwd" class="form-control col-10"
                                 style="border-radius: 3rem;" required>
                         </div>
                     </div>
@@ -122,7 +169,7 @@
                 <div class="row">
                     <div class="col-4"></div>
                     <div class="col-4 form-group">
-                        <button class="btn btn-primary mt-3">Đăng nhập</button>
+                        <button type="button" class="btn btn-primary mt-3" id="btnLogin">Đăng nhập</button>
                     </div>
                     <div class="col-4"></div>
                 </div>
