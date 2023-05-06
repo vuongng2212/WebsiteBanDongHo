@@ -8,13 +8,15 @@
     <title>Dang Ky</title>
     <script src="../js/jquery-3.5.1.js"></script>
     <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/BootstrapJS/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/BootstrapCSS/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/New.css">
-    <script src="../js/bootstrap.js"></script>
 </head>
 <script>
+
     function valid_Ho() {
         let ho = $("#txtHo").val();
         let pattern = /[A-Z]{1}[a-z]{1,}/
@@ -135,7 +137,7 @@
         }
     }
     function check_checkbox() {
-        document.getElementById('cbox').onclick = function (e) {
+        document.getElementById("cbox").onclick = function (e) {
             if (this.checked) {
                 return true;
             }
@@ -145,7 +147,27 @@
         };
     }
 
+    // localStorage
+    var storageKeyUser = 'User';
+    var storageKeyPwd = 'Password';
+    var storageKeyFirstN = 'FirstName';
+    var storageKeyLastN = 'LastName';
+    function LogOut() {
+        localStorage.setItem('LoginStatus', 0);
+        $("#formDN").css("display", "list-item");
+        $("#AccountInfo").css("display", "none");
+    }
     $(document).ready(function () {
+        var loginSts = localStorage.getItem('LoginStatus');
+        if (loginSts == '1') {
+            $("#formDN").css("display", "none");
+            $("#AccountInfo").css("display", "list-item");
+            
+        }
+        else {
+            $("#formDN").css("display", "list-item");
+            $("#AccountInfo").css("display", "none");
+        }
         $('#toggle').click(function () {
             $('nav').slideToggle();
         });
@@ -156,19 +178,21 @@
         });
 
         $("#btnDK").click(function (e) {
-            if (check_checkbox()) {
-                if (valid_Ho() && valid_Ten() && valid_Email() && valid_Username() && valid_Pwd() && valid_CfmPwd) {
-                    alert("Đăng ký thành công!");
-                    return true;
-                }
-                else {
-                    alert("Đăng ký thất bại!")
-                    return false;
-                }
+            if (valid_Ho() && valid_Ten() && valid_Email() && valid_Username() && valid_Pwd() && valid_CfmPwd) {
+                let ho = $("#txtHo").val();
+                let ten = $("#txtName").val();
+                let user = $("#txtUser").val();
+                let pwd = $("#txtPwd").val();
+                localStorage.setItem(storageKeyUser, user);
+                localStorage.setItem(storageKeyPwd, pwd);
+                localStorage.setItem(storageKeyFirstN, ho);
+                localStorage.setItem(storageKeyLastN, ten);
+                alert("Đăng ký thành công!");
             }
             else {
-                alert("Vui lòng chấp nhận điều khoản của chúng tôi!");
+                alert("Đăng ký thất bại!")
             }
+
         });
     });
 </script>
@@ -215,11 +239,21 @@
                     <li>
                         <a href="">LIÊN HỆ</a>
                     </li>
-                    <li style="padding-top: 20px; padding-left: 20px;">
+                    <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
                         <div class="row">
                             <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
                             <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
                             <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" id="AccountInfo">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NgyenVong</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                            <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                            <a class="dropdown-item" href="#">Thiết lập</a>
+                            <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
                         </div>
                     </li>
                     <li>

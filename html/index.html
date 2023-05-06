@@ -7,15 +7,37 @@ __<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Do an cuoi ky</title>
   <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
+<<<<<<< HEAD
+=======
+  <script src="../js/jquery-3.5.1.js"></script>
+  <script src="../js/BootstrapJS/bootstrap.js"></script>
+>>>>>>> cd0a86f1c9783700594ebd6ae49646e90e448211
   <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
-  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/BootstrapCSS/bootstrap.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/New.css">
   <script src="../js/bootstrap.js"></script>
   <script src="../js/jquery-3.5.1.js"></script>
 </head>
 <script>
+  function LogOut() {
+    localStorage.setItem('LoginStatus', 0);
+    $("#formDN").css("display", "list-item");
+    $("#AccountInfo").css("display", "none");
+  }
   $(document).ready(function () {
+    var loginSts = localStorage.getItem('LoginStatus');
+    if (loginSts == '1') {
+      $("#formDN").css("display", "none");
+      $("#AccountInfo").css("display", "list-item");
+      let ho = localStorage.getItem('FirstName');
+      let ten = localStorage.getItem('LastName');
+      $("#AccountName").html(ten + " " + ho);
+    }
+    else{
+      $("#formDN").css("display", "list-item");
+      $("#AccountInfo").css("display", "none");
+    }
     $('#toggle').click(function () {
       $('nav').slideToggle();
     });
@@ -57,11 +79,21 @@ __<!DOCTYPE html>
           <li>
             <a href="">LIÊN HỆ</a>
           </li>
-          <li style="padding-top: 20px; padding-left: 20px;">
+          <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
             <div class="row">
               <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
               <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
               <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown" id="AccountInfo">
+            <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+              <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+              <a class="dropdown-item" href="#">Thiết lập</a>
+              <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
             </div>
           </li>
           <li>
@@ -1259,23 +1291,30 @@ __<!DOCTYPE html>
     <div class="bg section-bg fill bg-fill bg-loaded bg-loaded"> </div>
     <div class="section-content relative">
       <div id="gap-3" class="clearfix" style="display: block; height: auto;">
-        <style>#gap-3{padding-top: 20px;}</style>
+        <style>
+          #gap-3 {
+            padding-top: 20px;
+          }
+        </style>
       </div>
       <div class="row row-small" id="row-400">
         <div id="col-400" class="col medium-2 small-6 large-2 small-col-first">
           <div class="col-inner text-center">
-            <a href="#orientbambino" target="_self" class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
+            <a href="#orientbambino" target="_self" class="button white is-small lowercase expand pale-yellow"
+              style="border-radius: 5px;">
               <span>ORIENT BAMBINO</span>
             </a>
-            <a href="#orientsunmoon" target="_self" class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
+            <a href="#orientsunmoon" target="_self" class="button white is-small lowercase expand pale-yellow"
+              style="border-radius: 5px;">
               <span>ORIENT SUN MOON</span>
             </a>
-            <a href="#matxanh" target="_self" class="button white is-small lowercase expand pale-yellow hide-for-small" style="border-radius: 5px;">
+            <a href="#matxanh" target="_self" class="button white is-small lowercase expand pale-yellow hide-for-small"
+              style="border-radius: 5px;">
               <span>MẶT XANH</span>
             </a>
           </div>
           <style>
-            #col-400 > .col-inner {
+            #col-400>.col-inner {
               padding: 0px 0px 0px 0px;
               margin: 0px 0px -20px 0px;
             }
@@ -1283,15 +1322,21 @@ __<!DOCTYPE html>
         </div>
         <div id="col-401" class="col medium-2 small-6 large-2">
           <div class="col-inner text-center">
+<<<<<<< HEAD
             <a href="#dientucasio" target="_self" class="button white is-small expand pale-yellow" style="border-radius: 5px;">
+=======
+            <a href="#dientucasio" target="_self" class="button white is-small lowercase expand pale-yellow"
+              style="border-radius: 5px;">
+>>>>>>> cd0a86f1c9783700594ebd6ae49646e90e448211
               <span>ĐIỆN TỬ CASIO</span>
             </a>
-            <a href="#tholan" target="_self" class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
+            <a href="#tholan" target="_self" class="button white is-small lowercase expand pale-yellow"
+              style="border-radius: 5px;">
               <span>THỢ LẶN</span>
             </a>
           </div>
           <style>
-            #col-401 > .col-inner {
+            #col-401>.col-inner {
               padding: 0px 0px 0px 0px;
               margin: 0px 0px -20px 0px;
             }
@@ -1299,30 +1344,34 @@ __<!DOCTYPE html>
         </div>
         <div id="col-402" class="col medium-2 small-6 large-2">
           <div class="col-inner text-center">
-            <a href="#pin10nam" target="_self" class="button white is-small expand pale-yellow" style="border-radius: 5px;">
+            <a href="#pin10nam" target="_self" class="button white is-small expand pale-yellow"
+              style="border-radius: 5px;">
               <span>PIN 10 NĂM</span>
             </a>
-            <a href="#dayluoi" target="_self" class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
+            <a href="#dayluoi" target="_self" class="button white is-small lowercase expand pale-yellow"
+              style="border-radius: 5px;">
               <span>DÂY LƯỚI</span>
             </a>
           </div>
           <style>
-            #col-402 > .col-inner {
+            #col-402>.col-inner {
               margin: 0px 0px -20px 0px;
             }
           </style>
         </div>
         <div id="col-403" class="col medium-2 small-6 large-2">
           <div class="col-inner text-center">
-            <a href="#vanghong" target="_self" class="button white is-small expand pale-yellow" style="border-radius: 5px;">
+            <a href="#vanghong" target="_self" class="button white is-small expand pale-yellow"
+              style="border-radius: 5px;">
               <span>VÀNG HỒNG</span>
             </a>
-            <a href="#quandoi" target="_self" class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
+            <a href="#quandoi" target="_self" class="button white is-small lowercase expand pale-yellow"
+              style="border-radius: 5px;">
               <span>QUÂN ĐỘI</span>
             </a>
           </div>
           <style>
-            #col-403 > .col-inner {
+            #col-403>.col-inner {
               padding: 0px 0px 0px 0px;
               margin: 0px 0px -20px 0px;
             }
@@ -1330,18 +1379,21 @@ __<!DOCTYPE html>
         </div>
         <div id="col-404" class="col medium-2 small-6 large-2">
           <div class="col-inner text-center">
-            <a href="#colomay" target="_self" class="button white is small expand pale-yellow" style="border-radius: 5px;">
+            <a href="#colomay" target="_self" class="button white is small expand pale-yellow"
+              style="border-radius: 5px;">
               <span>CƠ LỘ MÁY</span>
             </a>
-            <a rel="noopener noreferrer" href="#30/04" target="_blank" class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
+            <a rel="noopener noreferrer" href="#30/04" target="_blank"
+              class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
               <span>QUÀ TẶNG 30/04</span>
             </a>
-            <a rel="noopener noreferrer" href="#matxanh" target="_blank" class="button white is-small lowercase expand pale-yellow show-for-small" style="border-radius: 5px;"></a>
-              <span>MẶT XANH</span>
+            <a rel="noopener noreferrer" href="#matxanh" target="_blank"
+              class="button white is-small lowercase expand pale-yellow show-for-small" style="border-radius: 5px;"></a>
+            <span>MẶT XANH</span>
             </a>
           </div>
           <style>
-            #col-404 > .col-inner {
+            #col-404>.col-inner {
               padding: 0px 0px 0px 0px;
               margin: 0px 0px -20px 0px;
             }
@@ -1349,15 +1401,17 @@ __<!DOCTYPE html>
         </div>
         <div id="col-405" class="col medium-2 small-6 large-2">
           <div class="col-inner text-center">
-            <a href="#seiko5" target="_self" class="button white is small expand pale-yellow" style="border-radius: 5px;">
+            <a href="#seiko5" target="_self" class="button white is small expand pale-yellow"
+              style="border-radius: 5px;">
               <span>SEIKO 5</span>
             </a>
-            <a href="#sale" target="_self" class="button white is small lowercase expand pale-yellow" style="border-radius: 5px;">
+            <a href="#sale" target="_self" class="button white is small lowercase expand pale-yellow"
+              style="border-radius: 5px;">
               <span>SALE</span>
             </a>
           </div>
           <style>
-            #col-405 > .col-inner {
+            #col-405>.col-inner {
               padding: 0px 0px 0px 0px;
               margin: 0px 0px -20px 0px;
             }
@@ -1371,6 +1425,19 @@ __<!DOCTYPE html>
         padding-bottom: 0px;
         margin-bottom: 30px;
       }
+<<<<<<< HEAD
+=======
+
+      #section_200 .ux-shape-divider--top svg {
+        height: 150px;
+        --divider-top-width: 100%;
+      }
+
+      #section_200 .ux-shape-divider--bottom svg {
+        height: 150px;
+        --divider-width: 100%;
+      }
+>>>>>>> cd0a86f1c9783700594ebd6ae49646e90e448211
     </style>
   </section>
   <section class="section block-post-widget-categories" id="section_300">
