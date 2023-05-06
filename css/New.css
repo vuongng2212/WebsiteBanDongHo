@@ -2683,8 +2683,8 @@ li.hide-title>a {
 .button.is-link,.button.is-underline {
     background-color: transparent!important;
     border-color: transparent!important;
-    padding-left: .15em;
-    padding-right: .15em
+    padding-left: .10em;
+    padding-right: .10em
 }
 
 .button.is-underline:before {
@@ -10118,7 +10118,7 @@ li.wc-layered-nav-rating .star-rating {
 	margin: 0 10px 0 0;
 }
 .block-post-widget-categories .col-inner a {
-	padding: 8px 10px 7px;
+	padding: 8px 9px 7px;
     border-color: darkgrey !important;
     border-radius: 5px;
     min-height: auto;
@@ -10140,7 +10140,7 @@ li.wc-layered-nav-rating .star-rating {
 }
 
 .block-post-widget-categories-icon {
-	  top: -1.7px;
+	top: -1.7px;
     position: relative;
 }
 
