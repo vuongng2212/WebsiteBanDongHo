@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+__<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,18 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Do an cuoi ky</title>
   <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
-  <script src="../js/jquery-3.5.1.js"></script>
-  <script src="../js/bootstrap.js"></script>
   <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
   <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/New.css">
+  <script src="../js/bootstrap.js"></script>
+  <script src="../js/jquery-3.5.1.js"></script>
 </head>
 <script>
   $(document).ready(function () {
     $('#toggle').click(function () {
       $('nav').slideToggle();
     });
+  });
+  $(document).ready(function () {
     $(window).scroll(function () {
       if ($(this).scrollTop()) {
         $('header').addClass('sticky');
@@ -33,23 +35,13 @@
       <div id="toggle">
         <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
       </div>
-      <nav class="navbar container">
+      <nav class="container">
         <ul id="main-menu">
           <li>
             <a href="">BÁN CHẠY</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Casio</a>
-              <a class="dropdown-item" href="#">Pierre nannier</a>
-              <a class="dropdown-item" href="#">Tudor</a>
-              <a class="dropdown-item" href="#">Tissot</a>
-              <a class="dropdown-item" href="#">G-shock</a>
-              <a class="dropdown-item" href="#">Orient</a>
-              <a class="dropdown-item" href="#">Citizen</a>
-            </div>
+          <li>
+            <a href="">THƯƠNG HIỆU</a>
           </li>
           <li>
             <a href="">NAM</a>
@@ -57,9 +49,11 @@
           <li>
             <a href="">NỮ</a>
           </li>
-          <a id="logo" href="../html/index.html" class="">
+
+          <a id="logo" href="../html/index.html">
             <img src="../img/logo.png" alt="Logo Shopdongho">
           </a>
+
           <li>
             <a href="">LIÊN HỆ</a>
           </li>
@@ -105,8 +99,7 @@
               </style>
             </div>
             <div class="text-center">
-              <div class="is-divider divider clearfix" style="max-width: 60px; height: 3px; background-color: red;">
-              </div>
+              <div class="is-divider divider clearfix" style="max-width: 60px; height: 3px; background-color: red;"></div>
             </div>
           </div>
           <style>
@@ -1236,7 +1229,6 @@
                         padding-top: 10px;
                       }
                     </style>
-
                   </div>
                 </div>
               </div>
@@ -1263,7 +1255,7 @@
       }
     </style>
   </section>
-  <section class="section" id="section-200">
+  <section class="section section-list-tag" id="section_200">
     <div class="bg section-bg fill bg-fill bg-loaded bg-loaded"> </div>
     <div class="section-content relative">
       <div id="gap-3" class="clearfix" style="display: block; height: auto;">
@@ -1291,7 +1283,7 @@
         </div>
         <div id="col-401" class="col medium-2 small-6 large-2">
           <div class="col-inner text-center">
-            <a href="#dientucasio" target="_self" class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
+            <a href="#dientucasio" target="_self" class="button white is-small expand pale-yellow" style="border-radius: 5px;">
               <span>ĐIỆN TỬ CASIO</span>
             </a>
             <a href="#tholan" target="_self" class="button white is-small lowercase expand pale-yellow" style="border-radius: 5px;">
@@ -1379,16 +1371,340 @@
         padding-bottom: 0px;
         margin-bottom: 30px;
       }
-      #section_200 .ux-shape-divider--top svg {
-        height: 150px;
-        --divider-top-width: 100%;
-      }
-      #section_200 .ux-shape-divider--bottom svg {
-        height: 150px;
-        --divider-width: 100%;
-      }
     </style>
   </section>
+  <section class="section block-post-widget-categories" id="section_300">
+    <div class="bg section-bg fill bg-fill bg-loaded bg-loaded"> </div>
+    <div class="section-content relative">
+      <div class="row" id="row-210">
+        <div id="col-500" class="col small-12 large-12">
+          <div class="col-inner">
+            <p><a href="ve-trangchu" class="button primary is-link is-small" target="_self" rel="noopener"><i class="block-post-widget-categories-icon" aria-hidden="true"><img src="../img/home-icon.png" alt="Trang chu" style="max-width: 17px;position: relative;top: 2px;"></i>VỀ TRANG CHỦ</a></p>
+            <p><a href="dong-ho-thong-minh" class="button primary is-link is-small" target="_self" rel="noopener"><i class="block-post-widget-categories-icon" aria-hidden="true"><img src="../img/smart-icon.png" alt="donghothongminh" style="max-width: 16px;"></i>ĐỒNG HỒ THÔNG MINH</a></p>
+            <p><a href="kien-thuc" class="button primary is-link is-small" target="_self" rel="noopener"><i class="block-post-widget-categories-icon" aria-hidden="true"><img src="../img/knowledge-icon.png" alt="kienthuc"></i> KIẾN THỨC ĐỒNG HỒ</a></p>
+            <p><a href="su-kien" class="button primary is-link is-small" target="_self" rel="noopener"><i class="block-post-widget-categories-icon" aria-hidden="true"><img src="../img/coupon-icon.png" alt="sukien" style="max-width: 16px;"></i>SỰ KIỆN-KHUYẾN MÃI</a></p>
+            <p><a href="thoi-trang-dong-ho" class="button primary is-link is-small" target="_self" rel="noopener"><i class="block-post-widget-categories-icon" aria-hidden="true"><img src="../img/advises.png" alt="thoi-trang-dong-ho" style="max-width: 16px;"></i>LỰA CHỌN ĐỒNG HỒ</a></p>
+            <p><a href="tin-tuc" class="button primary is-link is-small" target="_self" rel="noopener"><i class="block-post-widget-categories-icon" aria-hidden="true"><img src="../img/newsp-icon.png" alt="tin-tuc" style="max-width: 16px;"></i>TIN TỨC MỚI NHẤT</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      #section_300 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+      }
+    </style>
+    </section>
+    <footer id="footer" class="footer-wrapper">
+      <section class="section" id="section_400">
+        <div class="bg section-bg fill bg-fill bg-loaded"> </div>
+        <div class="section-content relative">
+          <div id="gap-4" class="clearfix" style="display: block;height: auto;">
+            <style>
+              #gap-4 {
+                padding-top: 15px;
+              }
+              @media (min-width:550px) {
+                #gap-4 {
+                  padding-top: 20px;
+                }
+              }
+            </style>
+          </div>
+          <div class="row row-small align-center" id="row-211">
+            <div id="col-406" class="col medium-3 small-6 large-3">
+              <div class="col-inner text-center dark">
+                <div class="icon-box featured-box icon-box-center text-center">
+                  <div class="icon-box-img" style="width: 40px;">
+                    <div class="icon">
+                      <div class="icon-inner" style="color: rbg(255,255,255);">
+                        <img width="1" height="1" src="../img/100-hang-chinh-hang.svg" alt="100-hang-chinh-hang">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="icon-box-text last-reset">
+                    <div id="text-101" class="text">
+                      <p><strong><span style="font-size: 90%;">100% HÀNG CHÍNH HÃNG</span></strong></p>
+                      <style>
+                        #text-101 {
+                          color: rgb(0, 0, 0);
+                        }
+                        #text-101 > * {
+                          color: rgb(0, 0, 0);
+                        }
+                      </style>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <style>
+                #col-406 > .col-inner {
+                  padding: 0px 0px 0px 0px;
+                  margin: 0px 0px -20px 0px;
+                }
+              </style>
+            </div>
+            <div id="col-407" class="col medium-3 small-6 large-3">
+              <div class="col-inner text-center dark">
+                <div class="icon-box featured-box icon-box-center text-center">
+                  <div class="icon-box-img" style="width: 40px;">
+                    <div class="icon">
+                      <div class="icon-inner">
+                        <img width="1" height="1" src="../img/3tlSnqZd-icon-free-shipping.svg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="icon-box-text last-reset">
+                    <div id="text-102" class="text">
+                      <span style="font-size: 90%;"><strong>MIỄN PHÍ VẬN CHUYỂN</strong></span>
+                      <style>
+                        #text-102 {
+                          color: rgb(0, 0, 0);
+                        }
+                        #text-102 > * {
+                          color: rgb(0, 0, 0);
+                        }
+                      </style>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <style>#col-407 > .col-inner { margin: 0px 0px -20px 0px;}</style>
+            </div>
+            <div id="col-408" class="col medium-3 small-6 large-3">
+              <div class="col-inner text-center dark">
+                <a class="plain" href="#baohanh" target="_blank" rel="noopener noreferrer">
+                  <div class="icon-box featured-box icon-box-center text-center">
+                    <div class="icon-box-img" style="width: 40px;">
+                      <div class="icon">
+                        <div class="icon-inner" style="color: rgb(255,255,255);">
+                          <img width="1" height="1" src="../img/qJb9aM3L-icon-secure-shield.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="icon-box-text last-reset">
+                      <div id="text-103" class="text">
+                        <span style="font-size: 90%;"><strong>BẢO HÀNH CHÍNH HÃNG</strong></span>
+                        <style>
+                          #text-103 {
+                            color: rgb(0, 0, 0);
+                          }
+                          #text-103 > * {
+                            color: rgb(0, 0, 0);
+                          }
+                        </style>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <style> #col-408 > .col-inner { margin: 0px 0px -20px 0px; } </style>
+            </div>
+            <div id="col-409" class="col medium-3 small-6 large-3">
+              <div class="col-inner text-center dark">
+                <a class="plain" href="#doi-dong-ho" target="_blank" rel="noopener noreferrer">
+                  <div class="icon-box featured-box icon-box-center text-center">
+                    <div class="icon-box-img" style="width: 40px;">
+                      <div class="icon">
+                        <div class="icon-inner" style="color: rgb(255,255,255);">
+                          <img width="1" height="1" src="../img/return-ic.svg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="icon-box-text last-reset">
+                      <div id="text-104" class="text">
+                        <span style="font-size: 90%;"><strong>ĐỔI HÀNG TRONG 7 NGÀY</strong></span>
+                      <style>
+                        #text-104 {
+                          color: rgb(0, 0, 0);
+                        }
+                        #text-104 > * {
+                          color: rgb(0, 0, 0);
+                        }
+                      </style>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <style> #col-408 > .col-inner { margin: 0px 0px -20px 0px; } </style>
+            </div>
+            <style> #row-211 > .col > .col-inner { padding: 0px 0px 0px 0px; } </style>
+          </div>
+          <div id="gap-5" class="clearfix" style="display: block;height: auto;">
+          <style>
+            #gap-5 {
+              padding-top: 15px;
+            }
+            @media (min-width:550px) {
+              #gap-5 {
+                padding-top: 20px;
+              }
+            }
+          </style>
+          </div>
+        </div>
+        <style>
+          #section_400 {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background-color: rgb(251, 230, 166);
+          }
+        </style>
+      </section>
+      <section class="new_footer_area bg_color">
+        <div class="hide-for-small">
+          <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col small-3 medium-3 large-3">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                            <p>Don’t miss any updates of our new templates and extensions.!</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col small-3 medium-3 large-3">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Android App</a></li>
+                                <li><a href="#">ios App</a></li>
+                                <li><a href="#">Desktop</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">My tasks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col small-3 medium-3 large-3">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Term &amp; conditions</a></li>
+                                <li><a href="#">Reporting</a></li>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Support Policy</a></li>
+                                <li><a href="#">Privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col small-3 medium-3 large-3">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                            <div class="f_social_icon">
+                                <a href="#" class="fab fa-facebook"></a>
+                                <a href="#" class="fab fa-twitter"></a>
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-pinterest"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-7">
+                        <p class="mb-0 f_400">© cakecounter Inc.. 2019 All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 col-sm-5 text-right">
+                        <p>Made with <i class="icon_heart"></i> in <a href="http://cakecounter.com" target="_blank">CakeCounter</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- show-for-small -->
+      <div class="show-for-small">
+        <div class="new_footer_top">
+          <div class="container">
+              <div class="row">
+                  <div class="col small-3 medium-2 large-3">
+                      <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                          <p>Don’t miss any updates of our new templates and extensions.!</p>
+                          <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                              <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                              <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                              <p class="mchimp-errmessage" style="display: none;"></p>
+                              <p class="mchimp-sucmessage" style="display: none;"></p>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col small-3 medium-2 large-3">
+                      <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                          <ul class="list-unstyled f_list">
+                              <li><a href="#">Company</a></li>
+                              <li><a href="#">Android App</a></li>
+                              <li><a href="#">ios App</a></li>
+                              <li><a href="#">Desktop</a></li>
+                              <li><a href="#">Projects</a></li>
+                              <li><a href="#">My tasks</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col small-3 medium-2 large-3">
+                      <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                          <ul class="list-unstyled f_list">
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Term &amp; conditions</a></li>
+                              <li><a href="#">Reporting</a></li>
+                              <li><a href="#">Documentation</a></li>
+                              <li><a href="#">Support Policy</a></li>
+                              <li><a href="#">Privacy</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col small-3 medium-2 large-3">
+                      <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                          <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                          <div class="f_social_icon">
+                              <a href="#" class="fab fa-facebook"></a>
+                              <a href="#" class="fab fa-twitter"></a>
+                              <a href="#" class="fab fa-linkedin"></a>
+                              <a href="#" class="fab fa-pinterest"></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer_bg">
+              <div class="footer_bg_one"></div>
+              <div class="footer_bg_two"></div>
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-lg-6 col-sm-7">
+                      <p class="mb-0 f_400">© cakecounter Inc.. 2019 All rights reserved.</p>
+                  </div>
+                  <div class="col-lg-6 col-sm-5 text-right">
+                      <p>Made with <i class="icon_heart"></i> in <a href="http://cakecounter.com" target="_blank">CakeCounter</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    </section>
+    </footer>
 </body>
 
 </html>
