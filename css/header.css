@@ -105,8 +105,8 @@ header.sticky #main-menu li a span {
         display: block;
     }
 
-    .container,
-    .container a {
+    .container-header,
+    .container-header a {
         width: 100%;
         display: none;
     }
