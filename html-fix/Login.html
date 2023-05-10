@@ -11,61 +11,12 @@
     <!-- JS -->
     <script src="../js-fix/jquery-3.5.1.js"></script>
     <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+    <script src="../js-fix/header.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
     <link rel="stylesheet" href="../css-fix/BootstrapCSS/bootstrap.min.css">
     <link rel="stylesheet" href="../css-fix/header.css">
 </head>
-
-<script>
-    function LogOut() {
-        localStorage.setItem('LoginStatus', 0);
-        $("#formDN").css("display", "list-item");
-        $("#AccountInfo").css("display", "none");
-    }
-    $(document).ready(function () {
-        var loginSts = localStorage.getItem('LoginStatus');
-        if (loginSts == '1') {
-            $("#formDN").css("display", "none");
-            $("#AccountInfo").css("display", "list-item");
-        }
-        else {
-            $("#formDN").css("display", "list-item");
-            $("#AccountInfo").css("display", "none");
-        }
-        $('#toggle-nav').click(function () {
-            $('nav').slideToggle();
-        });
-        $(window).scroll(function () {
-            if ($(this).scrollTop()) {
-                $('header').addClass('sticky');
-            }
-        });
-        $("#btnLogin").click(function (e) {
-            let localStorageLogin = 'LoginStatus';
-            let user = $("#txtUser").val();
-            let pwd = $("#txtPwd").val();
-            var UserData = localStorage.getItem('User');
-            var PwdData = localStorage.getItem('Password');
-            // console.log(user);
-            // console.log(pwd);
-            // console.log(UserData);
-            // console.log(PwdData);
-            if (user == UserData && pwd == PwdData) {
-                localStorage.setItem(localStorageLogin, 1);
-
-                // localStorage.getItem('FirstName');
-                // localStorage.getItem('LastName');
-                alert("Đăng nhập thành công");
-                location.replace("index.html")
-            }
-            else {
-                localStorage.setItem(localStorageLogin, 0);
-                alert("Không tồn tại tài khoản!");
-            }
-        });
-    });
-</script>
 
 <body>
     <div class="wrapper">
@@ -84,8 +35,7 @@
                             HIỆU</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="product.html">Casio</a>
-                            <a class="dropdown-item" href="product.html">Pierre
-                                nannier</a>
+                            <a class="dropdown-item" href="product.html">Pierre nannier</a>
                             <a class="dropdown-item" href="product.html">Tudor</a>
                             <a class="dropdown-item" href="product.html">Tissot</a>
                             <a class="dropdown-item" href="product.html">G-shock</a>

@@ -8,6 +8,8 @@
   <title>Document</title>
   <script src="../js-fix/jquery-3.5.1.js"></script>
   <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+  <script src="../js-fix/header.js"></script>
+
   <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
   <link rel="stylesheet" href="../css-fix/header.css">
   <link rel="stylesheet" href="../css-fix/grid.css">
@@ -15,36 +17,7 @@
   <link rel="stylesheet" href="../css-fix/main.css">
   <link rel="stylesheet" href="../css-fix/footer.css">
   <link rel="stylesheet" href="../css-fix/New.css">
-  <script>
-
-    function LogOut() {
-      localStorage.setItem('LoginStatus', 0);
-      $("#formDN").css("display", "list-item");
-      $("#AccountInfo").css("display", "none");
-    }
-    $(document).ready(function () {
-      var loginSts = localStorage.getItem('LoginStatus');
-      if (loginSts == '1') {
-        $("#formDN").css("display", "none");
-        $("#AccountInfo").css("display", "list-item");
-        let ho = localStorage.getItem('FirstName');
-        let ten = localStorage.getItem('LastName');
-        $("#AccountName").html(ten + " " + ho);
-      }
-      else {
-        $("#formDN").css("display", "list-item");
-        $("#AccountInfo").css("display", "none");
-      }
-      $('#toggle').click(function () {
-        $('nav').slideToggle();
-      });
-      $(window).scroll(function () {
-        if ($(this).scrollTop()) {
-          $('header').addClass('sticky');
-        }
-      });
-    });
-  </script>
+  
   <style>
     * {
       box-sizing: border-box;
@@ -57,35 +30,6 @@
       margin-bottom: 8px;
     }
   </style>
-  <script>
-    function LogOut() {
-      localStorage.setItem('LoginStatus', 0);
-      $("#formDN").css("display", "list-item");
-      $("#AccountInfo").css("display", "none");
-    }
-    $(document).ready(function () {
-      var loginSts = localStorage.getItem('LoginStatus');
-      if (loginSts == '1') {
-        $("#formDN").css("display", "none");
-        $("#AccountInfo").css("display", "list-item");
-        let ho = localStorage.getItem('FirstName');
-        let ten = localStorage.getItem('LastName');
-        $("#AccountName").html(ten + " " + ho);
-      }
-      else {
-        $("#formDN").css("display", "list-item");
-        $("#AccountInfo").css("display", "none");
-      }
-      $('#toggle-nav').click(function () {
-        $('nav').slideToggle();
-      });
-      $(window).scroll(function () {
-        if ($(this).scrollTop()) {
-          $('header').addClass('sticky');
-        }
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -100,7 +44,8 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+            aria-haspopup="true" aria-expanded="false">THƯƠNG
+            HIỆU</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="product.html">Casio</a>
             <a class="dropdown-item" href="product.html">Pierre nannier</a>
@@ -117,7 +62,7 @@
         <li>
           <a href="">NỮ</a>
         </li>
-        <a id="logo" href="./index.html" class="">
+        <a id="logo" href="index.html" class="">
           <img src="../img/logo.png" alt="Logo Shopdongho">
         </a>
         <li>
@@ -125,28 +70,33 @@
         </li>
         <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
           <div class="row">
-            <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
-            <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
-            <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+            <a href="Login.html" class="btn-dtl"><span>ĐĂNG
+                NHẬP</span></a>
+            <label for="" style="padding-left:
+                                      5px;padding-right: 5px; font-size: 20px;"></label>
+            <a href="Register.html" class="btn-dtl"><span>ĐĂNG
+                KÝ</span></a>
           </div>
         </li>
         <li class="nav-item dropdown" id="AccountInfo">
           <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false"></a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+            <a class="dropdown-item" href="#">Thông tin tài
+              khoản</a>
             <a class="dropdown-item" href="#">Đổi mật khẩu</a>
             <a class="dropdown-item" href="#">Thiết lập</a>
             <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
           </div>
         </li>
         <li>
-          <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+          <a href="bag.html"><i class="fa-solid
+                                      fa-cart-shopping" style="color: #576574;"></i></a>
         </li>
       </ul>
-
+  
     </nav>
-
+  
   </header>
 
 
