@@ -1180,7 +1180,7 @@ ol.list-cmt-text li .text-cmt_by_user span{
     overflow: hidden;
 }
 .slide-video-container .home video{
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
