@@ -124,7 +124,7 @@
                                     <abbr title="bắc buộc" class="required">*</abbr></label>
                                 <br>
                                 <input type="text" name="" id="name-user" placeholder="Nhập họ và tên"
-                                    onblur="ktraHoTen();">
+                                    onblur="valid_TenTT();">
                                 <br>
                                 <span style="margin:10px; color: red;" id="errFullName"></span>
                             </p>
@@ -137,9 +137,9 @@
                                     <label for="">Số điện thoại&nbsp;
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
                                     <br>
-                                    <input type="tel" name="" id="tel-user" placeholder="Nhập số điện thoại">
+                                    <input type="tel" name="" id="tel-user" placeholder="Nhập số điện thoại" onblur="valid_Phone()">
                                     <br>
-                                    <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>
+                                    <span style="margin:10px; color: red;" id="errTel-user"></span>
                                 </p>
                             </div>
                             <div class="col l-6 m-12 c-12">
@@ -147,9 +147,9 @@
                                     <label for="">Địa chỉ email&nbsp;
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
                                     <br>
-                                    <input type="email" name="" id="email-user" placeholder="Nhập địa chỉ email">
+                                    <input type="email" name="" id="email-user" placeholder="Nhập địa chỉ email" onblur="valid_EmailTT()">
                                     <br>
-                                    <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>
+                                    <span style="margin:10px; color: red;" id="errEmail-user"></span>
                                 </p>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                                     <br>
                                     <input type="text" name="" id="city-user" placeholder="Nhập tên thành phố">
                                     <br>
-                                    <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>
+                                    <span style="margin:10px; color: red;"></span>
                                 </p>
                             </div>
                             <div class="col l-6 m-12 c-12">
@@ -172,7 +172,7 @@
                                     <input type="text" name="" id="address-user"
                                         placeholder="Ví dụ:Số 20 đường Cầu Giấy">
                                     <br>
-                                    <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>
+                                    <span style="margin:10px; color: red;"></span>
                                 </p>
                             </div>
                         </div>

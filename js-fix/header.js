@@ -30,6 +30,43 @@ function valid_Ten() {
         return false;
     }
 }
+
+function valid_TenTT() {
+    let ten = $("#name-user").val();
+    let pattern = /([A-Z]{1}[a-z]{1,})|(\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*))+/
+    if (pattern.test(ten)) {
+        $("#errFullName").html("");
+        return true;
+    }
+    else {
+        $("#errFullName").html("Vui lòng nhập lại Họ và Tên");
+        return false;
+    }
+}
+function valid_Phone(){
+    let tel = $("#tel-user").val();
+    let pattern = /((09|03|07|08|05)+([0-9]{8})\b)/
+    if (pattern.test(tel)) {
+        $("#errTel-user").html("");
+        return true;
+    }
+    else {
+        $("#errTel-user").html("Vui lòng nhập lại số điện thoại");
+        return false;
+    }
+}
+function valid_EmailTT() {
+    let email = $("#email-user").val();
+    let pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+    if (pattern.test(email)) {
+        $("#errEmail-user").html("");
+        return true;
+    }
+    else {
+        $("#errEmail-user").html("Vui lòng nhập lại Email!");
+        return false;
+    }
+}
 function valid_Email() {
     let email = $("#txtEmail").val();
     let pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
@@ -198,6 +235,15 @@ $(document).ready(function () {
         else {
             localStorage.setItem(localStorageLogin, 0);
             alert("Đăng nhập thất bại! Vui lòng thử lại...");
+        }
+    });
+    $("#chotDon").click(function (e) { 
+        e.preventDefault();
+        if(valid_TenTT() && valid_Phone() && valid_EmailTT()){
+            return true;
+        }
+        else{
+            return false;
         }
     });
 });
