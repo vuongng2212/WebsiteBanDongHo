@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Ky</title>
+    <script src="../js-fix/jquery-3.5.1.js"></script>
+    <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
+    <script src="../js-fix/jquery-3.5.1.js"></script>
+    <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="../css/BootstrapCSS/bootstrap.css">
+    <link rel="stylesheet" href="../css-fix/header.css">
+    <link rel="stylesheet" href="../css/New.css">
+</head>
+<script>
+
+    function valid_Ho() {
+        let ho = $("#txtHo").val();
+        let pattern = /[A-Z]{1}[a-z]{1,}/
+        if (pattern.test(ho)) {
+            $("#errName").html("");
+            $("#txtHo").removeClass("border-danger");
+            $("#txtHo").addClass("border-success");
+            return true;
+        }
+        else {
+            $("#errName").html("(*) Vui lòng nhập lại First name!");
+            $("#txtHo").removeClass("border-success");
+            $("#txtHo").addClass("border-danger");
+            return false;
+        }
+    }
+    function valid_Ten() {
+        let ten = $("#txtName").val();
+        let pattern = /([A-Z]{1}[a-z]{1,})|(\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*))+/
+        if (pattern.test(ten)) {
+            $("#errName").html("");
+            $("#txtName").removeClass("border-danger");
+            $("#txtName").addClass("border-success");
+            return true;
+        }
+        else {
+            $("#errName").html("(*) Vui lòng nhập lại Last name!");
+            $("#txtName").removeClass("border-success");
+            $("#txtName").addClass("border-danger");
+            return false;
+        }
+    }
+    function valid_Email() {
+        let email = $("#txtEmail").val();
+        let pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+        if (pattern.test(email)) {
+            $("#errEmail").html("");
+            $("#txtEmail").removeClass("border-danger");
+            $("#txtEmail").addClass("border-success");
+            return true;
+        }
+        else {
+            $("#errEmail").html("(*) Vui lòng nhập lại Email!");
+            $("#txtEmail").removeClass("border-success");
+            $("#txtEmail").addClass("border-danger");
+            return false;
+        }
+    }
+    function valid_Username() {
+        let user = $("#txtUser").val();
+        let pattern = /\w+/
+        if (pattern.test(user)) {
+            $("#errUser").html("");
+            $("#txtUser").removeClass("border-danger");
+            $("#txtUser").addClass("border-success");
+            return true;
+        }
+        else {
+            $("#errUser").html("(*) User name không chứa ký tự đặc biệt! {!@#$%^&*}");
+            $("#txtUser").removeClass("border-success");
+            $("#txtUser").addClass("border-danger");
+            return false;
+        }
+    }
+    function valid_Pwd() {
+        let pwd = $("#txtPwd").val();
+        let pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if (pattern.test(pwd)) {
+            $("#errPwd").html("");
+            $("#txtPwd").removeClass("border-danger");
+            $("#txtPwd").addClass("border-success");
+            return true;
+        }
+        else {
+            $("#errPwd").html("(*) Password phải chứa ký tự in hoa, thường và ký tự đặc biệt!");
+            $("#txtPwd").removeClass("border-success");
+            $("#txtPwd").addClass("border-danger");
+            return false;
+        }
+    }
+    function valid_CfmPwd() {
+        let pwd = $("#txtPwd").val();
+        let cfm = $("#cfmPwd").val();
+        if (pwd == cfm) {
+            $("#errCfmPwd").html("");
+            $("#cfmPwd").removeClass("border-danger");
+            $("#cfmPwd").addClass("border-success");
+            return true;
+        }
+        else {
+            $("#errCfmPwd").html("(*) Mật khẩu không khớp!");
+            $("#cfmPwd").removeClass("border-success");
+            $("#cfmPwd").addClass("border-danger");
+            return false;
+        }
+    }
+    function valid_Address() {
+        let ho = $("#txtAdd").val();
+        //let pattern = /\d{1,}(\s{1}\w{1,})(\s{1}?\w{1,})+)/
+        if (pattern.test(ho)) {
+            $("#errAdd").html("");
+            return true;
+        }
+        else {
+            $("#errAdd").html("(*) Vui long nhap lai!");
+            return false;
+        }
+    }
+    function valid_Tinh() {
+        let ho = $("#txtTinh").val();
+        let pattern = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/
+        if (pattern.test(ho)) {
+            $("#err").html("");
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    function check_checkbox() {
+        document.getElementById("cbox").onclick = function (e) {
+            if (this.checked) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
+    }
+
+    // localStorage
+    var storageKeyUser = 'User';
+    var storageKeyPwd = 'Password';
+    var storageKeyFirstN = 'FirstName';
+    var storageKeyLastN = 'LastName';
+    function LogOut() {
+        localStorage.setItem('LoginStatus', 0);
+        $("#formDN").css("display", "list-item");
+        $("#AccountInfo").css("display", "none");
+    }
+    $(document).ready(function () {
+        var loginSts = localStorage.getItem('LoginStatus');
+        if (loginSts == '1') {
+            $("#formDN").css("display", "none");
+            $("#AccountInfo").css("display", "list-item");
+            
+        }
+        else {
+            $("#formDN").css("display", "list-item");
+            $("#AccountInfo").css("display", "none");
+        }
+        $('#toggle').click(function () {
+            $('nav').slideToggle();
+        });
+        $(window).scroll(function () {
+            if ($(this).scrollTop()) {
+                $('header').addClass('sticky');
+            }
+        });
+
+        $("#btnDK").click(function (e) {
+            if (valid_Ho() && valid_Ten() && valid_Email() && valid_Username() && valid_Pwd() && valid_CfmPwd) {
+                let ho = $("#txtHo").val();
+                let ten = $("#txtName").val();
+                let user = $("#txtUser").val();
+                let pwd = $("#txtPwd").val();
+                localStorage.setItem(storageKeyUser, user);
+                localStorage.setItem(storageKeyPwd, pwd);
+                localStorage.setItem(storageKeyFirstN, ho);
+                localStorage.setItem(storageKeyLastN, ten);
+                alert("Đăng ký thành công!");
+            }
+            else {
+                alert("Đăng ký thất bại!")
+            }
+
+        });
+    });
+</script>
+<style>
+    .absolute-footer,
+    html {
+        background-color: #ffffff;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div id="toggle">
+                <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+            </div>
+            <nav class="navbar container">
+                <ul id="main-menu">
+                    <li>
+                        <a href="">BÁN CHẠY</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Casio</a>
+                            <a class="dropdown-item" href="#">Pierre nannier</a>
+                            <a class="dropdown-item" href="#">Tudor</a>
+                            <a class="dropdown-item" href="#">Tissot</a>
+                            <a class="dropdown-item" href="#">G-shock</a>
+                            <a class="dropdown-item" href="#">Orient</a>
+                            <a class="dropdown-item" href="#">Citizen</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">NAM</a>
+                    </li>
+                    <li>
+                        <a href="">NỮ</a>
+                    </li>
+                    <a id="logo" href="./index.html" class="">
+                        <img src="../img/logo.png" alt="Logo Shopdongho">
+                    </a>
+                    <li>
+                        <a href="">LIÊN HỆ</a>
+                    </li>
+                    <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
+                        <div class="row">
+                            <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
+                            <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
+                            <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" id="AccountInfo">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NgyenVong</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                            <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                            <a class="dropdown-item" href="#">Thiết lập</a>
+                            <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <div style="height: 75px;"></div>
+        <div class="container-login" style="padding-top: 5%;">
+            <form action="">
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-6">
+                            <label for="">First name*</label>
+                            <input type="text" name="" id="txtHo" class="form-control" required onblur="valid_Ho()">
+
+                        </div>
+                        <div class="col-6">
+                            <label for="">Last name*</label>
+                            <input type="text" name="" id="txtName" class="form-control" required onblur="valid_Ten()">
+                        </div>
+                        <span style="color: red; padding-left: 15px;" id="errName"></span>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-12 form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" name="" id="txtEmail" required type="email" onblur="valid_Email()">
+                            <span style="color: red;" id="errEmail"></span>
+
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-12 form-group">
+                            <label for="">User name*</label>
+                            <input type="text" name="" id="txtUser" required onblur="valid_Username()">
+                            <span style="color: red;" id="errUser"></span>
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-12 form-group">
+                            <label for="">Password*</label>
+                            <input type="password" name="" id="txtPwd" required onblur="valid_Pwd()">
+                            <span style="color: red;" id="errPwd"></span>
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-12 form-group">
+                            <label for="">Comfirm Password*</label>
+                            <input type="password" name="" id="cfmPwd" required onblur="valid_CfmPwd()">
+                            <span style="color: red;" id="errCfmPwd"></span>
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-12 form-group">
+                            <label for="">Địa chỉ</label>
+                            <input type="text" name="" id="txtAdd">
+                            <span style="color: red;" id="errAdd"></span>
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-6">
+                            <label for="">Tỉnh</label>
+                            <input type="text" name="" id="txtTinh">
+                            <span style="color: red;" id="errTinh"></span>
+                        </div>
+                        <div class="col-6">
+                            <label for="">Thành phố</label>
+                            <select name="" id="" class="form-control">
+                                <option value="1">TP. Hồ Chí Minh</option>
+                                <option value="2">Hà Nội</option>
+                                <option value="3">Huế</option>
+                                <option value="4">Cần Thơ</option>
+                                <option value="5">Hải Phòng</option>
+                                <option value="6">Đà Nẵng</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-12 form-check ml-3">
+                            <input type="checkbox" name="" id="cbox" class="form-check-input ">
+                            <label for="">Đồng ý với điều khoảng của chúng tôi</label>
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="row col-6">
+                        <div class="col-12 form-group">
+                            <button class="btn btn-success float-right" id="btnDK">Đăng Ký</button>
+                        </div>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

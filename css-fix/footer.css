@@ -1,0 +1,48 @@
+.footer-wrapper {
+    position: relative;
+    width: 100%;
+}
+#section_400 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: rgb(251, 230, 166);
+}
+.section {
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    min-height: auto;
+    padding: 30px 0;
+    position: relative;
+    width: 100%;
+}
+.bg-fill {
+    background-position: 50% 50%;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+}
+.fill {
+    height: 100%;
+    left: 0;
+    margin: 0!important;
+    padding: 0!important;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.bottom, .fill {
+    bottom: 0;
+}
+.bg, .section-content {
+    width: 100%;
+}
+.relative {
+    position: relative!important;
+}
+.section-content {
+    z-index: 1;
+}
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}

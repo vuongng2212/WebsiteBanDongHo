@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    .col {
+      text-align: center;
+      background-clip: content-box;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  </style>
+<body>
+    <div class="grid wide">
+        <div class="row">
+            <div class="col l-12 m-12 c-12">
+                <div class="label-dongho">
+                    <h2 style="font-weight: 700; font-size: 2rem;">Chi tiết hóa đơn</h2>
+                </div>
+                <div class="vien"></div>
+                
+              </div>
+        </div>
+        <!-- <section id="blog-home" class="">
+            <h2 class="font-weight-bold pt-5">Chi tiết hóa đơn</h2>
+            <hr>
+        </section> -->
+        <section id="cart-container" class="container">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Xóa</td>
+                        <td>Ảnh Sản Phẩm</td>
+                        <td>Tên Đồng Hồ</td>
+                        <td>Giá</td>
+                        <td>Số Lượng</td>
+                        <td>Tổng Tiền</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                        <td><img src="product-img/img-for-brands/buvola/bu2.webp" alt=""></td>
+                        <td><h5>Testing product</h5></td>
+                        <td><h5>6.200.000VND</h5></td>
+                        <td><input class="w-25 pl-1" value="1" type="number"></td>
+                        <td><h5>Total</h5></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                        <td><img src="product-img/img-for-brands/buvola/bu2.webp" alt=""></td>
+                        <td><h5>Testing product</h5></td>
+                        <td><h5>6.200.000VND</h5></td>
+                        <td><input class="" value="1" type="number"></td>
+                        <td><h5>Total</h5></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                        <td><img src="product-img/img-for-brands/buvola/bu2.webp" alt=""></td>
+                        <td><h5>Testing product</h5></td>
+                        <td><h5>6.200.000VND</h5></td>
+                        <td><input class="" value="1" type="number"></td>
+                        <td><h5>Total</h5></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="fa-solid fa-trash"></i></a></td>
+                        <td><img src="product-img/img-for-brands/buvola/bu2.webp" alt=""></td>
+                        <td><h5>Testing product</h5></td>
+                        <td><h5>6.200.000VND</h5></td>
+                        <td><input class="" value="1" type="number"></td>
+                        <td><h5>Total</h5></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="cart-bottom" class="container">
+            <div class="row">
+                <div class="coupon col l-6 m-6 c-12" style="text-align: left;">
+                    <div class="">
+                        <h5>Mã Giảm Giá</h5>
+                        <p style="padding: 12px;font-size: 17px; text-align: left;">Nhập mã giảm giá ở đây để nhận ưu đãi của cửa hàng</p>
+                        <input type="text" placeholder="Mã Giảm Giá" style="font-size: 20px;">
+                        <button>Sử Dụng Mã</button>
+                    </div>
+                </div>
+                <div class="total col l-6 m-6 c-12" style="text-align: left;">
+                    <div class="">
+                        <h5>Tổng Tiền</h5>
+                        <div class="row">
+                            <div class="col l-6 m-6 c-6 title-deal" style="text-align: left;"><p>Tiền đơn hàng</p></div>
+                            <div class="col l-6 m-6 c-6 price-deal" style="text-align: right;"><p>total</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col l-6 m-6 c-6 title-deal" style="text-align: left;"><p>Tiền Ship</p></div>
+                            <div class="col l-6 m-6 c-6 price-deal" style="text-align: right;"><p>Giá tiền ship</p></div>
+                        </div>
+                       
+                        <hr class="second-hr">
+                        <div class="row">
+                            <div class="col l-6 m-6 c-6 title-deal" style="text-align: left;"><p>Tổng</p></div>
+                            <div class="col l-6 m-6 c-6 price-deal" style="text-align: right;"><p>Total Sum</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col l-12 c-12 m-12" style="text-align: right;">
+                                <button>Thanh Toán</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

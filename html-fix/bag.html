@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js-fix/jquery-3.5.1.js"></script>
+  <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+    <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../css-fix/header.css">
+    <link rel="stylesheet" href="../css-fix/bag.css">
+    <link rel="stylesheet" href="../css-fix/grid.css">
+    <link rel="stylesheet" href="../css-fix/main.css">
+    <link rel="stylesheet" href="../css-fix/bag.css">
+    <style>
+      .empty{
+        /* height: 50px; */
+        background-image: url(../test-img/empty-cart.webp);
+        top: 100;
+        padding-top: 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top center;
+        
+      }
+      .none{
+        display: none;
+      }
+        .col {
+        text-align: center;
+        background-clip: content-box;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+    </style>
+     <script>
+
+      function LogOut() {
+      localStorage.setItem('LoginStatus', 0);
+      $("#formDN").css("display", "list-item");
+      $("#AccountInfo").css("display", "none");
+    }
+    $(document).ready(function () {
+      var loginSts = localStorage.getItem('LoginStatus');
+      if (loginSts == '1') {
+        $("#formDN").css("display", "none");
+        $("#AccountInfo").css("display", "list-item");
+        let ho = localStorage.getItem('FirstName');
+        let ten = localStorage.getItem('LastName');
+        $("#AccountName").html(ten + " " + ho);
+      }
+      else {
+        $("#formDN").css("display", "list-item");
+        $("#AccountInfo").css("display", "none");
+      }
+      $('#toggle').click(function () {
+        $('nav').slideToggle();
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop()) {
+          $('header').addClass('sticky');
+        }
+      });
+    });
+   </script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div id="toggle">
+          <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+        </div>
+        <nav class="navbar container-header">
+          <ul id="main-menu">
+            <li>
+              <a href="product.html">BÁN CHẠY</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="product.html">Casio</a>
+                <a class="dropdown-item" href="product.html">Pierre nannier</a>
+                <a class="dropdown-item" href="product.html">Tudor</a>
+                <a class="dropdown-item" href="product.html">Tissot</a>
+                <a class="dropdown-item" href="product.html">G-shock</a>
+                <a class="dropdown-item" href="product.html">Orient</a>
+                <a class="dropdown-item" href="product.html">Citizen</a>
+              </div>
+            </li>
+            <li>
+              <a href="">NAM</a>
+            </li>
+            <li>
+              <a href="">NỮ</a>
+            </li>
+            <a id="logo" href="./index.html" class="">
+              <img src="../img/logo.png" alt="Logo Shopdongho">
+            </a>
+            <li>
+              <a href="">LIÊN HỆ</a>
+            </li>
+            <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
+              <div class="row">
+                <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
+                <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
+                <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown" id="AccountInfo">
+              <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="">Thông tin tài khoản</a>
+                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                <a class="dropdown-item" href="#">Thiết lập</a>
+                <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
+              </div>
+            </li>
+            <li>
+              <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+            </li>
+          </ul>
+  
+        </nav>
+  
+      </header>
+    <!-- body -->
+    <div class="grid wide">
+        <div class="row">
+            <div class="col l-12 m-12 c-12">
+                <div class="label-dongho">
+                    <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng Hồ Nam Nữ Chính Hãng</h2>
+                </div>
+                <!-- <div class="vien"></div> -->
+                <div class="disc">
+                    <p>Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất khi quý khách hàng tin dùng & mua sắm đồng hồ nam nữ chính hãng của thương hiệu SHOPDONGHO.com</p>
+                </div>
+              </div>
+        </div>
+        <div class="wrapper">
+            <h1>Giỏ Hàng</h1>
+            <div class="project">
+              
+                
+                  <div class="shop box-container col l-8 m-12 c-12" style="position: relative;height: 400px;">
+                    
+                    <!-- <img src="../test-img/empty-cart.webp" alt="" style="position: absolute; position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%; filter: grayscale(1);"> -->
+                    <div class="empty"></div>
+                
+                </div>
+                
+                
+                  <div class="right-bar col l-4 m-12 c-12">
+                    <p><span>Tổng tiền</span> <span id="priceShow1">0</span></p>
+                    <hr>
+                    <p><span>Phụ thu</span> <span>0</span></p>
+                    <hr>
+                    <p><span>Phí Vận Chuyển</span> <span>0</span></p>
+                    <hr>
+                    <p><span>Thanh Toán</span> <span id="priceShow2">0</span></p>
+                    
+                    <a href="thanhToan.html">Tiến Hành Thanh Toán</a>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("load",()=>{
+            let cartProductArr = window.localStorage.getItem("cartProduct");
+            cartProductArr = JSON.parse(cartProductArr);
+            console.log(cartProductArr);
+            let container = document.querySelector(".shop.box-container");
+            console.log(container); 
+            let flag = true;
+            let right_bar = document.querySelector(".right-bar");
+            let priceShow1 = document.getElementById("priceShow1");
+            let priceShow2 = document.getElementById("priceShow2");
+            console.log(right_bar);
+          
+            let stringItem = ``;
+            let stringDeal = ``;
+            let sumPrice = 0;
+            if(cartProductArr.length==0){
+              console.log("co hang");
+              
+                    flag = false;
+                    // container.classList.add("empty");
+                    // right_bar.classList.add("none");
+            }
+            if(flag == true){
+              cartProductArr.forEach((item)=>{
+                stringItem+=`<div class="box">
+                        <img src="${item.sp.img[0]}" alt="">
+                        <div class="content"  style="text-align: left;">
+                            <h3>${item.sp.name}</h3>
+                            <h4>Price:${item.sp.price.toLocaleString()}₫</h4>
+                            <p class="unit">Quantity: <span>${item.quantity}₫</span>
+                            <p class="btn-area">
+                                <i class="fa fa-trash"></i>
+                                <span class="btn2">Xóa</span>
+                            </p>
+                        </div>
+                    </div>`;
+                    sumPrice+=(item.quantity*item.sp.price);
+                    // right_bar.classList.remove("none");
+            });
+            container.innerHTML=stringItem;
+            priceShow1.innerHTML = sumPrice.toLocaleString();
+            priceShow2.innerHTML = sumPrice.toLocaleString();
+            }
+            
+            
+        })
+    </script>
+</body>
+</html>
