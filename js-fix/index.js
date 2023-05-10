@@ -1,3 +1,4 @@
+
 window.addEventListener("load",()=>{
 
     let maleBtn = document.getElementById("btnMale");

@@ -120,7 +120,7 @@
             <img src="../img/logo.png" alt="Logo Shopdongho">
           </a>
           <li>
-            <a href="">LIÊN HỆ</a>
+            <a href="./Infomation.html">LIÊN HỆ</a>
           </li>
           <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
             <div class="row">
@@ -2934,13 +2934,27 @@
           </div>
         </section>
       </footer>
-    <script src="../js-fix/index.js"></script>
-    <script>
-        
-        let cartProduct = [];
+      <script>
+        console.log(window.localStorage.getItem("cartProduct"));
+        if(window.localStorage.getItem("cartProduct") == null){
+            let cartProduct = [];
             let productConvertJson = JSON.stringify(cartProduct);
-        window.localStorage.setItem("cartProduct",productConvertJson);
-
+            window.localStorage.setItem("cartProduct",productConvertJson);
+        }
+        // let cartProduct = [];
+        //     let productConvertJson = JSON.stringify(cartProduct);
+        // window.localStorage.setItem("cartProduct",productConvertJson);
+        // let cartProduct = localStorage.getItem("cartProduct") ? JSON.parse(localStorage.getItem("cartProduct")) : [];
+        //      let productConvertJson = JSON.stringify(cartProduct);
+        // window.localStorage.setItem("cartProduct",productConvertJson);
+        // window.localStorage.setItem("cartProduct",JSON.stringify(cartProduct));
+        if(window.localStorage.getItem("cartProduct") == null){
+            // let cartProduct = [];
+            // let productConvertJson = JSON.stringify(cartProduct);
+            // window.localStorage.setItem("cartProduct",productConvertJson);
+        }
     </script>
+    <script src="../js-fix/index.js"></script>
+   
   </body>
 </html>
