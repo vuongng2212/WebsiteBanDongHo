@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dang Nhap</title>
-    <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
-    <script src="../js-fix/jquery-3.5.1.js"></script>
-    <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
-    <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
-    <link rel="stylesheet" href="../css/BootstrapCSS/bootstrap.css">
-    <link rel="stylesheet" href="../css-fix/header.css">
-    <link rel="stylesheet" href="../css/New.css">
-</head>
-<script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dang Nhap</title>
+        <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
+
+        <script src="../js-fix/jquery-3.5.1.js"></script>
+        <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+
+        <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+        <link rel="stylesheet" href="../css-fix/BootstrapCSS/bootstrap.min.css">
+        <link rel="stylesheet" href="../css-fix/header.css">
+    </head>
+    <script>
     function LogOut(){
         localStorage.setItem('LoginStatus', 0);
         $("#formDN").css("display", "list-item");
@@ -63,120 +64,138 @@
         });
     });
 </script>
-<style>
-    .absolute-footer,
-    html {
-        background-color: #ffffff;
-    }
-</style>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div id="toggle">
+                    <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+                </div>
+                <nav class="navbar container-header">
+                    <ul id="main-menu">
+                        <li>
+                            <a href="product.html">BÁN CHẠY</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                id="navbarDropdown" role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">THƯƠNG
+                                HIỆU</a>
+                            <div class="dropdown-menu"
+                                aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="product.html">Casio</a>
+                                <a class="dropdown-item" href="product.html">Pierre
+                                    nannier</a>
+                                <a class="dropdown-item" href="product.html">Tudor</a>
+                                <a class="dropdown-item" href="product.html">Tissot</a>
+                                <a class="dropdown-item" href="product.html">G-shock</a>
+                                <a class="dropdown-item" href="product.html">Orient</a>
+                                <a class="dropdown-item" href="product.html">Citizen</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">NAM</a>
+                        </li>
+                        <li>
+                            <a href="">NỮ</a>
+                        </li>
+                        <a id="logo" href="./index.html" class="">
+                            <img src="../img/logo.png" alt="Logo Shopdongho">
+                        </a>
+                        <li>
+                            <a href="">LIÊN HỆ</a>
+                        </li>
+                        <li style="padding-top: 20px; padding-left: 20px;"
+                            id="formDN">
+                            <div class="row">
+                                <a href="Login.html" class="btn-dtl"><span>ĐĂNG
+                                        NHẬP</span></a>
+                                <label for="" style="padding-left:
+                                    5px;padding-right: 5px; font-size: 20px;"></label>
+                                <a href="Register.html" class="btn-dtl"><span>ĐĂNG
+                                        KÝ</span></a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown" id="AccountInfo">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                id="AccountName" role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"></a>
+                            <div class="dropdown-menu"
+                                aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Thông tin tài
+                                    khoản</a>
+                                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                                <a class="dropdown-item" href="#">Thiết lập</a>
+                                <a class="dropdown-item" href="#"
+                                    onclick="LogOut()">Đăng xuất</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="bag.html"><i class="fa-solid
+                                    fa-cart-shopping" style="color: #576574;"></i></a>
+                        </li>
+                    </ul>
 
-<body>
-    <div class="wrapper">
-        <header>
-            <div id="toggle">
-                <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+                </nav>
+
+            </header>
+            <div style="height: 75px;"></div>
+            <div class="container-login" style="padding-top: 10%;">
+                <form action="">
+                    <div class="row">
+                        <div class="col-md-5"></div>
+                        <div class="col-2 form-group">
+                            <label for="">Username*</label>
+                            <div class="row form-group">
+                                <i class="fa-solid fa-user fa-2x col-2 mt-1"></i>
+                                <input type="text" name="" id="txtUser"
+                                    class="form-control col-10"
+                                    style="border-radius: 3rem;"
+                                    required>
+                            </div>
+
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2"><label for="">Password*</label>
+                            <div class="row form-group">
+                                <i class="fa fa-key fa-2x col-2 mt-1"
+                                    aria-hidden="true"></i>
+                                <input type="password" name="" id="txtPwd"
+                                    class="form-control col-10"
+                                    style="border-radius: 3rem;" required>
+                            </div>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class=" row">
+                        <div class="col-5"></div>
+                        <div class="col-2">
+                            <div class="form-check ">
+                                <input type="checkbox" name="" id=""
+                                    class="form-check-input mt-2">
+                                <label for="" class="form-check-label text-left">Lưu đăng
+                                    nhập</label>
+                                <a href="" class="float-right" style="color:
+                                    rgb(51, 168, 218);">Quên mật khẩu?</a>
+                            </div></div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2 form-group text-right">
+                            <button type="button" class="btn btn-primary mt-3"
+                                id="btnLogin">Đăng nhập</button>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+
+                </form>
             </div>
-            <nav class="navbar container">
-                <ul id="main-menu">
-                    <li>
-                        <a href="product.html">BÁN CHẠY</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="product.html">Casio</a>
-                            <a class="dropdown-item" href="product.html">Pierre nannier</a>
-                            <a class="dropdown-item" href="product.html">Tudor</a>
-                            <a class="dropdown-item" href="product.html">Tissot</a>
-                            <a class="dropdown-item" href="product.html">G-shock</a>
-                            <a class="dropdown-item" href="product.html">Orient</a>
-                            <a class="dropdown-item" href="product.html">Citizen</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="">NAM</a>
-                    </li>
-                    <li>
-                        <a href="">NỮ</a>
-                    </li>
-                    <a id="logo" href="./index.html" class="">
-                        <img src="../img/logo.png" alt="Logo Shopdongho">
-                    </a>
-                    <li>
-                        <a href="">LIÊN HỆ</a>
-                    </li>
-                    <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
-                        <div class="row">
-                            <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
-                            <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
-                            <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown" id="AccountInfo">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">NgyenVong</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Thông tin tài khoản</a>
-                            <a class="dropdown-item" href="#">Đổi mật khẩu</a>
-                            <a class="dropdown-item" href="#">Thiết lập</a>
-                            <a class="dropdown-item" href="index.html" onclick="LogOut()">Đăng xuất</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
-                    </li>
-                </ul>
-
-            </nav>
-        </header>
-        <div style="height: 75px;"></div>
-        <div class="container-login" style="padding-top: 10%;">
-            <form action="">
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4 form-group">
-                        <label for="">Username*</label>
-                        <div class="row form-group">
-                            <i class="fa-solid fa-user fa-2x col-2 mt-1"></i>
-                            <input type="text" name="" id="txtUser" class="form-control col-10" style="border-radius: 3rem;"
-                                required>
-                        </div>
-
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4"><label for="">Password*</label>
-                        <div class="row form-group">
-                            <i class="fa fa-key fa-2x col-2 mt-1" aria-hidden="true"></i>
-                            <input type="password" name="" id="txtPwd" class="form-control col-10"
-                                style="border-radius: 3rem;" required>
-                        </div>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-                <div class=" row">
-                    <div class="col-4"></div>
-                    <div class="form-check col-4 ml-3">
-                        <input type="checkbox" name="" id="" class="form-check-input mt-2">
-                        <label for="" class="form-check-label">Lưu đăng nhập</label>
-                        <a href="" class="float-right" style="color: rgb(51, 168, 218);">Quên mật khẩu?</a>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4 form-group">
-                        <button type="button" class="btn btn-primary mt-3" id="btnLogin">Đăng nhập</button>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-
-            </form>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>

@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dang Ky</title>
-    <script src="../js-fix/jquery-3.5.1.js"></script>
     <meta name="Website giới thiệu, bán đồng hồ trực tuyến">
     <script src="../js-fix/jquery-3.5.1.js"></script>
     <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
-    <link rel="stylesheet" href="../css/fontawesome-free-6.4.0-web/css/all.css">
-    <link rel="stylesheet" href="../css/BootstrapCSS/bootstrap.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="../css-fix/BootstrapCSS/bootstrap.css">
     <link rel="stylesheet" href="../css-fix/header.css">
-    <link rel="stylesheet" href="../css/New.css">
 </head>
 <script>
 
@@ -209,14 +207,14 @@
             <div id="toggle">
                 <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
             </div>
-            <nav class="navbar container">
+            <nav class="navbar container-header">
                 <ul id="main-menu">
                     <li>
                         <a href="">BÁN CHẠY</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Casio</a>
                             <a class="dropdown-item" href="#">Pierre nannier</a>
@@ -233,7 +231,7 @@
                     <li>
                         <a href="">NỮ</a>
                     </li>
-                    <a id="logo" href="./index.html" class="">
+                    <a id="logo" href="../html/index.html" class="">
                         <img src="../img/logo.png" alt="Logo Shopdongho">
                     </a>
                     <li>
@@ -247,8 +245,8 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown" id="AccountInfo">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NgyenVong</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"></a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Thông tin tài khoản</a>
                             <a class="dropdown-item" href="#">Đổi mật khẩu</a>
@@ -257,18 +255,19 @@
                         </div>
                     </li>
                     <li>
-                        <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+                        <a href=""><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
                     </li>
                 </ul>
-
+        
             </nav>
+        
         </header>
         <div style="height: 75px;"></div>
         <div class="container-login" style="padding-top: 5%;">
             <form action="">
                 <div class="form-group row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-6">
                             <label for="">First name*</label>
                             <input type="text" name="" id="txtHo" class="form-control" required onblur="valid_Ho()">
@@ -280,70 +279,70 @@
                         </div>
                         <span style="color: red; padding-left: 15px;" id="errName"></span>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-12 form-group">
                             <label for="email">Email*</label>
-                            <input type="email" name="" id="txtEmail" required type="email" onblur="valid_Email()">
+                            <input type="email" name="" id="txtEmail" class="form-control" required type="email" onblur="valid_Email()">
                             <span style="color: red;" id="errEmail"></span>
 
                         </div>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-12 form-group">
                             <label for="">User name*</label>
-                            <input type="text" name="" id="txtUser" required onblur="valid_Username()">
+                            <input type="text" name="" id="txtUser" class="form-control" required onblur="valid_Username()">
                             <span style="color: red;" id="errUser"></span>
                         </div>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-12 form-group">
                             <label for="">Password*</label>
-                            <input type="password" name="" id="txtPwd" required onblur="valid_Pwd()">
+                            <input type="password" name="" id="txtPwd" class="form-control" required onblur="valid_Pwd()">
                             <span style="color: red;" id="errPwd"></span>
                         </div>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-12 form-group">
                             <label for="">Comfirm Password*</label>
-                            <input type="password" name="" id="cfmPwd" required onblur="valid_CfmPwd()">
+                            <input type="password" name="" id="cfmPwd" class="form-control" required onblur="valid_CfmPwd()">
                             <span style="color: red;" id="errCfmPwd"></span>
                         </div>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-12 form-group">
                             <label for="">Địa chỉ</label>
-                            <input type="text" name="" id="txtAdd">
+                            <input type="text" name="" id="txtAdd" class="form-control">
                             <span style="color: red;" id="errAdd"></span>
                         </div>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-6">
                             <label for="">Tỉnh</label>
-                            <input type="text" name="" id="txtTinh">
+                            <input type="text" name="" id="txtTinh" class="form-control">
                             <span style="color: red;" id="errTinh"></span>
                         </div>
                         <div class="col-6">
@@ -359,26 +358,26 @@
                         </div>
 
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-12 form-check ml-3">
                             <input type="checkbox" name="" id="cbox" class="form-check-input ">
                             <label for="">Đồng ý với điều khoảng của chúng tôi</label>
                         </div>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
                 <div class="row">
-                    <div class="col-3"></div>
-                    <div class="row col-6">
+                    <div class="col-4"></div>
+                    <div class="row col-4">
                         <div class="col-12 form-group">
                             <button class="btn btn-success float-right" id="btnDK">Đăng Ký</button>
                         </div>
                     </div>
-                    <div class="col-3"></div>
+                    <div class="col-4"></div>
                 </div>
             </form>
         </div>
