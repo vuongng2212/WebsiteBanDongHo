@@ -182,7 +182,7 @@ window.addEventListener("load",function(){
             name:`DOXA GRANDEMETRE D154TWH – NAM – HANDWINDING (LÊN CÓT BẰNG TAY) `,
             img:[`./product-img/img-for-brands/doxa/doxa1.webp`,`./product-img/product-detail/D154TWH/img1.webp`,`./product-img/product-detail/D154TWH/img2.webp`,`./product-img/product-detail/D154TWH/img3.webp`,`./product-img/product-detail/D154TWH/img4.webp`,`./product-img/product-detail/D154TWH/img5.webp`,`./product-img/product-detail/D154TWH/img7.webp`],
             price:135830000,
-            brand:` Doxa (Phiên Bản Giới Hạn 1000 Chiếc Trên Toàn Thế Giới)`,
+            brand:`DOXA`,
             
             xuatXu:`Thụy Sỹ`,
             gioiTinh:`Nam`,
@@ -3658,7 +3658,7 @@ function SpHandleChangeSlide(direction){
         if(direction===1){ 
             if(spIndex===(imgArr.length-4)) return;
             spIndex++;   
-            spposition = spposition - sliderItemWidth;
+            spposition = spposition - 141;
 
              sliderMain.style = `transform: translateX(${spposition}px)`;
             
@@ -3670,7 +3670,7 @@ function SpHandleChangeSlide(direction){
                 return;
             } 
             spIndex--;
-            spposition = spposition + sliderItemWidth;
+            spposition = spposition + 141;
             sliderMain.style = `transform: translateX(${spposition}px)`;
         }
     }
@@ -3755,6 +3755,114 @@ function SpHandleChangeSlide(direction){
         showSuccessToast();
         addCart();
     })
+    
+    // Sửa code
+    let favoriteProductArr = document.querySelector(".sp_favorite_products");
+    console.log(favoriteProductArr);
+    let favoriteString = ``;
+    
+
+
+    for(let i=0;i<4;i++){
+        favoriteString+=`
+        <div class="col l-3 m-3 c-6 product-item">
+                <div class="product-sale">
+                    HOT
+                </div>
+                <div class="box-img">
+                    <a href="#" aria-label="${cartDetail[i].name}">
+                        <img  src="${cartDetail[i].img[0]}" alt="" >
+                    </a>
+                    <div class="box-text text-center" style="height: 122.287px;">
+                        <div class="title-wrapper">
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">${cartDetail[i].name}</a>
+                            </p>
+                        </div>
+                        <div class="price-wrapper" style="height: 48.4px;">
+                            <div class="star-rating star-rating--inline" role="img">
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            </div>
+                            <span class="price">
+                                <span class="amount">
+                                    ${cartDetail[i].price.toLocaleString()}
+                                    <span>
+                                        VND
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        `;
+    }
+    favoriteProductArr.innerHTML = favoriteString;
+    let favoriteElement = document.querySelectorAll(".sp_favorite_products .product-item");
+    console.log(favoriteElement);
+    favoriteElement.forEach((item,index)=>{
+        item.addEventListener("click",()=>{
+            window.localStorage.setItem("productShow",cartDetail[index].code);
+            location.href = "cart-detail.html";
+        });
+    })
+    let similarArr = [];
+    cartDetail.forEach((item)=>{
+        if(item.brand == productInfo.brand){
+            similarArr.push(item);
+        }
+    });
+    console.log(similarArr);
+    let similarCnt = document.querySelector(".similar_product_cnt");
+    console.log(similarCnt);
+    
+    let similarString = ``;
+    for(let i=0;i<4;i++){
+        similarString+=`
+        <div class="col l-3 m-3 c-6 product-item">
+                <div class="product-sale">
+                    HOT
+                </div>
+                <div class="box-img">
+                    <a href="#" aria-label="${similarArr[i].name}">
+                        <img  src="${similarArr[i].img[0]}" alt="" >
+                    </a>
+                    <div class="box-text text-center" style="height: 122.287px;">
+                        <div class="title-wrapper">
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">${similarArr[i].name}</a>
+                            </p>
+                        </div>
+                        <div class="price-wrapper" style="height: 48.4px;">
+                            <div class="star-rating star-rating--inline" role="img">
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            </div>
+                            <span class="price">
+                                <span class="amount">
+                                    ${similarArr[i].price.toLocaleString()}
+                                    <span>
+                                        VND
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        `;
+    }
+    similarCnt.innerHTML=similarString;
+
+    //Fix cuối
+
     function addCart(){
         console.log("ahihi");
         var item;
@@ -3781,8 +3889,15 @@ function SpHandleChangeSlide(direction){
         
         cartProductArr = JSON.stringify(cartProductArr);
         window.localStorage.setItem("cartProduct",cartProductArr);
-
     }
+    let similarItem = document.querySelectorAll(".similar_product_cnt .product-item");
+    console.log(similarItem);
+    similarItem.forEach((item,index)=>{
+        item.addEventListener("click",()=>{
+            window.localStorage.setItem("productShow",similarArr[index].code);
+            location.href = "cart-detail.html";
+        });
+    });
     
     
 });

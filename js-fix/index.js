@@ -1646,7 +1646,7 @@ window.addEventListener("load",()=>{
      </div>` 
     });
     stringHot1+= `<button class="col l-4 c-4 m-4 btn-product">
-    <a href="" style="text-decoration: none;">
+    <a href="product.html" style="text-decoration: none;">
         <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
     <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
     </a>
@@ -1777,7 +1777,7 @@ window.addEventListener("load",()=>{
     
     });
     tissotString+=`<button class="col l-4 c-4 m-4 btn-product">
-    <a href="" style="text-decoration: none;">
+    <a href="product.html" style="text-decoration: none;">
         <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
     <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
     </a>
@@ -1840,7 +1840,7 @@ window.addEventListener("load",()=>{
       </div>`
     })
     doxaString+=`<button class="col l-4 c-4 m-4 btn-product">
-    <a href="" style="text-decoration: none;">
+    <a href="product.html" style="text-decoration: none;">
         <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
     <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
     </a>
@@ -1903,7 +1903,7 @@ window.addEventListener("load",()=>{
       </div>`
     })
     seikoString+=`<button class="col l-4 c-4 m-4 btn-product">
-    <a href="" style="text-decoration: none;">
+    <a href="product.html" style="text-decoration: none;">
         <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
     <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
     </a>
@@ -1966,7 +1966,7 @@ let seikoItem = document.querySelectorAll(".seiko-item");
       </div>`
     });
     fossilString+=`<button class="col l-4 c-4 m-4 btn-product">
-    <a href="" style="text-decoration: none;">
+    <a href="product.html" style="text-decoration: none;">
         <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
     <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
     </a>

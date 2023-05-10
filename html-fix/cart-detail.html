@@ -7,8 +7,6 @@
     <title>Document</title>
     <script src="../js-fix/jquery-3.5.1.js"></script>
   <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
-    <script src="../js-fix/header.js"></script>
-
     <link rel="stylesheet" href="../css-fix/header.css">
     <link rel="stylesheet" href="../css-fix/grid.css">
     <link rel="stylesheet" href="../css-fix/base.css">
@@ -22,11 +20,41 @@
         margin-bottom: 8px;
       }
     </style>
+     <script>
+
+        function LogOut() {
+        localStorage.setItem('LoginStatus', 0);
+        $("#formDN").css("display", "list-item");
+        $("#AccountInfo").css("display", "none");
+      }
+      $(document).ready(function () {
+        var loginSts = localStorage.getItem('LoginStatus');
+        if (loginSts == '1') {
+          $("#formDN").css("display", "none");
+          $("#AccountInfo").css("display", "list-item");
+          let ho = localStorage.getItem('FirstName');
+          let ten = localStorage.getItem('LastName');
+          $("#AccountName").html(ten + " " + ho);
+        }
+        else {
+          $("#formDN").css("display", "list-item");
+          $("#AccountInfo").css("display", "none");
+        }
+        $('#toggle').click(function () {
+          $('nav').slideToggle();
+        });
+        $(window).scroll(function () {
+          if ($(this).scrollTop()) {
+            $('header').addClass('sticky');
+          }
+        });
+      });
+     </script>
 </head>
 <body>
     <!-- header -->
     <header>
-        <div id="toggle-nav">
+        <div id="toggle">
           <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
         </div>
         <nav class="navbar container-header">
@@ -57,7 +85,7 @@
               <img src="../img/logo.png" alt="Logo Shopdongho">
             </a>
             <li>
-              <a href="./Infomation.html">LIÊN HỆ</a>
+              <a href="">LIÊN HỆ</a>
             </li>
             <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
               <div class="row">
@@ -769,6 +797,7 @@
               </div>
         </div>
         <!-- Sản phẩm tương tự -->
+
         <div class="row" style="margin-top: 25px;">
             <div class="col l-12 m-12 c-12">
                 <div class="label-dongho" style="text-align: left;">
@@ -777,7 +806,7 @@
                 <!-- <div class="vien" style="text-align: left;"></div> -->
               </div>
         </div>
-          <div class="row product_container">
+          <div class="row product_container similar_product_cnt">
             <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     HOT
