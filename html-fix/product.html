@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../js-fix/jquery-3.5.1.js"></script>
-  <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+    <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
     <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../css-fix/header.css">
     <link rel="stylesheet" href="../css-fix/grid.css">
@@ -14,108 +15,109 @@
     <link rel="stylesheet" href="../css-fix/main.css">
     <link rel="stylesheet" href="../css-fix/product.css">
     <style>
-        .col{
-            
-        text-align: center;
-        
-        background-clip: content-box;
-        margin-top: 8px;
-        margin-bottom: 8px;
+        .col {
+
+            text-align: center;
+
+            background-clip: content-box;
+            margin-top: 8px;
+            margin-bottom: 8px;
         }
     </style>
-     <script>
+    <script>
 
         function LogOut() {
-        localStorage.setItem('LoginStatus', 0);
-        $("#formDN").css("display", "list-item");
-        $("#AccountInfo").css("display", "none");
-      }
-      $(document).ready(function () {
-        var loginSts = localStorage.getItem('LoginStatus');
-        if (loginSts == '1') {
-          $("#formDN").css("display", "none");
-          $("#AccountInfo").css("display", "list-item");
-          let ho = localStorage.getItem('FirstName');
-          let ten = localStorage.getItem('LastName');
-          $("#AccountName").html(ten + " " + ho);
+            localStorage.setItem('LoginStatus', 0);
+            $("#formDN").css("display", "list-item");
+            $("#AccountInfo").css("display", "none");
         }
-        else {
-          $("#formDN").css("display", "list-item");
-          $("#AccountInfo").css("display", "none");
-        }
-        $('#toggle').click(function () {
-          $('nav').slideToggle();
+        $(document).ready(function () {
+            var loginSts = localStorage.getItem('LoginStatus');
+            if (loginSts == '1') {
+                $("#formDN").css("display", "none");
+                $("#AccountInfo").css("display", "list-item");
+                let ho = localStorage.getItem('FirstName');
+                let ten = localStorage.getItem('LastName');
+                $("#AccountName").html(ten + " " + ho);
+            }
+            else {
+                $("#formDN").css("display", "list-item");
+                $("#AccountInfo").css("display", "none");
+            }
+            $('#toggle').click(function () {
+                $('nav').slideToggle();
+            });
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $('header').addClass('sticky');
+                }
+            });
         });
-        $(window).scroll(function () {
-          if ($(this).scrollTop()) {
-            $('header').addClass('sticky');
-          }
-        });
-      });
-     </script>
+    </script>
 </head>
+
 <body>
     <!-- header  -->
     <header>
         <div id="toggle">
-          <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+            <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
         </div>
         <nav class="navbar container-header">
-          <ul id="main-menu">
-            <li>
-              <a href="product.html">BÁN CHẠY</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="product.html">Casio</a>
-                <a class="dropdown-item" href="product.html">Pierre nannier</a>
-                <a class="dropdown-item" href="product.html">Tudor</a>
-                <a class="dropdown-item" href="product.html">Tissot</a>
-                <a class="dropdown-item" href="product.html">G-shock</a>
-                <a class="dropdown-item" href="product.html">Orient</a>
-                <a class="dropdown-item" href="product.html">Citizen</a>
-              </div>
-            </li>
-            <li>
-              <a href="">NAM</a>
-            </li>
-            <li>
-              <a href="">NỮ</a>
-            </li>
-            <a id="logo" href="./index.html" class="">
-              <img src="../img/logo.png" alt="Logo Shopdongho">
-            </a>
-            <li>
-              <a href="">LIÊN HỆ</a>
-            </li>
-            <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
-              <div class="row">
-                <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
-                <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
-                <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
-              </div>
-            </li>
-            <li class="nav-item dropdown" id="AccountInfo">
-              <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Thông tin tài khoản</a>
-                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
-                <a class="dropdown-item" href="#">Thiết lập</a>
-                <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
-              </div>
-            </li>
-            <li>
-              <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
-            </li>
-          </ul>
-  
+            <ul id="main-menu">
+                <li>
+                    <a href="product.html">BÁN CHẠY</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="product.html">Casio</a>
+                        <a class="dropdown-item" href="product.html">Pierre nannier</a>
+                        <a class="dropdown-item" href="product.html">Tudor</a>
+                        <a class="dropdown-item" href="product.html">Tissot</a>
+                        <a class="dropdown-item" href="product.html">G-shock</a>
+                        <a class="dropdown-item" href="product.html">Orient</a>
+                        <a class="dropdown-item" href="product.html">Citizen</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">NAM</a>
+                </li>
+                <li>
+                    <a href="">NỮ</a>
+                </li>
+                <a id="logo" href="./index.html" class="">
+                    <img src="../img/logo.png" alt="Logo Shopdongho">
+                </a>
+                <li>
+                    <a href="./Infomation.html">LIÊN HỆ</a>
+                </li>
+                <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
+                    <div class="row">
+                        <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
+                        <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
+                        <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" id="AccountInfo">
+                    <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                        <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                        <a class="dropdown-item" href="#">Thiết lập</a>
+                        <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+                </li>
+            </ul>
+
         </nav>
-  
-      </header>
-      <!-- body -->
+
+    </header>
+    <!-- body -->
     <div class="grid wide ">
         <div class="row pannel-intro" style="margin-bottom: 15px;">
             <div class="col l-12 m-12 c-12">
@@ -124,11 +126,12 @@
                 </div>
                 <div class="vien"></div>
                 <div class="disc">
-                    <p>Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất khi quý khách hàng tin dùng & mua sắm đồng hồ nam nữ chính hãng của thương hiệu SHOPDONGHO.com</p>
+                    <p>Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất khi quý khách hàng tin
+                        dùng & mua sắm đồng hồ nam nữ chính hãng của thương hiệu SHOPDONGHO.com</p>
                 </div>
-              </div>
+            </div>
         </div>
-       <div class="row  container">
+        <div class="row  container">
             <div class="col  l-3 m-3 c-3 brands">
                 <!-- Lọc theo thương hiệu -->
                 <div class="row name-brands-inner">
@@ -165,7 +168,7 @@
                                     <label for="Casio">Casio</label>
                                 </div>    -->
                             </div>
-         
+
                         </form>
                     </div>
                 </div>
@@ -184,7 +187,7 @@
                                     0 <span>đ</span> - 2.000.000 <span>đ</span>
                                 </div>
                                 <div class="col l-12 m-12 c-12 request-item-price" style="text-align: left;">
-                                    <input type="checkbox" name="" id=""class="check-request-price">
+                                    <input type="checkbox" name="" id="" class="check-request-price">
                                     2.000.000<span>đ</span> - 4.000.000 <span>đ</span>
                                 </div>
                                 <div class="col l-12 m-12 c-12 request-item-price" style="text-align: left;">
@@ -219,289 +222,289 @@
                         </form>
                     </div>
                 </div>
-               
-               <!-- Lọc theo giới tính -->
-               <div class="row request-between">
-                <div class="pf-help-title">
-                    <h4 class="widget-title">
-                        <span class="">Giới tính</span>
-                    </h4>
-                </div>
-                <div class="request-scroll" >
-                    <form action="">
-                        <div class="row no-gutters inner-request" style="text-align: left;">
-                            <div class="col l-12 m-12 c-12 request-item" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Nam</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                Nữ
-                            </div>
-                            
-                           
-                           
-                            
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- Bộ máy và năng lượng -->
-            <div class="row request-between">
-                <div class="pf-help-title">
-                    <h4 class="widget-title">
-                        <span class="">Giới tính</span>
-                    </h4>
-                </div>
-                <div class="request-scroll" >
-                    <form action="">
-                        <div class="row no-gutters inner-request" style="text-align: left;">
-                            <div class="col l-12 m-12 c-12 request-item" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Pin(Quanrtz)</span><span id="unitInStock"></span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Cơ(Automactic)</span><span id="unitInStock"></span>
-                            </div>    
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- Chất liệu mặt kính -->
-            <div class="row request-between">
-                <div class="pf-help-title">
-                    <h4 class="widget-title">
-                        <span class="">Chất Liệu Mặt Kính</span>
-                    </h4>
-                </div>
-                <div class="request-scroll" >
-                    <form action="">
-                        <div class="row no-gutters inner-request-window" style="text-align: left;">
-                            
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Kính Sapphire</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Kính Nhựa</span>
-                            </div>
-                        
-                        </div>
-                    </form>
-                </div>
-            </div>
-             <!-- Chất liệu dây -->
-             <div class="row request-between">
-                <div class="pf-help-title">
-                    <h4 class="widget-title">
-                        <span class="">Chất liệu dây</span>
-                    </h4>
-                </div>
-                <div class="request-scroll">
-                    <form action="">
-                        <div class="row no-gutters inner-request price" style="text-align: left;">
-                            <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
-                                <input type="checkbox" name="" id="" class="check-request-jumbed">
-                                <span>  Dây Đờ Mi</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
-                                <input type="checkbox" name="" id="" class="check-request-jumbed">
-                                <span>  Dây Da</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
-                                <input type="checkbox" name="" id="" class="check-request-jumbed">
-                                <span>  Dây Kim Loại</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
-                                <input type="checkbox" name="" id="" class="check-request-jumbed">
-                                <span>  Dây Lưới</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
-                                <input type="checkbox" name="" id="" class="check-request-jumbed">
-                                <span>  Dây Vải</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
-                                <input type="checkbox" name="" id="" class="check-request-jumbed">
-                                <span>  Dây Kiểu Lắc Tay</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
-                                <input type="checkbox" name="" id="" class="check-request-jumbed">
-                                <span>  Dây Da Cá Sấu</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
-                                <input type="checkbox" name="" id="" class="check-request-jumbed">
-                                <span>  Dây Nhựa / Cao Su</span>
-                            </div>
-                            
-                           
-                            
-                            
-                            
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- Phiên bản đặt biệt -->
-            <div class="row request-between">
-                <div class="pf-help-title">
-                    <h4 class="widget-title">
-                        <span class="">Phiên bản đặc biệt</span>
-                    </h4>
-                </div>
-                <div class="request-scroll collection" style="max-height: 235px;" >
-                    <form action="">
-                        <div class="row no-gutters inner-request-window" style="text-align: left;">
-                            
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Citizen C7</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Daniel Wellington Iconic Link</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Daniel Wellington Quadro</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Longines Grande Classique</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Longines Lyre</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Orient Bambino</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Orient Envoy - Caballero</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Orient Mako</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Orient Ray</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Orient Sun and Moon</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Rado Captain Cook</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>The Longines Elegant Collection</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>The Longines Master Collection</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Tissot Le Locle</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Tissot Le Locle Powermatic 80</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Tissot PR 100</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Tissot Visodate</span>
-                            </div>
-                           
-                           
-                            
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- Phiên bản đặc biệt -->
-            <div class="row request-between">
-                <div class="pf-help-title">
-                    <h4 class="widget-title">
-                        <span class="">Phiên bản đặc biệt</span>
-                    </h4>
-                </div>
-                <div class="request-scroll collection" style="max-height: 235px;" >
-                    <form action="">
-                        <div class="row no-gutters inner-request-window" style="text-align: left;">
-                            
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Không Lọc</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Alligator Leather(Da Cá Sấu)</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Siêu Mỏng</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Limited (Phiên bản giới hạn)</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Skeleton</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Vàng 18k</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Vật liệu Quý Hiếm</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Đính kim cương</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Choronometer</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Moon Phrase (Lịch Trăng)</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Big Date (Ô lịch Lớn)</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Perpeptual Calendar (Lịch Vạn Niên)</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Múi Giờ GMT</span>
-                            </div>
-                            <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
-                                <input type="checkbox" name="" id="">
-                                <span>Power Reserve</span>
-                            </div>
 
-                            
-                        </div>
-                    </form>
+                <!-- Lọc theo giới tính -->
+                <div class="row request-between">
+                    <div class="pf-help-title">
+                        <h4 class="widget-title">
+                            <span class="">Giới tính</span>
+                        </h4>
+                    </div>
+                    <div class="request-scroll">
+                        <form action="">
+                            <div class="row no-gutters inner-request" style="text-align: left;">
+                                <div class="col l-12 m-12 c-12 request-item" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Nam</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    Nữ
+                                </div>
+
+
+
+
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
+                <!-- Bộ máy và năng lượng -->
+                <div class="row request-between">
+                    <div class="pf-help-title">
+                        <h4 class="widget-title">
+                            <span class="">Giới tính</span>
+                        </h4>
+                    </div>
+                    <div class="request-scroll">
+                        <form action="">
+                            <div class="row no-gutters inner-request" style="text-align: left;">
+                                <div class="col l-12 m-12 c-12 request-item" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Pin(Quanrtz)</span><span id="unitInStock"></span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Cơ(Automactic)</span><span id="unitInStock"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Chất liệu mặt kính -->
+                <div class="row request-between">
+                    <div class="pf-help-title">
+                        <h4 class="widget-title">
+                            <span class="">Chất Liệu Mặt Kính</span>
+                        </h4>
+                    </div>
+                    <div class="request-scroll">
+                        <form action="">
+                            <div class="row no-gutters inner-request-window" style="text-align: left;">
+
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Kính Sapphire</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Kính Nhựa</span>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Chất liệu dây -->
+                <div class="row request-between">
+                    <div class="pf-help-title">
+                        <h4 class="widget-title">
+                            <span class="">Chất liệu dây</span>
+                        </h4>
+                    </div>
+                    <div class="request-scroll">
+                        <form action="">
+                            <div class="row no-gutters inner-request price" style="text-align: left;">
+                                <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
+                                    <input type="checkbox" name="" id="" class="check-request-jumbed">
+                                    <span> Dây Đờ Mi</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
+                                    <input type="checkbox" name="" id="" class="check-request-jumbed">
+                                    <span> Dây Da</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
+                                    <input type="checkbox" name="" id="" class="check-request-jumbed">
+                                    <span> Dây Kim Loại</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
+                                    <input type="checkbox" name="" id="" class="check-request-jumbed">
+                                    <span> Dây Lưới</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
+                                    <input type="checkbox" name="" id="" class="check-request-jumbed">
+                                    <span> Dây Vải</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
+                                    <input type="checkbox" name="" id="" class="check-request-jumbed">
+                                    <span> Dây Kiểu Lắc Tay</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
+                                    <input type="checkbox" name="" id="" class="check-request-jumbed">
+                                    <span> Dây Da Cá Sấu</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-jumbed" style="text-align: left;">
+                                    <input type="checkbox" name="" id="" class="check-request-jumbed">
+                                    <span> Dây Nhựa / Cao Su</span>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Phiên bản đặt biệt -->
+                <div class="row request-between">
+                    <div class="pf-help-title">
+                        <h4 class="widget-title">
+                            <span class="">Phiên bản đặc biệt</span>
+                        </h4>
+                    </div>
+                    <div class="request-scroll collection" style="max-height: 235px;">
+                        <form action="">
+                            <div class="row no-gutters inner-request-window" style="text-align: left;">
+
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Citizen C7</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Daniel Wellington Iconic Link</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Daniel Wellington Quadro</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Longines Grande Classique</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Longines Lyre</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Orient Bambino</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Orient Envoy - Caballero</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Orient Mako</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Orient Ray</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Orient Sun and Moon</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Rado Captain Cook</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>The Longines Elegant Collection</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>The Longines Master Collection</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Tissot Le Locle</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Tissot Le Locle Powermatic 80</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Tissot PR 100</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Tissot Visodate</span>
+                                </div>
+
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Phiên bản đặc biệt -->
+                <div class="row request-between">
+                    <div class="pf-help-title">
+                        <h4 class="widget-title">
+                            <span class="">Phiên bản đặc biệt</span>
+                        </h4>
+                    </div>
+                    <div class="request-scroll collection" style="max-height: 235px;">
+                        <form action="">
+                            <div class="row no-gutters inner-request-window" style="text-align: left;">
+
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Không Lọc</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Alligator Leather(Da Cá Sấu)</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Siêu Mỏng</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Limited (Phiên bản giới hạn)</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Skeleton</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Vàng 18k</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Vật liệu Quý Hiếm</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Đính kim cương</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Choronometer</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Moon Phrase (Lịch Trăng)</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Big Date (Ô lịch Lớn)</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Perpeptual Calendar (Lịch Vạn Niên)</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Múi Giờ GMT</span>
+                                </div>
+                                <div class="col l-12 m-12 c-12 request-item-window" style="text-align: left;">
+                                    <input type="checkbox" name="" id="">
+                                    <span>Power Reserve</span>
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="col l-9 m-9 c-9 product-container">
                 <div class="page-description">
@@ -509,13 +512,24 @@
                         <div class="hide-in-mobile">
                             <p>
                                 <span>
-                                    <img id="img-intro-products" src="../test-img/banner-dong-ho-deo-tay-chinh-hang-nam-nu.webp" alt="">
+                                    <img id="img-intro-products"
+                                        src="../test-img/banner-dong-ho-deo-tay-chinh-hang-nam-nu.webp" alt="">
                                 </span>
                             </p>
                             <blockquote>
                                 <p>
-                                    <span style="font-family: 'times new roman', times;font-size: 10pt" id="disc-for-brands">
-                                        “Người ta vẫn thường nói “thời gian là vĩnh cữu”, mọi thứ trên thế giới này có thể bị lụi tàn hoặc thụt lùi, nhưng thời gian sẽ không bao giờ phai mờ. Chính vì thế, hãy trân trọng thời gian của mình đang có với một chiếc đồng hồ chính hãng (vật dùng để kiểm soát thời gian). Nếu bạn là phái mạnh, thì đồng hồ đeo tay nam chính hãng không chỉ đơn giản dùng để kiểm soát thời gian dành cho bạn mà còn phụ kiện để khẳng định địa vị trong xã hội. Nếu bạn là phái đẹp, thì đồng hồ đeo tay nữ chính hãng sẽ là phụ kiện thời trang sành điệu nhất trong những sự kiện quan trọng dành cho bạn…. Khi mua đồng hồ thời trang cao cấp hay giá rẻ, bạn cũng nên chú ý đến 3 điều: 1 – Thương hiệu nổi tiếng được tin dùng. 2 – Kích cỡ phù hợp. 3 – Bộ máy và tính năng đáp ứng nhu cầu.”
+                                    <span style="font-family: 'times new roman', times;font-size: 10pt"
+                                        id="disc-for-brands">
+                                        “Người ta vẫn thường nói “thời gian là vĩnh cữu”, mọi thứ trên thế giới này có
+                                        thể bị lụi tàn hoặc thụt lùi, nhưng thời gian sẽ không bao giờ phai mờ. Chính vì
+                                        thế, hãy trân trọng thời gian của mình đang có với một chiếc đồng hồ chính hãng
+                                        (vật dùng để kiểm soát thời gian). Nếu bạn là phái mạnh, thì đồng hồ đeo tay nam
+                                        chính hãng không chỉ đơn giản dùng để kiểm soát thời gian dành cho bạn mà còn
+                                        phụ kiện để khẳng định địa vị trong xã hội. Nếu bạn là phái đẹp, thì đồng hồ đeo
+                                        tay nữ chính hãng sẽ là phụ kiện thời trang sành điệu nhất trong những sự kiện
+                                        quan trọng dành cho bạn…. Khi mua đồng hồ thời trang cao cấp hay giá rẻ, bạn
+                                        cũng nên chú ý đến 3 điều: 1 – Thương hiệu nổi tiếng được tin dùng. 2 – Kích cỡ
+                                        phù hợp. 3 – Bộ máy và tính năng đáp ứng nhu cầu.”
                                     </span>
                                 </p>
                             </blockquote>
@@ -622,44 +636,50 @@
                                     <img src="https://donghohaitrieu.com/wp-content/uploads/2015/10/CASIO.png" alt="Đồng hồ đeo tay Casio" class="hover08 alignleft wp-image-29288 size-full">
                                 </a>
                             </p> -->
-                        </div> 
+                        </div>
                         <!-- <p>&nbsp;</p> -->
-                        <table style="width: 100%;border-collapse: collapse;" >
+                        <table style="width: 100%;border-collapse: collapse;">
                             <tbody>
                                 <tr style="height: 95px;">
                                     <td style="width: 50%; height: 95px;">
                                         <p class="hover01">
                                             <a href="#" target="_blank" rel="noopener noreferrer">
-                                                <img id="bannerDongHoNam" class="aligncenter wp-image-97782 size-full" src="../test-img/img-icon-nam.webp" alt="Đồng hồ đeo tay nam" width="148" height="88">
+                                                <img id="bannerDongHoNam" class="aligncenter wp-image-97782 size-full"
+                                                    src="../test-img/img-icon-nam.webp" alt="Đồng hồ đeo tay nam"
+                                                    width="148" height="88">
                                             </a>
                                         </p>
                                     </td>
                                     <td style="width: 50%; height: 95px;">
                                         <p class="hover01" aria-keyshortcuts="ahii">
                                             <a href="#" target="_blank" rel="noopener noreferrer">
-                                                <img id="bannerDongHoNu" class="aligncenter wp-image-97782 size-full" src="../test-img/img-icon-nu.webp" alt="Đồng hồ đeo tay nam" width="148" height="88">
+                                                <img id="bannerDongHoNu" class="aligncenter wp-image-97782 size-full"
+                                                    src="../test-img/img-icon-nu.webp" alt="Đồng hồ đeo tay nam"
+                                                    width="148" height="88">
                                             </a>
                                         </p>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <p>&nbsp;</p> 
+                        <p>&nbsp;</p>
 
                         <!-- toolbar toobar-top -->
                         <div class="toolbar toolbar-top">
                             <div class="woocommerce-notices-wrapper"></div>
-                            <div class="prdctfltr_wc prdctfltr_woocommerce woocommerce prdctfltr_wc_regular pf_sidebar_css prdctfltr_slide prdctfltr_click_filter  prdctfltr_checkbox prdctfltr_search_fields prdctfltr_hierarchy_circle  prdctfltr_adoptive_reorder   pf_mod_multirow prdctfltr_scroll_default prdctfltr_custom_scroll"></div>
+                            <div
+                                class="prdctfltr_wc prdctfltr_woocommerce woocommerce prdctfltr_wc_regular pf_sidebar_css prdctfltr_slide prdctfltr_click_filter  prdctfltr_checkbox prdctfltr_search_fields prdctfltr_hierarchy_circle  prdctfltr_adoptive_reorder   pf_mod_multirow prdctfltr_scroll_default prdctfltr_custom_scroll">
+                            </div>
                             <div class="woocommerce-notices-wrapper">
                                 <p class="woocommerce-result-count">Hiển thị 1–33 của 299 kết quả</p>
                                 <form action="" method="get" class="woocommerce-ordering">
                                     <select name="orderby" id="" class="orderby" aria-label="Đơn hàng của cửa hàng">
-                                       <div aria-hidden="true">Thứ tự theo điểm đánh giá</div>
-                                       <option value="popularity">Thứ tự theo mức độ phổ biến</option>
-                                       <option value="rating" selected>Thứ tự theo điểm đánh giá</option>
-                                       <option value="date">Mới nhất</option>
-                                       <option value="price">Thứ tự theo giá:Thấp đến cao</option>
-                                       <option value="price-desc">Thứ tự theo giá:Cao xuống thấp</option>
+                                        <div aria-hidden="true">Thứ tự theo điểm đánh giá</div>
+                                        <option value="popularity">Thứ tự theo mức độ phổ biến</option>
+                                        <option value="rating" selected>Thứ tự theo điểm đánh giá</option>
+                                        <option value="date">Mới nhất</option>
+                                        <option value="price">Thứ tự theo giá:Thấp đến cao</option>
+                                        <option value="price-desc">Thứ tự theo giá:Cao xuống thấp</option>
                                     </select>
                                 </form>
                                 <nav class="woocommerce-pagination" id="pagination-list">
@@ -671,10 +691,12 @@
                                             <span aria-current="page" class="page-numbers current">1</span>
                                         </li>
                                         <li>
-                                            <a href="#" class="page-numbers" id="click_change_1" data-wpel-link="internal">2</a>
+                                            <a href="#" class="page-numbers" id="click_change_1"
+                                                data-wpel-link="internal">2</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="page-numbers" id="click_change_2" data-wpel-link="internal">3</a>
+                                            <a href="#" class="page-numbers" id="click_change_2"
+                                                data-wpel-link="internal">3</a>
                                         </li>
                                         <li>
                                             <span class="page-numbers dots">…</span>
@@ -697,11 +719,11 @@
                                     </div>
                                 </div>
                                 <div class="clear"></div>
-                            </div>    
+                            </div>
                         </div>
                         <!-- Product  -->
                         <div class="row product-list" id="productCnt">
-                             <!-- <div class="col l-12 m-4 c-6 product-item">
+                            <!-- <div class="col l-12 m-4 c-6 product-item">
                                 <div class="row">
                                     <div class="col l-4 m-6 c-6">
                                         <a href="#" aria-label="Casio LTP-V300L-4AUDF Nu Quanrtz">
@@ -738,7 +760,7 @@
                                     </div>
                                 </div>                               
                               </div> -->
-                              <!-- <div class="col l-4 m-4 c-6 product-item">
+                            <!-- <div class="col l-4 m-4 c-6 product-item">
                                
                                 <div class="box-img">
                                     <a href="#" aria-label="Casio LTP-V300L-4AUDF Nu Quanrtz">
@@ -934,11 +956,12 @@
                     </div>
                 </div>
             </div>
-       </div> 
+        </div>
     </div>
-    
+
     <script src="../js-fix/product.js"></script>
     <script src="../js-fix/productForBrands.js"></script>
     <script src="../js-fix/productdetail.js"></script>
 </body>
+
 </html>

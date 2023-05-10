@@ -222,7 +222,7 @@ a{
 
 
 
-/* @media screen and (min-aspect-ratio: 4/3) {
+@media screen and (min-aspect-ratio: 4/3) {
     body {
         background-size: 100% auto;
     }
@@ -258,7 +258,7 @@ a{
             padding-bottom: 100%;
         }
     }
-} */
+}
 
 @media screen and (min-height: 480px) {
     .profile-card {
@@ -472,14 +472,14 @@ a{
     }
 
     50% {
-        -webkit-border-radius: 4px;
+        -webkit-border-radius: 1rem;
     }
 
     100% {
         width: 440px;
         height: 280px;
         background: #FFFFFF;
-        -webkit-border-radius: 4px;
+        -webkit-border-radius: 1rem;
     }
 }
 
@@ -489,14 +489,14 @@ a{
     }
 
     50% {
-        border-radius: 4px;
+        border-radius: 1rem;
     }
 
     100% {
         width: 440px;
         height: 280px;
         background: #FFFFFF;
-        border-radius: 4px;
+        border-radius: 1rem;
     }
 }
 
@@ -506,14 +506,14 @@ a{
     }
 
     50% {
-        -webkit-border-radius: 4px;
+        -webkit-border-radius: 1rem;
     }
 
     100% {
         width: 280px;
         height: 440px;
         background: #FFFFFF;
-        -webkit-border-radius: 4px;
+        -webkit-border-radius: 1rem;
     }
 }
 
@@ -523,14 +523,14 @@ a{
     }
 
     50% {
-        border-radius: 4px;
+        border-radius: 1rem;
     }
 
     100% {
         width: 280px;
         height: 440px;
         background: #FFFFFF;
-        border-radius: 4px;
+        border-radius: 1rem;
     }
 }
 
