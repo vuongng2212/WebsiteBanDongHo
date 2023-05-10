@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../js-fix/jquery-3.5.1.js"></script>
-  <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+    <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+    <script src="../js-fix/header.js"></script>
+
     <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../css-fix/header.css">
     <link rel="stylesheet" href="../css-fix/bag.css">
@@ -34,36 +36,6 @@
         margin-bottom: 8px;
       }
     </style>
-     <script>
-
-      function LogOut() {
-      localStorage.setItem('LoginStatus', 0);
-      $("#formDN").css("display", "list-item");
-      $("#AccountInfo").css("display", "none");
-    }
-    $(document).ready(function () {
-      var loginSts = localStorage.getItem('LoginStatus');
-      if (loginSts == '1') {
-        $("#formDN").css("display", "none");
-        $("#AccountInfo").css("display", "list-item");
-        let ho = localStorage.getItem('FirstName');
-        let ten = localStorage.getItem('LastName');
-        $("#AccountName").html(ten + " " + ho);
-      }
-      else {
-        $("#formDN").css("display", "list-item");
-        $("#AccountInfo").css("display", "none");
-      }
-      $('#toggle-nav').click(function () {
-        $('nav').slideToggle();
-      });
-      $(window).scroll(function () {
-        if ($(this).scrollTop()) {
-          $('header').addClass('sticky');
-        }
-      });
-    });
-   </script>
 </head>
 <body>
     <!-- header -->

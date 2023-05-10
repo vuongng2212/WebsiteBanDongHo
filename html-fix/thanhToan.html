@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,119 +8,93 @@
     <title>Document</title>
     <script src="../js-fix/jquery-3.5.1.js"></script>
     <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+    <script src="../js-fix/header.js"></script>
+
     <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../css-fix/header.css">
     <link rel="stylesheet" href="../css-fix/grid.css">
     <link rel="stylesheet" href="../css-fix/base.css">
     <link rel="stylesheet" href="../css-fix/main.css">
-    
+
     <style>
         * {
-          box-sizing: border-box;
+            box-sizing: border-box;
         }
+
         .col {
-          text-align: center;
-          background-clip: content-box;
-          margin-top: 8px;
-          margin-bottom: 8px;
+            text-align: center;
+            background-clip: content-box;
+            margin-top: 8px;
+            margin-bottom: 8px;
         }
-        .err{
+
+        .err {
             border: 1px solid red;
         }
-      </style>
-       <script>
-
-        function LogOut() {
-        localStorage.setItem('LoginStatus', 0);
-        $("#formDN").css("display", "list-item");
-        $("#AccountInfo").css("display", "none");
-      }
-      $(document).ready(function () {
-        var loginSts = localStorage.getItem('LoginStatus');
-        if (loginSts == '1') {
-          $("#formDN").css("display", "none");
-          $("#AccountInfo").css("display", "list-item");
-          let ho = localStorage.getItem('FirstName');
-          let ten = localStorage.getItem('LastName');
-          $("#AccountName").html(ten + " " + ho);
-        }
-        else {
-          $("#formDN").css("display", "list-item");
-          $("#AccountInfo").css("display", "none");
-        }
-        $('#toggle-nav').click(function () {
-          $('nav').slideToggle();
-        });
-        $(window).scroll(function () {
-          if ($(this).scrollTop()) {
-            $('header').addClass('sticky');
-          }
-        });
-      });
-
-
-     </script>
+    </style>
+    </script>
 </head>
+
 <body>
-     <!-- Header navigation -->
+    <!-- Header navigation -->
 
     <header>
-      <div id="toggle-nav">
-        <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
-      </div>
-      <nav class="navbar container-header">
-        <ul id="main-menu">
-          <li>
-            <a href="product.html">BÁN CHẠY</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="product.html">Casio</a>
-              <a class="dropdown-item" href="product.html">Pierre nannier</a>
-              <a class="dropdown-item" href="product.html">Tudor</a>
-              <a class="dropdown-item" href="product.html">Tissot</a>
-              <a class="dropdown-item" href="product.html">G-shock</a>
-              <a class="dropdown-item" href="product.html">Orient</a>
-              <a class="dropdown-item" href="product.html">Citizen</a>
-            </div>
-          </li>
-          <li>
-            <a href="">NAM</a>
-          </li>
-          <li>
-            <a href="">NỮ</a>
-          </li>
-          <a id="logo" href="./index.html" class="">
-            <img src="../img/logo.png" alt="Logo Shopdongho">
-          </a>
-          <li>
-            <a href="./Infomation.html">LIÊN HỆ</a>
-          </li>
-          <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
-            <div class="row">
-              <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
-              <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
-              <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
-            </div>
-          </li>
-          <li class="nav-item dropdown" id="AccountInfo">
-            <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false"></a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Thông tin tài khoản</a>
-              <a class="dropdown-item" href="#">Đổi mật khẩu</a>
-              <a class="dropdown-item" href="#">Thiết lập</a>
-              <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
-            </div>
-          </li>
-          <li>
-            <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
-          </li>
-        </ul>
+        <div id="toggle-nav">
+            <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+        </div>
+        <nav class="navbar container-header">
+            <ul id="main-menu">
+                <li>
+                    <a href="product.html">BÁN CHẠY</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="product.html">Casio</a>
+                        <a class="dropdown-item" href="product.html">Pierre nannier</a>
+                        <a class="dropdown-item" href="product.html">Tudor</a>
+                        <a class="dropdown-item" href="product.html">Tissot</a>
+                        <a class="dropdown-item" href="product.html">G-shock</a>
+                        <a class="dropdown-item" href="product.html">Orient</a>
+                        <a class="dropdown-item" href="product.html">Citizen</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">NAM</a>
+                </li>
+                <li>
+                    <a href="">NỮ</a>
+                </li>
+                <a id="logo" href="./index.html" class="">
+                    <img src="../img/logo.png" alt="Logo Shopdongho">
+                </a>
+                <li>
+                    <a href="./Infomation.html">LIÊN HỆ</a>
+                </li>
+                <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
+                    <div class="row">
+                        <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
+                        <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
+                        <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" id="AccountInfo">
+                    <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                        <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                        <a class="dropdown-item" href="#">Thiết lập</a>
+                        <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+                </li>
+            </ul>
 
-      </nav>
+        </nav>
 
     </header>
     <div class="grid wide">
@@ -130,28 +105,30 @@
                 </div>
                 <div class="vien"></div>
                 <div class="disc">
-                    <p>Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất khi quý khách hàng tin dùng & mua sắm đồng hồ nam nữ chính hãng của thương hiệu SHOPDONGHO.com</p>
+                    <p>Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất khi quý khách hàng tin
+                        dùng & mua sắm đồng hồ nam nữ chính hãng của thương hiệu SHOPDONGHO.com</p>
                 </div>
-              </div>
+            </div>
         </div>
         <div class="row">
             <div class="col l-6 m-12 c-12 frm-user">
                 <div class="addres-title">
-                   <p>Địa chỉ nhận hàng
-                   </p>
+                    <p>Địa chỉ nhận hàng
+                    </p>
                 </div>
                 <div id="customer_details">
                     <form action="">
                         <div class="frm_user_name">
-                        <p style="text-align: left;">
-                            <label for="">Họ và Tên&nbsp;
-                                <abbr title="bắc buộc" class="required">*</abbr></label>
-                            <br>
-                            <input type="text" name="" id="name-user" placeholder="Nhập họ và tên" onblur="ktraHoTen();">
-                            <br>
-                            <span style="margin:10px; color: red;"  id="errFullName"></span>   
-                        </p>
-                        
+                            <p style="text-align: left;">
+                                <label for="">Họ và Tên&nbsp;
+                                    <abbr title="bắc buộc" class="required">*</abbr></label>
+                                <br>
+                                <input type="text" name="" id="name-user" placeholder="Nhập họ và tên"
+                                    onblur="valid_TenTT();">
+                                <br>
+                                <span style="margin:10px; color: red;" id="errFullName"></span>
+                            </p>
+
 
                         </div>
                         <div class="frm_user_tel_email row">
@@ -159,10 +136,10 @@
                                 <p style="text-align: left;">
                                     <label for="">Số điện thoại&nbsp;
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
-                                <br>
-                                <input type="tel" name="" id="tel-user" placeholder="Nhập số điện thoại">
-                                <br>
-                            <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>   
+                                    <br>
+                                    <input type="tel" name="" id="tel-user" placeholder="Nhập số điện thoại" onblur="valid_Phone()">
+                                    <br>
+                                    <span style="margin:10px; color: red;" id="errTel-user"></span>
                                 </p>
                             </div>
                             <div class="col l-6 m-12 c-12">
@@ -170,9 +147,9 @@
                                     <label for="">Địa chỉ email&nbsp;
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
                                     <br>
-                                    <input type="email" name="" id="email-user" placeholder="Nhập địa chỉ email">
+                                    <input type="email" name="" id="email-user" placeholder="Nhập địa chỉ email" onblur="valid_EmailTT()">
                                     <br>
-                            <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>   
+                                    <span style="margin:10px; color: red;" id="errEmail-user"></span>
                                 </p>
                             </div>
                         </div>
@@ -181,20 +158,21 @@
                                 <p style="text-align: left;">
                                     <label for="">Thành Phố&nbsp;
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
-                                <br>
-                                <input type="text" name="" id="city-user" placeholder="Nhập tên thành phố">
-                                <br>
-                            <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>   
+                                    <br>
+                                    <input type="text" name="" id="city-user" placeholder="Nhập tên thành phố">
+                                    <br>
+                                    <span style="margin:10px; color: red;"></span>
                                 </p>
                             </div>
                             <div class="col l-6 m-12 c-12">
                                 <p style="text-align: left;">
                                     <label for="">Địa chỉ&nbsp;
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
-                                <br>
-                                <input type="text" name="" id="address-user" placeholder="Ví dụ:Số 20 đường Cầu Giấy">
-                                <br>
-                            <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>   
+                                    <br>
+                                    <input type="text" name="" id="address-user"
+                                        placeholder="Ví dụ:Số 20 đường Cầu Giấy">
+                                    <br>
+                                    <span style="margin:10px; color: red;"></span>
                                 </p>
                             </div>
                         </div>
@@ -204,7 +182,9 @@
                                 <p class="sub-info-title">Thông tin thêm</p>
                                 <span style="line-height: 30px; font-size: 14px;">Ghi chú đơn hàng (tuỳ chọn)</span>
                                 <br>
-                                <textarea name="" id="" cols="30" rows="10" style="width: 100%; background-color: #f3f3f3;" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
+                                <textarea name="" id="" cols="30" rows="10"
+                                    style="width: 100%; background-color: #f3f3f3;"
+                                    placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
                             </div>
                         </div>
                     </form>
@@ -213,7 +193,8 @@
             <div class="col l-6 m-12 c-12 frm-product">
                 <h3 id="order_review_heading" style="padding-left: 9px;">Đơn Hàng Của Bạn</h3>
                 <div id="order_review">
-                    <table style="position: static; zoom: 1; width: 100%;" class="shop_table table woocommerce-checkout-review-order-table">
+                    <table style="position: static; zoom: 1; width: 100%;"
+                        class="shop_table table woocommerce-checkout-review-order-table">
                         <thead>
                             <tr>
                                 <th class="product-name" style="font-weight: 400;
@@ -237,9 +218,10 @@
                         <tbody class="tbody-cart">
                             <tr class="cart_item">
                                 <td class="product-name">
-                                    
-							Casio World Time AE-1200WHD-1AVDF - Nam - Quartz (Pin) - Mặt Số 45 mm, Bộ Bấm Giờ, Chống Nước 10 ATM	
-                            <strong class="product-quantity">×&nbsp;3</strong>						 
+
+                                    Casio World Time AE-1200WHD-1AVDF - Nam - Quartz (Pin) - Mặt Số 45 mm, Bộ Bấm Giờ,
+                                    Chống Nước 10 ATM
+                                    <strong class="product-quantity">×&nbsp;3</strong>
                                 </td>
                                 <td class="product-total">
                                     <span class="woocommerce-Price-amount amount">
@@ -250,9 +232,10 @@
                             </tr>
                             <tr class="cart_item">
                                 <td class="product-name">
-                                    
-							Casio World Time AE-1200WHD-1AVDF - Nam - Quartz (Pin) - Mặt Số 45 mm, Bộ Bấm Giờ, Chống Nước 10 ATM	
-                            <strong class="product-quantity">×&nbsp;3</strong>						 
+
+                                    Casio World Time AE-1200WHD-1AVDF - Nam - Quartz (Pin) - Mặt Số 45 mm, Bộ Bấm Giờ,
+                                    Chống Nước 10 ATM
+                                    <strong class="product-quantity">×&nbsp;3</strong>
                                 </td>
                                 <td class="product-total">
                                     <span class="woocommerce-Price-amount amount">
@@ -263,9 +246,10 @@
                             </tr>
                             <tr class="cart_item">
                                 <td class="product-name">
-                                    
-							Casio World Time AE-1200WHD-1AVDF - Nam - Quartz (Pin) - Mặt Số 45 mm, Bộ Bấm Giờ, Chống Nước 10 ATM	
-                            <strong class="product-quantity">×&nbsp;3</strong>						 
+
+                                    Casio World Time AE-1200WHD-1AVDF - Nam - Quartz (Pin) - Mặt Số 45 mm, Bộ Bấm Giờ,
+                                    Chống Nước 10 ATM
+                                    <strong class="product-quantity">×&nbsp;3</strong>
                                 </td>
                                 <td class="product-total">
                                     <span class="woocommerce-Price-amount amount">
@@ -294,7 +278,7 @@
                                 font-size: 14px;
                                 color: #000; width: 50%;
     text-align: right;">
-                                    <span class="woocommerce-Price-amount amount" >
+                                    <span class="woocommerce-Price-amount amount">
                                         <span class="show-total">4.119.000&nbsp;</span>
                                         <span>₫</span>
                                     </span>
@@ -310,35 +294,37 @@
                                     Trả Tiền Mặt Khi Nhận Hàng </label>
                             </li>
                             <li>
-                                <input type="radio" name="payment_method" class="input-radio"  id="payment_method_bacs">
+                                <input type="radio" name="payment_method" class="input-radio" id="payment_method_bacs">
                                 <label for="payment_method_bacs">
                                     Chuyển Khoản Ngân Hàng </label>
                             </li>
                             <div class="disc-user" style="text-align: left; margin-top: 15px;margin-left: 10px;">
-                                <p>Dữ liệu cá nhân của bạn sẽ được sử dụng để xử lý đơn đặt hàng của bạn, hỗ trợ trải nghiệm của bạn trên trang web này và cho các mục đích khác được mô tả trong chính sách riêng tư của chúng tôi.</p>
+                                <p>Dữ liệu cá nhân của bạn sẽ được sử dụng để xử lý đơn đặt hàng của bạn, hỗ trợ trải
+                                    nghiệm của bạn trên trang web này và cho các mục đích khác được mô tả trong chính
+                                    sách riêng tư của chúng tôi.</p>
                             </div>
-                        <button id="chotDon">Đặt Hàng</button>    
+                            <button id="chotDon">Đặt Hàng</button>
                         </ul>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <script>
-        window.addEventListener("load",()=>{
+        window.addEventListener("load", () => {
             let cartProductArr = window.localStorage.getItem("cartProduct");
             cartProductArr = JSON.parse(cartProductArr);
             console.log(cartProductArr);
             let tbody = document.querySelector(".tbody-cart");
             console.log(tbody);
-            let total=0;
+            let total = 0;
             let showTotal = document.querySelector(".show-total");
             console.log(showTotal);
-            
+
             let stringShow = ``;
-            cartProductArr.forEach((item)=>{
-                stringShow+=`<tr class="cart_item">
+            cartProductArr.forEach((item) => {
+                stringShow += `<tr class="cart_item">
                                 <td class="product-name">
                                     
 							${item.sp.name}
@@ -346,19 +332,20 @@
                                 </td>
                                 <td class="product-total">
                                     <span class="woocommerce-Price-amount amount">
-                                        <span class="">${parseInt(item.quantity*item.sp.price).toLocaleString()}&nbsp;</span>
+                                        <span class="">${parseInt(item.quantity * item.sp.price).toLocaleString()}&nbsp;</span>
                                         <span>₫</span>
                                     </span>
                                 </td>
                             </tr>`
-                            console.log(parseInt(item.quantity*item.sp.price).toLocaleString());
-                total+=item.quantity*item.sp.price;            
+                console.log(parseInt(item.quantity * item.sp.price).toLocaleString());
+                total += item.quantity * item.sp.price;
             });
 
-            tbody.innerHTML=stringShow;
+            tbody.innerHTML = stringShow;
             console.log(total);
             showTotal.innerHTML = total.toLocaleString();
         })
     </script>
 </body>
+
 </html>
