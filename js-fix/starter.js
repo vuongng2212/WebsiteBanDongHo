@@ -3683,7 +3683,7 @@ function SpHandleChangeSlide(direction){
     console.log(blurBtn);
     
     
-
+    console.log(containerTable)
     btnMore.addEventListener("click",function(){
         if(containerTable.offsetHeight===616){
             btnMore.innerHTML = 'Xem thêm';

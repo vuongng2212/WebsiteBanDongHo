@@ -662,7 +662,7 @@ embed,iframe,object {
 .container,.container-width,.full-width .ubermenu-nav,.row,body {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .container {
@@ -849,12 +849,12 @@ body.boxed,body.boxed .header-wrapper,body.boxed .is-sticky-section,body.boxed h
 .gallery,.row {
     display: flex;
     flex-flow: row wrap;
-    width: 100%
+    /* width: 100% */
 }
-
+/* 
 .row>div:not(.col-new):not([class^=col-]):not([class*=" col-"]) {
     width: 100%!important
-}
+} */
 
 .row.row-grid,.row.row-masonry {
     display: block
@@ -869,7 +869,7 @@ body.boxed,body.boxed .header-wrapper,body.boxed .is-sticky-section,body.boxed h
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .row .container {
@@ -3010,11 +3010,11 @@ fieldset {
     padding: 0
 }
 
-input[type=checkbox],input[type=radio] {
+/* input[type=checkbox],input[type=radio] {
     display: inline;
     font-size: 16px;
     margin-right: 10px
-}
+} */
 
 label>.label-body {
     display: inline-block;
@@ -5298,9 +5298,9 @@ label {
     color: #222
 }
 
-.table {
+/* .table {
     display: table
-}
+} */
 
 .table-cell {
     display: table-cell;

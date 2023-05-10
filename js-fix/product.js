@@ -1610,7 +1610,7 @@ window.addEventListener("load",()=>{
     let strOptBrands = ``;
     brandsArr.forEach((option)=>{
         strOptBrands+=`<div class="col l-6 m-6 c-6 brand-option" style="text-align: left;">
-        <input type="radio" name="optionBrands" value = "${option.acronym}" id="" class="opstionsBrands">
+        <input type="radio" style="margin-left:5px;" name="optionBrands" value = "${option.acronym}" id="" class="opstionsBrands">
         <label for="${option.acronym}"  style="text-transform: lowercase; ">${option.acronym}</label>
     </div>`
     });
