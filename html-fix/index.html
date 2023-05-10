@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trang Chủ</title>
+    <title>Document</title>
     <script src="../js-fix/jquery-3.5.1.js"></script>
-    <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+  <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
     <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="../css-fix/header.css">
     <!-- <link rel="stylesheet" href="../css/New.css"> -->
@@ -15,175 +14,174 @@
     <link rel="stylesheet" href="../css-fix/base.css">
     <link rel="stylesheet" href="../css-fix/main.css">
     <link rel="stylesheet" href="../css-fix/footer.css">
-    <script>
+ <script>
 
-        function LogOut() {
-            localStorage.setItem('LoginStatus', 0);
-            $("#formDN").css("display", "list-item");
-            $("#AccountInfo").css("display", "none");
-        }
-        $(document).ready(function () {
-            var loginSts = localStorage.getItem('LoginStatus');
-            if (loginSts == '1') {
-                $("#formDN").css("display", "none");
-                $("#AccountInfo").css("display", "list-item");
-                let ho = localStorage.getItem('FirstName');
-                let ten = localStorage.getItem('LastName');
-                $("#AccountName").html(ten + " " + ho);
-            }
-            else {
-                $("#formDN").css("display", "list-item");
-                $("#AccountInfo").css("display", "none");
-            }
-            $('#toggle').click(function () {
-                $('nav').slideToggle();
-            });
-            $(window).scroll(function () {
-                if ($(this).scrollTop()) {
-                    $('header').addClass('sticky');
-                }
-            });
-        });
-    </script>
+    function LogOut() {
+    localStorage.setItem('LoginStatus', 0);
+    $("#formDN").css("display", "list-item");
+    $("#AccountInfo").css("display", "none");
+  }
+  $(document).ready(function () {
+    var loginSts = localStorage.getItem('LoginStatus');
+    if (loginSts == '1') {
+      $("#formDN").css("display", "none");
+      $("#AccountInfo").css("display", "list-item");
+      let ho = localStorage.getItem('FirstName');
+      let ten = localStorage.getItem('LastName');
+      $("#AccountName").html(ten + " " + ho);
+    }
+    else {
+      $("#formDN").css("display", "list-item");
+      $("#AccountInfo").css("display", "none");
+    }
+    $('#toggle').click(function () {
+      $('nav').slideToggle();
+    });
+    $(window).scroll(function () {
+      if ($(this).scrollTop()) {
+        $('header').addClass('sticky');
+      }
+    });
+  });
+ </script>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .col {
-            text-align: center;
-            background-clip: content-box;
-            margin-top: 8px;
-            margin-bottom: 8px;
-        }
+      * {
+        box-sizing: border-box;
+      }
+      .col {
+        text-align: center;
+        background-clip: content-box;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
     </style>
     <script>
         function LogOut() {
-            localStorage.setItem('LoginStatus', 0);
-            $("#formDN").css("display", "list-item");
-            $("#AccountInfo").css("display", "none");
+          localStorage.setItem('LoginStatus', 0);
+          $("#formDN").css("display", "list-item");
+          $("#AccountInfo").css("display", "none");
         }
         $(document).ready(function () {
-            var loginSts = localStorage.getItem('LoginStatus');
-            if (loginSts == '1') {
-                $("#formDN").css("display", "none");
-                $("#AccountInfo").css("display", "list-item");
-                let ho = localStorage.getItem('FirstName');
-                let ten = localStorage.getItem('LastName');
-                $("#AccountName").html(ten + " " + ho);
+          var loginSts = localStorage.getItem('LoginStatus');
+          if (loginSts == '1') {
+            $("#formDN").css("display", "none");
+            $("#AccountInfo").css("display", "list-item");
+            let ho = localStorage.getItem('FirstName');
+            let ten = localStorage.getItem('LastName');
+            $("#AccountName").html(ten + " " + ho);
+          }
+          else {
+            $("#formDN").css("display", "list-item");
+            $("#AccountInfo").css("display", "none");
+          }
+          $('#toggle').click(function () {
+            $('nav').slideToggle();
+          });
+          $(window).scroll(function () {
+            if ($(this).scrollTop()) {
+              $('header').addClass('sticky');
             }
-            else {
-                $("#formDN").css("display", "list-item");
-                $("#AccountInfo").css("display", "none");
-            }
-            $('#toggle').click(function () {
-                $('nav').slideToggle();
-            });
-            $(window).scroll(function () {
-                if ($(this).scrollTop()) {
-                    $('header').addClass('sticky');
-                }
-            });
+          });
         });
-    </script>
-</head>
+      </script>
+  </head>
 
-<body>
-    <header>
-        <div id="toggle">
-            <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
-        </div>
-        <nav class="navbar container-header">
-            <ul id="main-menu">
-                <li>
-                    <a href="product.html">BÁN CHẠY</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="product.html">Casio</a>
-                        <a class="dropdown-item" href="product.html">Pierre nannier</a>
-                        <a class="dropdown-item" href="product.html">Tudor</a>
-                        <a class="dropdown-item" href="product.html">Tissot</a>
-                        <a class="dropdown-item" href="product.html">G-shock</a>
-                        <a class="dropdown-item" href="product.html">Orient</a>
-                        <a class="dropdown-item" href="product.html">Citizen</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="">NAM</a>
-                </li>
-                <li>
-                    <a href="">NỮ</a>
-                </li>
-                <a id="logo" href="./index.html" class="">
-                    <img src="../img/logo.png" alt="Logo Shopdongho">
-                </a>
-                <li>
-                    <a href="./Infomation.html">LIÊN HỆ</a>
-                </li>
-                <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
-                    <div class="row">
-                        <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
-                        <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
-                        <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown" id="AccountInfo">
-                    <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Thông tin tài khoản</a>
-                        <a class="dropdown-item" href="#">Đổi mật khẩu</a>
-                        <a class="dropdown-item" href="#">Thiết lập</a>
-                        <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
-                </li>
-            </ul>
+  <body>
+     <header>
+      <div id="toggle">
+        <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+      </div>
+      <nav class="navbar container-header">
+        <ul id="main-menu">
+          <li>
+            <a href="product.html">BÁN CHẠY</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="product.html">Casio</a>
+              <a class="dropdown-item" href="product.html">Pierre nannier</a>
+              <a class="dropdown-item" href="product.html">Tudor</a>
+              <a class="dropdown-item" href="product.html">Tissot</a>
+              <a class="dropdown-item" href="product.html">G-shock</a>
+              <a class="dropdown-item" href="product.html">Orient</a>
+              <a class="dropdown-item" href="product.html">Citizen</a>
+            </div>
+          </li>
+          <li>
+            <a href="">NAM</a>
+          </li>
+          <li>
+            <a href="">NỮ</a>
+          </li>
+          <a id="logo" href="./index.html" class="">
+            <img src="../img/logo.png" alt="Logo Shopdongho">
+          </a>
+          <li>
+            <a href="">LIÊN HỆ</a>
+          </li>
+          <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
+            <div class="row">
+              <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
+              <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
+              <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown" id="AccountInfo">
+            <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+              <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+              <a class="dropdown-item" href="#">Thiết lập</a>
+              <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
+            </div>
+          </li>
+          <li>
+            <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+          </li>
+        </ul>
 
-        </nav>
+      </nav>
 
     </header>
 
-
+    
     <!-- <div class="menu-btn"></div> -->
     <section class="slide-video-container" style="margin-top: 80px;">
         <div class="home">
             <video src="../img/video_rolex.mp4" class="video-slide active" autoplay loop muted></video>
 
-            <div class="grid wide">
-                <div class="row">
-                    <div class="col l-6 m-6 c-12" style="text-align: left;">
-                        <div class="content active">
-                            <h1>
-                                <span>Đồng Hồ</span>
-                                <span>Đồng Hồ</span>
-                            </h1>
-                            <p>Khám phá vẻ đẹp kiêu sa của tất cả các loại đồng hồ</p>
-                            <p>Đặt hàng để được sở hữu vẻ đẹp đó nào</p>
-                            <a href="product.html">Tìm hiểu thêm</a>
-                        </div>
-                    </div>
-                    <div class="col l-6 m-6 c-12"></div>
+           <div class="grid wide">
+            <div class="row">
+                <div class="col l-6 m-6 c-12" style="text-align: left;">
+                    <div class="content active">
+                        <h1>
+                            <span>Đồng Hồ</span>
+                            <span>Đồng Hồ</span>
+                        </h1>
+                       <p>Khám phá vẻ đẹp kiêu sa của tất cả các loại đồng hồ</p>
+                       <p>Đặt hàng để được sở hữu vẻ đẹp đó nào</p>
+                        <a href="product.html">Tìm hiểu thêm</a>
+                       </div>
                 </div>
-            </div>
+                <div class="col l-6 m-6 c-12"></div>
+               </div>
+           </div>
         </div>
     </section>
     <!-- Section banner-container -->
     <div class="grid wide">
-
+        
     </div>
     <!-- Blog -->
-
-
+    
+  
 
     <!--  -->
     <div class="grid wide">
-
+        
         <!--  -->
         <div class="row" style="margin-bottom: 15px;">
             <div class="col l-12 m-12 c-12">
@@ -192,17 +190,16 @@
                 </div>
                 <div class="vien"></div>
                 <div class="disc">
-                    <p>Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất khi quý khách hàng tin
-                        dùng & mua sắm đồng hồ nam nữ chính hãng của thương hiệu SHOPDONGHO.com</p>
+                    <p>Chúng tôi cam kết mang lại những giá trị cao nhất, chế độ hậu mãi tốt nhất khi quý khách hàng tin dùng & mua sắm đồng hồ nam nữ chính hãng của thương hiệu SHOPDONGHO.com</p>
                 </div>
-            </div>
+              </div>
         </div>
 
-        <div class="row">
-            <div class="col l-2 m-4 c-6">
-                <div class="col-inner text-center">
-                    <a href="" class="plain">
-                        <div class="icon-box featured-box icon-box-center text-center is-small">
+      <div class="row">
+        <div class="col l-2 m-4 c-6">
+            <div class="col-inner text-center">
+                <a href="" class="plain">
+                    <div class="icon-box featured-box icon-box-center text-center is-small">
                             <div class="icon-box-img" style="width: 55px;">
                                 <div class="icon">
                                     <div class="icon-inner">
@@ -213,14 +210,14 @@
                             <div class="icon-box-text last-reset">
                                 <h5 class="uppercase">Nam</h5>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
-            <div class="col l-2 m-4 c-6">
-                <div class="col-inner text-center">
-                    <a href="" class="plain">
-                        <div class="icon-box featured-box icon-box-center text-center is-small">
+        </div>
+        <div class="col l-2 m-4 c-6">
+            <div class="col-inner text-center">
+                <a href="" class="plain">
+                    <div class="icon-box featured-box icon-box-center text-center is-small">
                             <div class="icon-box-img" style="width: 55px;">
                                 <div class="icon">
                                     <div class="icon-inner">
@@ -231,14 +228,14 @@
                             <div class="icon-box-text last-reset">
                                 <h5 class="uppercase">Nữ</h5>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
-            <div class="col l-2 m-4 c-6">
-                <div class="col-inner text-center">
-                    <a href="" class="plain">
-                        <div class="icon-box featured-box icon-box-center text-center is-small">
+        </div>
+        <div class="col l-2 m-4 c-6">
+            <div class="col-inner text-center">
+                <a href="" class="plain">
+                    <div class="icon-box featured-box icon-box-center text-center is-small">
                             <div class="icon-box-img" style="width: 55px;">
                                 <div class="icon">
                                     <div class="icon-inner">
@@ -249,14 +246,14 @@
                             <div class="icon-box-text last-reset">
                                 <h5 class="uppercase">Cặp đôi</h5>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
-            <div class="col l-2 m-4 c-6">
-                <div class="col-inner text-center">
-                    <a href="" class="plain">
-                        <div class="icon-box featured-box icon-box-center text-center is-small">
+        </div>
+        <div class="col l-2 m-4 c-6">
+            <div class="col-inner text-center">
+                <a href="" class="plain">
+                    <div class="icon-box featured-box icon-box-center text-center is-small">
                             <div class="icon-box-img" style="width: 55px;">
                                 <div class="icon">
                                     <div class="icon-inner">
@@ -267,14 +264,14 @@
                             <div class="icon-box-text last-reset">
                                 <h5 class="uppercase">HOT</h5>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
-            <div class="col l-2 m-4 c-6">
-                <div class="col-inner text-center">
-                    <a href="" class="plain">
-                        <div class="icon-box featured-box icon-box-center text-center is-small">
+        </div>
+        <div class="col l-2 m-4 c-6">
+            <div class="col-inner text-center">
+                <a href="" class="plain">
+                    <div class="icon-box featured-box icon-box-center text-center is-small">
                             <div class="icon-box-img" style="width: 55px;">
                                 <div class="icon">
                                     <div class="icon-inner">
@@ -285,14 +282,14 @@
                             <div class="icon-box-text last-reset">
                                 <h5 class="uppercase">SALE</h5>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
-            <div class="col l-2 m-4 c-6">
-                <div class="col-inner text-center">
-                    <a href="" class="plain">
-                        <div class="icon-box featured-box icon-box-center text-center is-small">
+        </div>
+        <div class="col l-2 m-4 c-6">
+            <div class="col-inner text-center">
+                <a href="" class="plain">
+                    <div class="icon-box featured-box icon-box-center text-center is-small">
                             <div class="icon-box-img" style="width: 55px;">
                                 <div class="icon">
                                     <div class="icon-inner">
@@ -303,42 +300,42 @@
                             <div class="icon-box-text last-reset">
                                 <h5 class="uppercase">Dây Da</h5>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
-        <section class="banner-container">
-            <div class="banner">
-                <img src="../test-img/donghonam.jpg" alt="">
-                <div class="content-banner">
-                    <h3>Đồng hồ nam</h3>
-                    <p>Upto 45% off</p>
-                    <a href="product.html" class="btn" id="btnMale">Xem tất cả</a>
+      </div>
+      <section class="banner-container">
+        <div class="banner">
+            <img src="../test-img/donghonam.jpg" alt="">
+            <div class="content-banner">
+                <h3>Đồng hồ nam</h3>
+                <p>Upto 45% off</p>
+                <a href="product.html" class="btn" id="btnMale">Xem tất cả</a>
 
-                </div>
-            </div>
-            <div class="banner">
-                <img src="../test-img/donghonu.jpg" alt="">
-                <div class="content-banner">
-                    <h3>Đồng hồ nữ</h3>
-                    <p>Upto 45% off</p>
-                    <a href="product.html" class="btn" id="btnFemale">Xem tất cả</a>
-                </div>
-            </div>
-        </section>
-        <!-- Content img intro-->
-        <!-- Products -->
-        <div class="row" style="margin-top: 25px;">
-            <div class="col l-12 m-12 c-12">
-                <div class="label-dongho">
-                    <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng Hồ Bán Chạy Nhất</h2>
-                </div>
-                <div class="vien"></div>
             </div>
         </div>
-        <div class="row product_container cotainer-hot-1">
-            <!-- <div class="col l-3 m-3 c-6 product-item hot-1">
+        <div class="banner">
+            <img src="../test-img/donghonu.jpg" alt="">
+            <div class="content-banner">
+                <h3>Đồng hồ nữ</h3>
+                <p>Upto 45% off</p>
+                <a href="product.html" class="btn" id="btnFemale">Xem tất cả</a>
+            </div>
+        </div>
+    </section>
+      <!-- Content img intro-->
+      <!-- Products -->
+      <div class="row" style="margin-top: 25px;">
+        <div class="col l-12 m-12 c-12">
+            <div class="label-dongho">
+                <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng Hồ Bán Chạy Nhất</h2>
+            </div>
+            <div class="vien"></div>
+          </div>
+    </div>
+      <div class="row product_container cotainer-hot-1">
+        <!-- <div class="col l-3 m-3 c-6 product-item hot-1">
             <div class="product-sale">
                 HOT
             </div>
@@ -604,618 +601,614 @@
                 <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
                 </a>
           </button> -->
-        </div>
-        <!-- ĐÒng hồ Casio -->
-        <div class="row" style="margin-top: 25px;">
-            <div class="col l-12 m-12 c-12">
-                <div class="label-dongho">
-                    <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng Hồ CASIO</h2>
-                </div>
-                <div class="vien"></div>
-
+    </div>
+    <!-- ĐÒng hồ Casio --> 
+    <div class="row" style="margin-top: 25px;">
+        <div class="col l-12 m-12 c-12">
+            <div class="label-dongho">
+                <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng Hồ CASIO</h2>
             </div>
-        </div>
-        <div class="row product_container casiocnt">
-            <div class="col l-3 m-3 c-6 product-item casio-item">
-
-                <div class="box-img">
-                    <a href="#" aria-label="Casio G-SHOCK GA-110-1ADR Nam Quartz">
-                        <img src="./img/caso1.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio G-SHOCK GA-110-1ADR Nam Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-
-                            <span class="price">
-                                <span class="amount">
-                                    4.612.000
-                                    <span>
-                                        VND
-                                    </span>
+            <div class="vien"></div>
+         
+          </div>
+    </div>
+      <div class="row product_container casiocnt">
+        <div class="col l-3 m-3 c-6 product-item casio-item">
+           
+            <div class="box-img">
+                <a href="#" aria-label="Casio G-SHOCK GA-110-1ADR Nam Quartz">
+                    <img  src="./img/caso1.jpg" alt="" >
+                </a>
+                <div class="box-text text-center" style="height: 122.287px;">
+                    <div class="title-wrapper">
+                        <p  style="height: 40.7875px;">
+                            <a href="" class="product__link">Casio G-SHOCK GA-110-1ADR Nam Quartz</a>
+                        </p>
+                    </div>
+                    <div class="price-wrapper" style="height: 48.4px;">
+                       
+                        <span class="price">
+                            <span class="amount">
+                                4.612.000
+                                <span>
+                                    VND
                                 </span>
                             </span>
-                        </div>
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="col l-3 m-3 c-6 product-item casio-item">
-
-                <div class="box-img">
-                    <a href="#" aria-label="Casio Edifice EFR-526L-7AVUDF Nam Quartz">
-                        <img src="./img/casio2.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio Edifice EFR-526L-7AVUDF Nam Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-
-                            <span class="price">
-                                <span class="amount">
-                                    3.356.000
-                                    <span>
-                                        VND
-                                    </span>
+          </div>
+          <div class="col l-3 m-3 c-6 product-item casio-item">
+           
+            <div class="box-img">
+                <a href="#" aria-label="Casio Edifice EFR-526L-7AVUDF Nam Quartz">
+                    <img  src="./img/casio2.jpg" alt="" >
+                </a>
+                <div class="box-text text-center" style="height: 122.287px;">
+                    <div class="title-wrapper">
+                        <p  style="height: 40.7875px;">
+                            <a href="" class="product__link">Casio Edifice EFR-526L-7AVUDF Nam Quartz</a>
+                        </p>
+                    </div>
+                    <div class="price-wrapper" style="height: 48.4px;">
+                       
+                        <span class="price">
+                            <span class="amount">
+                               3.356.000
+                                <span>
+                                    VND
                                 </span>
                             </span>
-                        </div>
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="col l-3 m-3 c-6 product-item casio-item">
-
-                <div class="box-img">
-                    <a href="#" aria-label="Casio MTP-V300G-7AUDF Nam Quartz">
-                        <img src="./img/casio3.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio MTP-V300G-7AUDF Nam Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-
-                            <span class="price">
-                                <span class="amount">
-                                    2.177.000
-                                    <span>
-                                        VND
-                                    </span>
+          </div>
+          <div class="col l-3 m-3 c-6 product-item casio-item">
+          
+            <div class="box-img">
+                <a href="#" aria-label="Casio MTP-V300G-7AUDF Nam Quartz">
+                    <img  src="./img/casio3.jpg" alt="" >
+                </a>
+                <div class="box-text text-center" style="height: 122.287px;">
+                    <div class="title-wrapper">
+                        <p  style="height: 40.7875px;">
+                            <a href="" class="product__link">Casio MTP-V300G-7AUDF Nam Quartz</a>
+                        </p>
+                    </div>
+                    <div class="price-wrapper" style="height: 48.4px;">
+                        
+                        <span class="price">
+                            <span class="amount">
+                               2.177.000
+                                <span>
+                                    VND
                                 </span>
                             </span>
-                        </div>
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="col l-3 m-3 c-6 product-item casio-item">
-
-                <div class="box-img">
-                    <a href="#" aria-label="Casio Edifice EFR-526L-1AVUDF Nam Quartz">
-                        <img src="./img/casio4.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio Edifice EFR-526L-1AVUDF Nam Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+          </div>
+          <div class="col l-3 m-3 c-6 product-item casio-item">
+            
+            <div class="box-img">
+                <a href="#" aria-label="Casio Edifice EFR-526L-1AVUDF Nam Quartz">
+                    <img  src="./img/casio4.jpg" alt="" >
+                </a>
+                <div class="box-text text-center" style="height: 122.287px;">
+                    <div class="title-wrapper">
+                        <p  style="height: 40.7875px;">
+                            <a href="" class="product__link">Casio Edifice EFR-526L-1AVUDF Nam Quartz</a>
+                        </p>
+                    </div>
+                    <div class="price-wrapper" style="height: 48.4px;">
+                        <!-- <div class="star-rating star-rating--inline" role="img">
                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                         </div> -->
-                            <span class="price">
-                                <span class="amount">
-                                    3.356.000
-                                    <span>
-                                        VND
-                                    </span>
+                        <span class="price">
+                            <span class="amount">
+                                3.356.000
+                                <span>
+                                    VND
                                 </span>
                             </span>
-                        </div>
+                        </span>
                     </div>
                 </div>
             </div>
+          </div>
 
-            <button class="col l-4 c-4 m-4 btn-product">
+          <button class="col l-4 c-4 m-4 btn-product">
                 <a href="" style="text-decoration: none;">
-                    <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất
-                        cả</span>
-                    <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
+                    <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
+                <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
                 </a>
-            </button>
+          </button>
         </div>
         <!-- banner-product -->
-        <div class="row">
-            <div class="col l-3 m-6 c-6 category_product">
-                <a href="" class="home-product-item">
-                    <div class="home-product-item__img" style="background-image: url(../img/ongnhom.webp);">
-                    </div>
-                </a>
-            </div>
-            <div class="col l-3 m-6 c-6 category_product">
-                <a href="" class="home-product-item">
-                    <div class="home-product-item__img" style="background-image: url(../img/donghoco.webp);">
-                    </div>
-                </a>
-            </div>
-            <div class="col l-3 m-6 c-6 category_product">
-                <a href="" class="home-product-item">
-                    <div class="home-product-item__img" style="background-image: url(../img/donghopin.webp);">
-                    </div>
-                </a>
-            </div>
-            <div class="col l-3 m-6 c-6 category_product">
-                <a href="" class="home-product-item">
-                    <div class="home-product-item__img" style="background-image: url(../img/donghodoi.webp);">
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- Đồng hồ Pierre Lannier -->
-        <div class="row" style="margin-top: 25px;">
-            <div class="col l-12 m-12 c-12">
-                <div class="label-dongho">
-                    <h2 style="font-weight: 700; font-size: 1.8rem;">
-                        ĐỒNG HỒ TISSOT</h2>
-                </div>
-                <div class="vien"></div>
-
-            </div>
-        </div>
-        <div class="row product_container Tissot-cnt">
-            <div class="col l-3 m-3 c-6 product-item tissot-item">
-                <div class="product-sale">
-                    -10%
-                </div>
-                <div class="box-img">
-                    <a href="#" aria-label="Pierre Lannier 255F466 Nam Quartz">
-                        <img src="../img/pire-img1.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Pierre Lannier 255F466 Nam Quartz</a>
-                            </p>
+            <div class="row">
+                 <div class="col l-3 m-6 c-6 category_product">
+                    <a href="" class="home-product-item">
+                        <div class="home-product-item__img" style="background-image: url(../img/ongnhom.webp);">     
                         </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-
-                            <span class="price">
-                                <span class="amount" style="text-decoration: dotted; font-size: 16px;">
-                                    <span class="old-price">6.670.000VND</span>
-                                    6.003.000
-                                    <span>
-                                        VND
+                    </a>
+                  </div>
+                  <div class="col l-3 m-6 c-6 category_product">
+                    <a href="" class="home-product-item">
+                        <div class="home-product-item__img" style="background-image: url(../img/donghoco.webp);">           
+                        </div>
+                    </a>
+                  </div>
+                  <div class="col l-3 m-6 c-6 category_product">
+                    <a href="" class="home-product-item">
+                        <div class="home-product-item__img" style="background-image: url(../img/donghopin.webp);">
+                        </div>
+                    </a>
+                  </div>
+                  <div class="col l-3 m-6 c-6 category_product">
+                    <a href="" class="home-product-item">
+                        <div class="home-product-item__img" style="background-image: url(../img/donghodoi.webp);">
+                        </div>
+                    </a>
+                  </div>
+            </div>
+            <!-- Đồng hồ Pierre Lannier -->
+            <div class="row" style="margin-top: 25px;">
+                <div class="col l-12 m-12 c-12">
+                    <div class="label-dongho">
+                        <h2 style="font-weight: 700; font-size: 1.8rem;">
+                            ĐỒNG HỒ TISSOT</h2>
+                    </div>
+                    <div class="vien"></div>
+                 
+                  </div>
+            </div>
+              <div class="row product_container Tissot-cnt">
+                <div class="col l-3 m-3 c-6 product-item tissot-item">
+                    <div class="product-sale">
+                        -10%
+                    </div>
+                    <div class="box-img">
+                        <a href="#" aria-label="Pierre Lannier 255F466 Nam Quartz">
+                            <img  src="../img/pire-img1.jpg" alt="" >
+                        </a>
+                        <div class="box-text text-center" style="height: 122.287px;">
+                            <div class="title-wrapper">
+                                <p  style="height: 40.7875px;">
+                                    <a href="" class="product__link">Pierre Lannier 255F466 Nam Quartz</a>
+                                </p>
+                            </div>
+                            <div class="price-wrapper" style="height: 48.4px;">
+                                
+                                <span class="price">
+                                    <span class="amount" style="text-decoration: dotted; font-size: 16px;">
+                                        <span class="old-price">6.670.000VND</span>
+                                        6.003.000
+                                        <span>
+                                            VND
+                                        </span>
                                     </span>
                                 </span>
-                            </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <div class="product-sale">
-                    -10%
-                </div>
-                <div class="box-img">
-                    <a href="#" aria-label="Pierre Lannier 023L928 Nữ Quartz">
-                        <img src="./img/pire-img2.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Pierre Lannier 023L928 Nữ Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-
-                            <span class="price">
-                                <span class="amount" style="text-decoration: dotted; font-size: 16px;">
-                                    <span class="old-price">5.170.000VND</span>
-                                    4.653.000
-                                    <span>
-                                        VND
+                  </div>
+                  <div class="col l-3 m-3 c-6 product-item">
+                    <div class="product-sale">
+                        -10%
+                    </div>
+                    <div class="box-img">
+                        <a href="#" aria-label="Pierre Lannier 023L928 Nữ Quartz">
+                            <img  src="./img/pire-img2.jpg" alt="" >
+                        </a>
+                        <div class="box-text text-center" style="height: 122.287px;">
+                            <div class="title-wrapper">
+                                <p  style="height: 40.7875px;">
+                                    <a href="" class="product__link">Pierre Lannier 023L928 Nữ Quartz</a>
+                                </p>
+                            </div>
+                            <div class="price-wrapper" style="height: 48.4px;">
+                                
+                                <span class="price">
+                                    <span class="amount"  style="text-decoration: dotted; font-size: 16px;">
+                                        <span class="old-price">5.170.000VND</span>
+                                      4.653.000
+                                        <span>
+                                            VND
+                                        </span>
                                     </span>
                                 </span>
-                            </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <div class="product-sale">
-                    -10%
-                </div>
-                <div class="box-img">
-                    <a href="#" aria-label="Pierre Lannier 381D138 Nam Quartz">
-                        <img src="./img/pire-img3.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Pierre Lannier 381D138 Nam Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+                  </div>
+                  <div class="col l-3 m-3 c-6 product-item">
+                    <div class="product-sale">
+                        -10%
+                    </div>
+                    <div class="box-img">
+                        <a href="#" aria-label="Pierre Lannier 381D138 Nam Quartz">
+                            <img  src="./img/pire-img3.jpg" alt="" >
+                        </a>
+                        <div class="box-text text-center" style="height: 122.287px;">
+                            <div class="title-wrapper">
+                                <p  style="height: 40.7875px;">
+                                    <a href="" class="product__link">Pierre Lannier 381D138 Nam Quartz</a>
+                                </p>
+                            </div>
+                            <div class="price-wrapper" style="height: 48.4px;">
+                                <!-- <div class="star-rating star-rating--inline" role="img">
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                 </div> -->
-                            <span class="price">
-                                <span class="amount" style="text-decoration: dotted; font-size: 16px;">
-                                    <span class="old-price">4.840.000VND</span>
-                                    4.356.000
-                                    <span>
-                                        VND
+                                <span class="price">
+                                    <span class="amount" style="text-decoration: dotted; font-size: 16px;">
+                                        <span class="old-price">4.840.000VND</span>
+                                       4.356.000
+                                        <span>
+                                            VND
+                                        </span>
                                     </span>
                                 </span>
-                            </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <div class="product-sale">
-                    -10%
-                </div>
-                <div class="box-img">
-                    <a href="#" aria-label="Pierre Lannier 040J608 Nữ Quartz">
-                        <img src="./img/pire-img4.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Pierre Lannier 040J608 Nữ Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+                  </div>
+                  <div class="col l-3 m-3 c-6 product-item">
+                    <div class="product-sale">
+                        -10%
+                    </div>
+                    <div class="box-img">
+                        <a href="#" aria-label="Pierre Lannier 040J608 Nữ Quartz">
+                            <img  src="./img/pire-img4.jpg" alt="" >
+                        </a>
+                        <div class="box-text text-center" style="height: 122.287px;">
+                            <div class="title-wrapper">
+                                <p  style="height: 40.7875px;">
+                                    <a href="" class="product__link">Pierre Lannier 040J608 Nữ Quartz</a>
+                                </p>
+                            </div>
+                            <div class="price-wrapper" style="height: 48.4px;">
+                                <!-- <div class="star-rating star-rating--inline" role="img">
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                 </div> -->
-                            <span class="price">
-                                <span class="amount" style="text-decoration: dotted; font-size: 16px;">
-                                    <span class="old-price">3.670.000VND</span>
-                                    3.303.000
-                                    <span>
-                                        VND
+                                <span class="price">
+                                    <span class="amount" style="text-decoration: dotted; font-size: 16px;">
+                                        <span class="old-price">3.670.000VND</span>
+                                        3.303.000
+                                        <span>
+                                            VND
+                                        </span>
                                     </span>
                                 </span>
-                            </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <button class="col l-4 c-4 m-4 btn-product">
-                <a href="" style="text-decoration: none;">
-                    <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất
-                        cả</span>
-                    <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
-                </a>
-            </button>
-        </div>
-        <!-- Đồng hồ treo tường -->
-        <div class="row" style="margin-top: 25px;">
-            <div class="col l-12 m-12 c-12">
-                <div class="label-dongho">
-                    <!-- <div class="word-waves">
+                  </div>
+        
+                  <button class="col l-4 c-4 m-4 btn-product">
+                        <a href="" style="text-decoration: none;">
+                            <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
+                        <i class="fa-solid fa-forward" style="font-size: 17px; margin-left: 5px;"></i>
+                        </a>
+                  </button>
+                </div>      
+                <!-- Đồng hồ treo tường -->
+                <div class="row" style="margin-top: 25px;">
+                    <div class="col l-12 m-12 c-12">
+                        <div class="label-dongho">
+                            <!-- <div class="word-waves">
                                 <span>Đồng hồ Doxa</span>
                                 <span>Đồng hồ Doxa</span>
                             </div> -->
-                    <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng Hồ CASIO</h2>
+                            <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng Hồ CASIO</h2>
+                        </div>
+                        <div class="vien"></div>
+                     
+                      </div>
                 </div>
-                <div class="vien"></div>
-
-            </div>
-        </div>
-        <div class="row product_container doxa-cnt">
-            <div class="col l-3 m-3 c-6 product-item">
-                <!-- <div class="product-sale">
+                  <div class="row product_container doxa-cnt">
+                    <div class="col l-3 m-3 c-6 product-item">
+                        <!-- <div class="product-sale">
                             HOT
                         </div> -->
-                <div class="box-img">
-                    <a href="#" aria-label="Treo Tường Seiko QXA678BN Quartz">
-                        <img src="./img/treoTuong1.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Treo Tường Seiko QXA678BN Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+                        <div class="box-img">
+                            <a href="#" aria-label="Treo Tường Seiko QXA678BN Quartz">
+                                <img  src="./img/treoTuong1.jpg" alt="" >
+                            </a>
+                            <div class="box-text text-center" style="height: 122.287px;">
+                                <div class="title-wrapper">
+                                    <p  style="height: 40.7875px;">
+                                        <a href="" class="product__link">Treo Tường Seiko QXA678BN Quartz</a>
+                                    </p>
+                                </div>
+                                <div class="price-wrapper" style="height: 48.4px;">
+                                    <!-- <div class="star-rating star-rating--inline" role="img">
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     </div> -->
-                            <span class="price">
-                                <span class="amount">
-                                    956.000
-                                    <span>
-                                        VND
+                                    <span class="price">
+                                        <span class="amount">
+                                            956.000
+                                            <span>
+                                                VND
+                                            </span>
+                                        </span>
                                     </span>
-                                </span>
-                            </span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <!-- <div class="product-sale">
+                      </div>
+                      <div class="col l-3 m-3 c-6 product-item">
+                        <!-- <div class="product-sale">
                             HOT
                         </div> -->
-                <div class="box-img">
-                    <a href="#" aria-label="Treo Tường Seiko QXA768B Quartz">
-                        <img src="./img/treoTuong2.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Treo Tường Seiko QXA768B Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+                        <div class="box-img">
+                            <a href="#" aria-label="Treo Tường Seiko QXA768B Quartz">
+                                <img  src="./img/treoTuong2.jpg" alt="" >
+                            </a>
+                            <div class="box-text text-center" style="height: 122.287px;">
+                                <div class="title-wrapper">
+                                    <p  style="height: 40.7875px;">
+                                        <a href="" class="product__link">Treo Tường Seiko QXA768B Quartz</a>
+                                    </p>
+                                </div>
+                                <div class="price-wrapper" style="height: 48.4px;">
+                                    <!-- <div class="star-rating star-rating--inline" role="img">
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     </div> -->
-                            <span class="price">
-                                <span class="amount">
-                                    1.196.000
-                                    <span>
-                                        VND
+                                    <span class="price">
+                                        <span class="amount">
+                                           1.196.000
+                                            <span>
+                                                VND
+                                            </span>
+                                        </span>
                                     </span>
-                                </span>
-                            </span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <!-- <div class="product-sale">
+                      </div>
+                      <div class="col l-3 m-3 c-6 product-item">
+                        <!-- <div class="product-sale">
                             HOT
                         </div> -->
-                <div class="box-img">
-                    <a href="#" aria-label="Treo Tường Seiko QXA768S Quartz">
-                        <img src="./img/treoTuong3.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Treo Tường Seiko QXA768S Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+                        <div class="box-img">
+                            <a href="#" aria-label="Treo Tường Seiko QXA768S Quartz">
+                                <img  src="./img/treoTuong3.jpg" alt="" >
+                            </a>
+                            <div class="box-text text-center" style="height: 122.287px;">
+                                <div class="title-wrapper">
+                                    <p  style="height: 40.7875px;">
+                                        <a href="" class="product__link">Treo Tường Seiko QXA768S Quartz</a>
+                                    </p>
+                                </div>
+                                <div class="price-wrapper" style="height: 48.4px;">
+                                    <!-- <div class="star-rating star-rating--inline" role="img">
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     </div> -->
-                            <span class="price">
-                                <span class="amount">
-                                    1.196.000
-                                    <span>
-                                        VND
+                                    <span class="price">
+                                        <span class="amount">
+                                          1.196.000
+                                            <span>
+                                                VND
+                                            </span>
+                                        </span>
                                     </span>
-                                </span>
-                            </span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <!-- <div class="product-sale">
+                      </div>
+                      <div class="col l-3 m-3 c-6 product-item">
+                        <!-- <div class="product-sale">
                             HOT
                         </div> -->
-                <div class="box-img">
-                    <a href="#" aria-label="Treo Tường Seiko QXA769S Quartz">
-                        <img src="./img/treoTuong4.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Treo Tường Seiko QXA769S Quartz</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+                        <div class="box-img">
+                            <a href="#" aria-label="Treo Tường Seiko QXA769S Quartz">
+                                <img  src="./img/treoTuong4.jpg" alt="" >
+                            </a>
+                            <div class="box-text text-center" style="height: 122.287px;">
+                                <div class="title-wrapper">
+                                    <p  style="height: 40.7875px;">
+                                        <a href="" class="product__link">Treo Tường Seiko QXA769S Quartz</a>
+                                    </p>
+                                </div>
+                                <div class="price-wrapper" style="height: 48.4px;">
+                                    <!-- <div class="star-rating star-rating--inline" role="img">
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                     </div> -->
-                            <span class="price">
-                                <span class="amount">
-                                    1.340.000
-                                    <span>
-                                        VND
+                                    <span class="price">
+                                        <span class="amount">
+                                            1.340.000
+                                            <span>
+                                                VND
+                                            </span>
+                                        </span>
                                     </span>
-                                </span>
-                            </span>
+                                </div>
+                            </div>
                         </div>
+                      </div>
+            
+                      <button class="col l-4 c-4 m-4 btn-product">
+                            <a href="" style="text-decoration: none;">
+                                <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;" >Xem tất cả</span>
+                            <i class="fa-solid fa-forward fill-text" style="font-size: 17px; margin-left: 5px;"></i>
+                            </a>
+                      </button>
                     </div>
-                </div>
-            </div>
-
-            <button class="col l-4 c-4 m-4 btn-product">
-                <a href="" style="text-decoration: none;">
-                    <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất
-                        cả</span>
-                    <i class="fa-solid fa-forward fill-text" style="font-size: 17px; margin-left: 5px;"></i>
-                </a>
-            </button>
-        </div>
-        <!-- Dây da đồng hồ -->
-        <div class="row" style="margin-top: 25px;">
-            <div class="col l-12 m-12 c-12">
-                <div class="label-dongho">
-                    <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng hồ SEIKO</h2>
-                </div>
-                <div class="vien"></div>
-
-            </div>
-        </div>
-        <div class="row product_container seiko-cnt">
-            <div class="col l-3 m-3 c-6 product-item">
-                <!-- <div class="product-sale">
+                    <!-- Dây da đồng hồ -->
+                    <div class="row" style="margin-top: 25px;">
+                        <div class="col l-12 m-12 c-12">
+                            <div class="label-dongho">
+                                <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng hồ SEIKO</h2>
+                            </div>
+                            <div class="vien"></div>
+                         
+                          </div>
+                    </div>
+                      <div class="row product_container seiko-cnt">
+                        <div class="col l-3 m-3 c-6 product-item">
+                            <!-- <div class="product-sale">
                                 HOT
                             </div> -->
-                <div class="box-img">
-                    <a href="#" aria-label="Dây da Percent Leather A01AY0120XA0">
-                        <img src="./img/dayda1.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Dây da Percent Leather A01AY0120XA0</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+                            <div class="box-img">
+                                <a href="#" aria-label="Dây da Percent Leather A01AY0120XA0">
+                                    <img  src="./img/dayda1.jpg" alt="" >
+                                </a>
+                                <div class="box-text text-center" style="height: 122.287px;">
+                                    <div class="title-wrapper">
+                                        <p  style="height: 40.7875px;">
+                                            <a href="" class="product__link">Dây da Percent Leather A01AY0120XA0</a>
+                                        </p>
+                                    </div>
+                                    <div class="price-wrapper" style="height: 48.4px;">
+                                        <!-- <div class="star-rating star-rating--inline" role="img">
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         </div> -->
-                            <span class="price">
-                                <span class="amount">
-                                    510.000
-                                    <span>
-                                        VND
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <!-- <div class="product-sale">
+                                        <span class="price">
+                                            <span class="amount">
+                                                510.000
+                                                <span>
+                                                    VND
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-3 c-6 product-item">
+                            <!-- <div class="product-sale">
                                 HOT
                             </div> -->
-                <div class="box-img">
-                    <a href="#" aria-label="Dây da Percent Leather A01AY0220XA0">
-                        <img src="./img/dayda2.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Dây da Percent Leather A01AY0220XA0</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-                            <!-- <div class="star-rating star-rating--inline" role="img">
+                            <div class="box-img">
+                                <a href="#" aria-label="Dây da Percent Leather A01AY0220XA0">
+                                    <img  src="./img/dayda2.jpg" alt="" >
+                                </a>
+                                <div class="box-text text-center" style="height: 122.287px;">
+                                    <div class="title-wrapper">
+                                        <p  style="height: 40.7875px;">
+                                            <a href="" class="product__link">Dây da Percent Leather A01AY0220XA0</a>
+                                        </p>
+                                    </div>
+                                    <div class="price-wrapper" style="height: 48.4px;">
+                                        <!-- <div class="star-rating star-rating--inline" role="img">
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                             <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                         </div> -->
-                            <span class="price">
-                                <span class="amount">
-                                    510.000
-                                    <span>
-                                        VND
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <!-- <div class="product-sale">
+                                        <span class="price">
+                                            <span class="amount">
+                                               510.000
+                                                <span>
+                                                    VND
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-3 c-6 product-item">
+                            <!-- <div class="product-sale">
                                 HOT
                             </div> -->
-                <div class="box-img">
-                    <a href="#" aria-label="Dây da Percent Leather A01AY0320XA0">
-                        <img src="./img/dayda3.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Dây da Percent Leather A01AY0320XA0</a>
-                            </p>
-                        </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-
-                            <span class="price">
-                                <span class="amount">
-                                    510.000
-                                    <span>
-                                        VND
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
-                <!-- <div class="product-sale">
+                            <div class="box-img">
+                                <a href="#" aria-label="Dây da Percent Leather A01AY0320XA0">
+                                    <img  src="./img/dayda3.jpg" alt="" >
+                                </a>
+                                <div class="box-text text-center" style="height: 122.287px;">
+                                    <div class="title-wrapper">
+                                        <p  style="height: 40.7875px;">
+                                            <a href="" class="product__link">Dây da Percent Leather A01AY0320XA0</a>
+                                        </p>
+                                    </div>
+                                    <div class="price-wrapper" style="height: 48.4px;">
+                                       
+                                        <span class="price">
+                                            <span class="amount">
+                                               510.000
+                                                <span>
+                                                    VND
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col l-3 m-3 c-6 product-item">
+                            <!-- <div class="product-sale">
                                 HOT
                             </div> -->
-                <div class="box-img">
-                    <a href="#" aria-label="Dây da Percent Leather A01BY0220XA0">
-                        <img src="./img/dayda4.jpg" alt="">
-                    </a>
-                    <div class="box-text text-center" style="height: 122.287px;">
-                        <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Dây da Percent Leather A01BY0220XA0</a>
-                            </p>
+                            <div class="box-img">
+                                <a href="#" aria-label="Dây da Percent Leather A01BY0220XA0">
+                                    <img  src="./img/dayda4.jpg" alt="" >
+                                </a>
+                                <div class="box-text text-center" style="height: 122.287px;">
+                                    <div class="title-wrapper">
+                                        <p  style="height: 40.7875px;">
+                                            <a href="" class="product__link">Dây da Percent Leather A01BY0220XA0</a>
+                                        </p>
+                                    </div>
+                                    <div class="price-wrapper" style="height: 48.4px;">
+                                       
+                                        <span class="price">
+                                            <span class="amount">
+                                                3.356.000
+                                                <span>
+                                                    VND
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                
+                          <button class="col l-4 c-4 m-4 btn-product">
+                                <a href="" style="text-decoration: none;">
+                                    <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
+                                <i class="fa-solid fa-forward fill-text" style="font-size: 17px; margin-left: 5px;"></i>
+                                </a>
+                          </button>
                         </div>
-                        <div class="price-wrapper" style="height: 48.4px;">
-
-                            <span class="price">
-                                <span class="amount">
-                                    3.356.000
-                                    <span>
-                                        VND
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="col l-4 c-4 m-4 btn-product">
-                <a href="" style="text-decoration: none;">
-                    <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất
-                        cả</span>
-                    <i class="fa-solid fa-forward fill-text" style="font-size: 17px; margin-left: 5px;"></i>
-                </a>
-            </button>
-        </div>
-
+                        
     </div>
     <!-- Hot Sale -->
     <div class="grid wide">
@@ -1226,21 +1219,21 @@
                     <h2 style="font-weight: 700; font-size: 1.8rem;">Đồng Hồ Fossil</h2>
                 </div>
                 <div class="vien"></div>
-
-            </div>
+             
+              </div>
         </div>
-        <div class="row product_container fossil-cnt">
+          <div class="row product_container fossil-cnt">
             <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     -50%
                 </div>
                 <div class="box-img">
                     <a href="#" aria-label="Casio G-SHOCK GA-110AC-7ADR Nam Quartz">
-                        <img src="./img/hotsale1.jpg" alt="">
+                        <img  src="./img/hotsale1.jpg" alt="" >
                     </a>
                     <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
+                            <p  style="height: 40.7875px;">
                                 <a href="" class="product__link">Casio G-SHOCK GA-110AC-7ADR Nam Quartz</a>
                             </p>
                         </div>
@@ -1255,29 +1248,29 @@
                             <span class="price">
                                 <span class="amount">
                                     <span class="old-price">3.549.000VNĐ</span>
-
+                                    
+                        <span>
+                                    2.484.000
                                     <span>
-                                        2.484.000
-                                        <span>
-                                            VND
-                                        </span>
+                                        VND
                                     </span>
                                 </span>
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     -50%
                 </div>
                 <div class="box-img">
                     <a href="#" aria-label="Casio G-SHOCK GA-400-4ADR Nam Quartz">
-                        <img src="./img/hotSale2.jpg" alt="">
+                        <img  src="./img/hotSale2.jpg" alt="" >
                     </a>
                     <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
+                            <p  style="height: 40.7875px;">
                                 <a href="" class="product__link">Casio G-SHOCK GA-400-4ADR Nam Quartz</a>
                             </p>
                         </div>
@@ -1293,29 +1286,29 @@
                                 <span class="amount">
                                     <span class="amount">
                                         <span class="old-price">5.170.000VNĐ</span>
-
-                                        <span>
-                                            4.140.000
-                                            <span>
-                                                VND
-                                            </span>
-                                        </span>
+                                        
+                            <span>
+                                4.140.000
+                                    <span>
+                                        VND
                                     </span>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     -50%
                 </div>
                 <div class="box-img">
                     <a href="#" aria-label="Rhythm S1413S01-MSB-T Nam Quartz">
-                        <img src="./img/hotsale3.jpg" alt="">
+                        <img  src="./img/hotsale3.jpg" alt="" >
                     </a>
                     <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
+                            <p  style="height: 40.7875px;">
                                 <a href="" class="product__link">Rhythm S1413S01-MSB-T Nam Quartz</a>
                             </p>
                         </div>
@@ -1331,29 +1324,29 @@
                                 <span class="amount">
                                     <span class="amount">
                                         <span class="old-price">5.808.000VNĐ</span>
-
-                                        <span>
-                                            2.904.000
-                                            <span>
-                                                VND
-                                            </span>
-                                        </span>
+                                        
+                            <span>
+                                    2.904.000
+                                    <span>
+                                        VND
                                     </span>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     -50%
                 </div>
                 <div class="box-img">
                     <a href="#" aria-label="Rhythm S1414R01-MSB-T Nam Quartz">
-                        <img src="./img/hotsale4.jpg" alt="">
+                        <img  src="./img/hotsale4.jpg" alt="" >
                     </a>
                     <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
+                            <p  style="height: 40.7875px;">
                                 <a href="" class="product__link">Rhythm S1414R01-MSB-T Nam Quartz</a>
                             </p>
                         </div>
@@ -1363,309 +1356,289 @@
                                 <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                 <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                                 <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star" ></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
                                     <span class="amount">
                                         <span class="old-price">6.383.000VNĐ</span>
-
-                                        <span>
-                                            3.192.000
-                                            <span>
-                                                VND
-                                            </span>
-                                        </span>
+                                        
+                            <span>
+                                    3.192.000
+                                    <span>
+                                        VND
                                     </span>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <button class="col l-4 c-4 m-4 btn-product">
-                <a href="" style="text-decoration: none;">
-                    <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất
-                        cả</span>
+              </div>
+    
+              <button class="col l-4 c-4 m-4 btn-product">
+                    <a href="" style="text-decoration: none;">
+                        <span style="color: #545dda; line-height: 40px; font-size:17px; font-weight: bold;">Xem tất cả</span>
                     <i class="fa-solid fa-forward fill-text" style="font-size: 17px; margin-left: 5px;"></i>
-                </a>
-            </button>
-        </div>
+                    </a>
+              </button>
+            </div>
     </div>
     <footer id="footer" class="footer-wrapper">
         <section class="section" id="section_400">
-            <div class="bg section-bg fill bg-fill bg-loaded"> </div>
-            <div class="grid wide">
-                <div class="section-content relative">
-                    <div id="gap-4" class="clearfix" style="display: block;height: auto;">
-                        <style>
-                            #gap-4 {
-                                padding-top: 15px;
-                            }
-
-                            @media (min-width:550px) {
-                                #gap-4 {
-                                    padding-top: 20px;
-                                }
-                            }
-                        </style>
-                    </div>
-                    <div class="row row-small align-center" id="row-211">
-                        <div id="col-406" class="col medium-3 small-6 large-3">
-                            <div class="col-inner text-center dark" style="background: transparent;">
-                                <div class="icon-box featured-box icon-box-center text-center">
-                                    <div class="icon-box-img" style="width: 40px;">
-                                        <div class="icon">
-                                            <div class="icon-inner" style="color: rbg(255,255,255);">
-                                                <img width="1" height="1" src="../img/100-hang-chinh-hang.svg"
-                                                    alt="100-hang-chinh-hang">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="icon-box-text last-reset">
-                                        <div id="text-101" class="text">
-                                            <p><strong><span style="font-size: 90%;">100% HÀNG CHÍNH
-                                                        HÃNG</span></strong></p>
-                                            <style>
-                                                #text-101 {
-                                                    color: rgb(0, 0, 0);
-                                                }
-
-                                                #text-101>* {
-                                                    color: rgb(0, 0, 0);
-                                                }
-                                            </style>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <style>
-                                #col-406>.col-inner {
-                                    padding: 0px 0px 0px 0px;
-                                    margin: 0px 0px -20px 0px;
-                                }
-                            </style>
-                        </div>
-                        <div id="col-407" class="col medium-3 small-6 large-3">
-                            <div class="col-inner text-center dark" style="background: transparent;">
-                                <div class="icon-box featured-box icon-box-center text-center">
-                                    <div class="icon-box-img" style="width: 40px;">
-                                        <div class="icon">
-                                            <div class="icon-inner">
-                                                <img width="1" height="1" src="../img/giaoHang.svg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="icon-box-text last-reset">
-                                        <div id="text-102" class="text">
-                                            <span style="font-size: 90%;"><strong>MIỄN PHÍ VẬN CHUYỂN</strong></span>
-                                            <style>
-                                                #text-102 {
-                                                    color: rgb(0, 0, 0);
-                                                }
-
-                                                #text-102>* {
-                                                    color: rgb(0, 0, 0);
-                                                }
-                                            </style>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <style>
-                                #col-407>.col-inner {
-                                    margin: 0px 0px -20px 0px;
-                                }
-                            </style>
-                        </div>
-                        <div id="col-408" class="col medium-3 small-6 large-3">
-                            <div class="col-inner text-center dark" style="background: transparent;">
-                                <a class="plain" href="#baohanh" target="_blank" rel="noopener noreferrer">
-                                    <div class="icon-box featured-box icon-box-center text-center">
-                                        <div class="icon-box-img" style="width: 40px;">
-                                            <div class="icon">
-                                                <div class="icon-inner" style="color: rgb(255,255,255);">
-                                                    <img width="1" height="1" src="../img/damBao.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="icon-box-text last-reset">
-                                            <div id="text-103" class="text">
-                                                <span style="font-size: 90%;"><strong>BẢO HÀNH CHÍNH
-                                                        HÃNG</strong></span>
-                                                <style>
-                                                    #text-103 {
-                                                        color: rgb(0, 0, 0);
-                                                    }
-
-                                                    #text-103>* {
-                                                        color: rgb(0, 0, 0);
-                                                    }
-                                                </style>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <style>
-                                #col-408>.col-inner {
-                                    margin: 0px 0px -20px 0px;
-                                }
-                            </style>
-                        </div>
-                        <div id="col-409" class="col medium-3 small-6 large-3">
-                            <div class="col-inner text-center dark" style="background: transparent;">
-                                <a class="plain" href="#doi-dong-ho" target="_blank" rel="noopener noreferrer">
-                                    <div class="icon-box featured-box icon-box-center text-center">
-                                        <div class="icon-box-img" style="width: 40px;">
-                                            <div class="icon">
-                                                <div class="icon-inner" style="color: rgb(255,255,255);">
-                                                    <img width="1" height="1" src="../img/return-ic.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="icon-box-text last-reset">
-                                            <div id="text-104" class="text">
-                                                <span style="font-size: 90%;"><strong>ĐỔI HÀNG TRONG 7
-                                                        NGÀY</strong></span>
-                                                <style>
-                                                    #text-104 {
-                                                        color: rgb(0, 0, 0);
-                                                    }
-
-                                                    #text-104>* {
-                                                        color: rgb(0, 0, 0);
-                                                    }
-                                                </style>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <style>
-                                #col-408>.col-inner {
-                                    margin: 0px 0px -20px 0px;
-                                }
-                            </style>
-                        </div>
-                        <style>
-                            #row-211>.col>.col-inner {
-                                padding: 0px 0px 0px 0px;
-                            }
-                        </style>
-                    </div>
-                    <div id="gap-5" class="clearfix" style="display: block;height: auto;">
-                        <style>
-                            #gap-5 {
-                                padding-top: 15px;
-                            }
-
-                            @media (min-width:550px) {
-                                #gap-5 {
-                                    padding-top: 20px;
-                                }
-                            }
-                        </style>
-                    </div>
+          <div class="bg section-bg fill bg-fill bg-loaded"> </div>
+          <div class="grid wide">
+            <div class="section-content relative">
+                <div id="gap-4" class="clearfix" style="display: block;height: auto;">
+                  <style>
+                    #gap-4 {
+                      padding-top: 15px;
+                    }
+                    @media (min-width:550px) {
+                      #gap-4 {
+                        padding-top: 20px;
+                      }
+                    }
+                  </style>
                 </div>
-            </div>
-            <style>
-                #section_400 {
-                    padding-top: 0px;
-                    padding-bottom: 0px;
-                    background-color: rgb(251, 230, 166);
-                }
-            </style>
+                <div class="row row-small align-center" id="row-211">
+                  <div id="col-406" class="col medium-3 small-6 large-3">
+                    <div class="col-inner text-center dark" style="background: transparent;">
+                      <div class="icon-box featured-box icon-box-center text-center">
+                        <div class="icon-box-img" style="width: 40px;">
+                          <div class="icon">
+                            <div class="icon-inner" style="color: rbg(255,255,255);">
+                              <img width="1" height="1" src="../img/100-hang-chinh-hang.svg" alt="100-hang-chinh-hang">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="icon-box-text last-reset">
+                          <div id="text-101" class="text">
+                            <p><strong><span style="font-size: 90%;">100% HÀNG CHÍNH HÃNG</span></strong></p>
+                            <style>
+                              #text-101 {
+                                color: rgb(0, 0, 0);
+                              }
+                              #text-101 > * {
+                                color: rgb(0, 0, 0);
+                              }
+                            </style>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <style>
+                      #col-406 > .col-inner {
+                        padding: 0px 0px 0px 0px;
+                        margin: 0px 0px -20px 0px;
+                      }
+                    </style>
+                  </div>
+                  <div id="col-407" class="col medium-3 small-6 large-3">
+                    <div class="col-inner text-center dark" style="background: transparent;">
+                      <div class="icon-box featured-box icon-box-center text-center">
+                        <div class="icon-box-img" style="width: 40px;">
+                          <div class="icon">
+                            <div class="icon-inner">
+                              <img width="1" height="1" src="../img/giaoHang.svg" alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="icon-box-text last-reset">
+                          <div id="text-102" class="text">
+                            <span style="font-size: 90%;"><strong>MIỄN PHÍ VẬN CHUYỂN</strong></span>
+                            <style>
+                              #text-102 {
+                                color: rgb(0, 0, 0);
+                              }
+                              #text-102 > * {
+                                color: rgb(0, 0, 0);
+                              }
+                            </style>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <style>#col-407 > .col-inner { margin: 0px 0px -20px 0px;}</style>
+                  </div>
+                  <div id="col-408" class="col medium-3 small-6 large-3">
+                    <div class="col-inner text-center dark" style="background: transparent;">
+                      <a class="plain" href="#baohanh" target="_blank" rel="noopener noreferrer">
+                        <div class="icon-box featured-box icon-box-center text-center">
+                          <div class="icon-box-img" style="width: 40px;">
+                            <div class="icon">
+                              <div class="icon-inner" style="color: rgb(255,255,255);">
+                                <img width="1" height="1" src="../img/damBao.svg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="icon-box-text last-reset">
+                            <div id="text-103" class="text">
+                              <span style="font-size: 90%;"><strong>BẢO HÀNH CHÍNH HÃNG</strong></span>
+                              <style>
+                                #text-103 {
+                                  color: rgb(0, 0, 0);
+                                }
+                                #text-103 > * {
+                                  color: rgb(0, 0, 0);
+                                }
+                              </style>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <style> #col-408 > .col-inner { margin: 0px 0px -20px 0px; } </style>
+                  </div>
+                  <div id="col-409" class="col medium-3 small-6 large-3">
+                    <div class="col-inner text-center dark" style="background: transparent;">
+                      <a class="plain" href="#doi-dong-ho" target="_blank" rel="noopener noreferrer">
+                        <div class="icon-box featured-box icon-box-center text-center">
+                          <div class="icon-box-img" style="width: 40px;">
+                            <div class="icon">
+                              <div class="icon-inner" style="color: rgb(255,255,255);">
+                                <img width="1" height="1" src="../img/return-ic.svg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="icon-box-text last-reset">
+                            <div id="text-104" class="text">
+                              <span style="font-size: 90%;"><strong>ĐỔI HÀNG TRONG 7 NGÀY</strong></span>
+                            <style>
+                              #text-104 {
+                                color: rgb(0, 0, 0);
+                              }
+                              #text-104 > * {
+                                color: rgb(0, 0, 0);
+                              }
+                            </style>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <style> #col-408 > .col-inner { margin: 0px 0px -20px 0px; } </style>
+                  </div>
+                  <style> #row-211 > .col > .col-inner { padding: 0px 0px 0px 0px; } </style>
+                </div>
+                <div id="gap-5" class="clearfix" style="display: block;height: auto;">
+                <style>
+                  #gap-5 {
+                    padding-top: 15px;
+                  }
+                  @media (min-width:550px) {
+                    #gap-5 {
+                      padding-top: 20px;
+                    }
+                  }
+                </style>
+                </div>
+              </div>
+          </div>
+          <style>
+            #section_400 {
+              padding-top: 0px;
+              padding-bottom: 0px;
+              background-color: rgb(251, 230, 166);
+            }
+          </style>
         </section>
         <section class="new_footer_area bg_color">
-            <div class="hide-for-small">
-                <div class="grid wide">
-                    <div class="new_footer_top">
-                        <div class="container">
-                            <!-- hide for small -->
-                            <div class="row">
-                                <div class="col l-3 m-3 c-3">
-                                    <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
-                                        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-                                        <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
-                                        <p>Đừng bỏ lỡ bất kỳ cập nhật nào về các mẫu và sản phẩm mới của chúng tôi.!</p>
-                                        <form action="#" class="f_subscribe_two mailchimp" method="post"
-                                            novalidate="true" _lpchecked="1">
-                                            <input type="text" name="EMAIL" class="form-control memail"
-                                                placeholder="Email">
-                                            <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
-                                            <p class="mchimp-errmessage" style="display: none;"></p>
-                                            <p class="mchimp-sucmessage" style="display: none;"></p>
-                                        </form>
-                                    </div>
+          <div class="hide-for-small">
+            <div class="grid wide">
+                <div class="new_footer_top">
+                    <div class="container">
+                      <!-- hide for small -->
+                        <div class="row">
+                            <div class="col l-3 m-3 c-3">
+                                <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                                    <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
+                                    <p>Đừng bỏ lỡ bất kỳ cập nhật nào về các mẫu và sản phẩm mới của chúng tôi.!</p>
+                                    <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                        <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                        <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                        <p class="mchimp-errmessage" style="display: none;"></p>
+                                        <p class="mchimp-sucmessage" style="display: none;"></p>
+                                    </form>
                                 </div>
-                                <div class="col l-3 m-3 c-3">
-                                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
-                                        style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-                                        <h3 class="f-title f_600 t_color f_size_18">Member</h3>
-                                        <ul class="list-unstyled f_list">
-                                            <li><a href="#">Phan Anh Tuấn</a></li>
-                                            <li><a href="#">Nguyễn Đức Vương</a></li>
-                                            <li><a href="#">Mai Lê Huy Hoàng</a></li>
-                                        </ul>
-                                    </div>
+                            </div>
+                            <div class="col l-3 m-3 c-3">
+                                <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                                    <h3 class="f-title f_600 t_color f_size_18">Member</h3>
+                                    <ul class="list-unstyled f_list">
+                                        <li><a href="#">Phan Anh Tuấn</a></li>
+                                        <li><a href="#">Nguyễn Đức Vương</a></li>
+                                        <li><a href="#">Mai Lê Huy Hoàng</a></li>
+                                    </ul>
                                 </div>
-                                <div class="col l-3 m-3 c-3">
-                                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
-                                        style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
-                                        <h3 class="f-title f_600 t_color f_size_18">Help</h3>
-                                        <ul class="list-unstyled f_list">
-                                            <li><a href="#">FAQ</a></li>
-                                            <li><a href="#">Term &amp; conditions</a></li>
-                                            <li><a href="#">Reporting</a></li>
-                                            <li><a href="#">Documentation</a></li>
-                                            <li><a href="#">Support Policy</a></li>
-                                            <li><a href="#">Privacy</a></li>
-                                        </ul>
-                                    </div>
+                            </div>
+                            <div class="col l-3 m-3 c-3">
+                                <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                                    <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                                    <ul class="list-unstyled f_list">
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Term &amp; conditions</a></li>
+                                        <li><a href="#">Reporting</a></li>
+                                        <li><a href="#">Documentation</a></li>
+                                        <li><a href="#">Support Policy</a></li>
+                                        <li><a href="#">Privacy</a></li>
+                                    </ul>
                                 </div>
-                                <div class="col l-3 m-3 c-3">
-                                    <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
-                                        style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
-                                        <h3 class="f-title f_600 t_color f_size_18">Contact Us Via</h3>
-                                        <div class="f_social_icon">
-                                            <a href="#" class="fab fa-facebook"></a>
-                                            <a href="#" class="fab fa-github"></a>
-                                            <a href="#" class="fab fa-youtube"></a>
-                                            <a href="#" class="fab fa-instagram"></a>
-                                        </div>
+                            </div>
+                            <div class="col l-3 m-3 c-3">
+                                <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                    <h3 class="f-title f_600 t_color f_size_18">Contact Us Via</h3>
+                                    <div class="f_social_icon">
+                                        <a href="#" class="fab fa-facebook"></a>
+                                        <a href="#" class="fab fa-github"></a>
+                                        <a href="#" class="fab fa-youtube"></a>
+                                        <a href="#" class="fab fa-instagram"></a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="footer_bg">
-                            <div class="footer_bg_one"></div>
-                            <div class="footer_bg_two"></div>
                         </div>
                     </div>
-                </div>
-                <div class="footer_bottom">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-sm-7">
-                                <p class="mb-0 f_400">© Nhóm 3.</p>
-                            </div>
-                            <div class="col-lg-6 col-sm-5 text-right">
-                                <p>Made by <i class="icon_heart"></i><a href="#" target="_blank">SHOP Đồng Hồ</a></p>
-                            </div>
+                    <div class="footer_bg">
+                        <div class="footer_bg_one"></div>
+                        <div class="footer_bg_two"></div>
+                    </div>
+                  </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <p class="mb-0 f_400">© Nhóm 3.</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-5 text-right">
+                            <p>Made by <i class="icon_heart"></i><a href="#" target="_blank">SHOP Đồng Hồ</a></p>
                         </div>
                     </div>
                 </div>
             </div>
+          </div>
         </section>
-    </footer>
-    <script src="../js-fix/index.js"></script>
-    <script>
-
-        let cartProduct = [];
-        let productConvertJson = JSON.stringify(cartProduct);
-        window.localStorage.setItem("cartProduct", productConvertJson);
-
+      </footer>
+      <script>
+        console.log(window.localStorage.getItem("cartProduct"));
+        if(window.localStorage.getItem("cartProduct") == null){
+            let cartProduct = [];
+            let productConvertJson = JSON.stringify(cartProduct);
+            window.localStorage.setItem("cartProduct",productConvertJson);
+        }
+        // let cartProduct = [];
+        //     let productConvertJson = JSON.stringify(cartProduct);
+        // window.localStorage.setItem("cartProduct",productConvertJson);
+        // let cartProduct = localStorage.getItem("cartProduct") ? JSON.parse(localStorage.getItem("cartProduct")) : [];
+        //      let productConvertJson = JSON.stringify(cartProduct);
+        // window.localStorage.setItem("cartProduct",productConvertJson);
+        // window.localStorage.setItem("cartProduct",JSON.stringify(cartProduct));
+        if(window.localStorage.getItem("cartProduct") == null){
+            // let cartProduct = [];
+            // let productConvertJson = JSON.stringify(cartProduct);
+            // window.localStorage.setItem("cartProduct",productConvertJson);
+        }
     </script>
-</body>
-
+    <script src="../js-fix/index.js"></script>
+   
+  </body>
 </html>

@@ -23,6 +23,9 @@
           margin-top: 8px;
           margin-bottom: 8px;
         }
+        .err{
+            border: 1px solid red;
+        }
       </style>
        <script>
 
@@ -53,6 +56,8 @@
           }
         });
       });
+
+
      </script>
 </head>
 <body>
@@ -90,7 +95,7 @@
             <img src="../img/logo.png" alt="Logo Shopdongho">
           </a>
           <li>
-            <a href="./Infomation.html">LIÊN HỆ</a>
+            <a href="">LIÊN HỆ</a>
           </li>
           <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
             <div class="row">
@@ -142,8 +147,11 @@
                             <label for="">Họ và Tên&nbsp;
                                 <abbr title="bắc buộc" class="required">*</abbr></label>
                             <br>
-                            <input type="text" name="" id="name-user" placeholder="Nhập họ và tên">
+                            <input type="text" name="" id="name-user" placeholder="Nhập họ và tên" onblur="ktraHoTen();">
+                            <br>
+                            <span style="margin:10px; color: red;"  id="errFullName"></span>   
                         </p>
+                        
 
                         </div>
                         <div class="frm_user_tel_email row">
@@ -153,6 +161,8 @@
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
                                 <br>
                                 <input type="tel" name="" id="tel-user" placeholder="Nhập số điện thoại">
+                                <br>
+                            <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>   
                                 </p>
                             </div>
                             <div class="col l-6 m-12 c-12">
@@ -161,6 +171,8 @@
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
                                     <br>
                                     <input type="email" name="" id="email-user" placeholder="Nhập địa chỉ email">
+                                    <br>
+                            <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>   
                                 </p>
                             </div>
                         </div>
@@ -171,6 +183,8 @@
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
                                 <br>
                                 <input type="text" name="" id="city-user" placeholder="Nhập tên thành phố">
+                                <br>
+                            <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>   
                                 </p>
                             </div>
                             <div class="col l-6 m-12 c-12">
@@ -179,6 +193,8 @@
                                         <abbr title="bắc buộc" class="required">*</abbr></label>
                                 <br>
                                 <input type="text" name="" id="address-user" placeholder="Ví dụ:Số 20 đường Cầu Giấy">
+                                <br>
+                            <span style="margin:10px; color: red;">Vui Lòng Nhập lại</span>   
                                 </p>
                             </div>
                         </div>

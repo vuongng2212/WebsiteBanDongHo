@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../js-fix/jquery-3.5.1.js"></script>
-    <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
+  <script src="../js-fix/BootstrapJS/bootstrap.js"></script>
     <link rel="stylesheet" href="../css-fix/header.css">
     <link rel="stylesheet" href="../css-fix/grid.css">
     <link rel="stylesheet" href="../css-fix/base.css">
@@ -15,128 +14,117 @@
     <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
     <style>
         .col {
-            text-align: center;
-            background-clip: content-box;
-            margin-top: 8px;
-            margin-bottom: 8px;
-        }
+        text-align: center;
+        background-clip: content-box;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
     </style>
-    <script>
+     <script>
 
         function LogOut() {
-            localStorage.setItem('LoginStatus', 0);
-            $("#formDN").css("display", "list-item");
-            $("#AccountInfo").css("display", "none");
+        localStorage.setItem('LoginStatus', 0);
+        $("#formDN").css("display", "list-item");
+        $("#AccountInfo").css("display", "none");
+      }
+      $(document).ready(function () {
+        var loginSts = localStorage.getItem('LoginStatus');
+        if (loginSts == '1') {
+          $("#formDN").css("display", "none");
+          $("#AccountInfo").css("display", "list-item");
+          let ho = localStorage.getItem('FirstName');
+          let ten = localStorage.getItem('LastName');
+          $("#AccountName").html(ten + " " + ho);
         }
-        $(document).ready(function () {
-            var loginSts = localStorage.getItem('LoginStatus');
-            if (loginSts == '1') {
-                $("#formDN").css("display", "none");
-                $("#AccountInfo").css("display", "list-item");
-                let ho = localStorage.getItem('FirstName');
-                let ten = localStorage.getItem('LastName');
-                $("#AccountName").html(ten + " " + ho);
-            }
-            else {
-                $("#formDN").css("display", "list-item");
-                $("#AccountInfo").css("display", "none");
-            }
-            $('#toggle').click(function () {
-                $('nav').slideToggle();
-            });
-            $(window).scroll(function () {
-                if ($(this).scrollTop()) {
-                    $('header').addClass('sticky');
-                }
-            });
+        else {
+          $("#formDN").css("display", "list-item");
+          $("#AccountInfo").css("display", "none");
+        }
+        $('#toggle').click(function () {
+          $('nav').slideToggle();
         });
-    </script>
+        $(window).scroll(function () {
+          if ($(this).scrollTop()) {
+            $('header').addClass('sticky');
+          }
+        });
+      });
+     </script>
 </head>
-
 <body>
     <!-- header -->
     <header>
         <div id="toggle">
-            <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
+          <i class="fas fa-bars fa-spin" style="color: #ced6e0;"></i>
         </div>
         <nav class="navbar container-header">
-            <ul id="main-menu">
-                <li>
-                    <a href="product.html">BÁN CHẠY</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">THƯƠNG
-                        HIỆU</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="product.html">Casio</a>
-                        <a class="dropdown-item" href="product.html">Pierre
-                            nannier</a>
-                        <a class="dropdown-item" href="product.html">Tudor</a>
-                        <a class="dropdown-item" href="product.html">Tissot</a>
-                        <a class="dropdown-item" href="product.html">G-shock</a>
-                        <a class="dropdown-item" href="product.html">Orient</a>
-                        <a class="dropdown-item" href="product.html">Citizen</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="product.html">NAM</a>
-                </li>
-                <li>
-                    <a href="product.html">NỮ</a>
-                </li>
-                <a id="logo" href="./index.html" class="">
-                    <img src="../img/logo.png" alt="Logo Shopdongho">
-                </a>
-                <li>
-                    <a href="./Infomation.html">LIÊN HỆ</a>
-                </li>
-                <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
-                    <div class="row">
-                        <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
-                        <label for="" style="padding-left:
-                                5px;padding-right: 5px; font-size: 20px;"></label>
-                        <a href="Register.html" class="btn-dtl"><span>ĐĂNG
-                                KÝ</span></a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown" id="AccountInfo">
-                    <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"></a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Thông tin tài
-                            khoản</a>
-                        <a class="dropdown-item" href="#">Đổi mật khẩu</a>
-                        <a class="dropdown-item" href="#">Thiết lập</a>
-                        <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
-                </li>
-            </ul>
-
+          <ul id="main-menu">
+            <li>
+              <a href="product.html">BÁN CHẠY</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">THƯƠNG HIỆU</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="product.html">Casio</a>
+                <a class="dropdown-item" href="product.html">Pierre nannier</a>
+                <a class="dropdown-item" href="product.html">Tudor</a>
+                <a class="dropdown-item" href="product.html">Tissot</a>
+                <a class="dropdown-item" href="product.html">G-shock</a>
+                <a class="dropdown-item" href="product.html">Orient</a>
+                <a class="dropdown-item" href="product.html">Citizen</a>
+              </div>
+            </li>
+            <li>
+              <a href="product.html">NAM</a>
+            </li>
+            <li>
+              <a href="product.html">NỮ</a>
+            </li>
+            <a id="logo" href="./index.html" class="">
+              <img src="../img/logo.png" alt="Logo Shopdongho">
+            </a>
+            <li>
+              <a href="">LIÊN HỆ</a>
+            </li>
+            <li style="padding-top: 20px; padding-left: 20px;" id="formDN">
+              <div class="row">
+                <a href="Login.html" class="btn-dtl"><span>ĐĂNG NHẬP</span></a>
+                <label for="" style="padding-left: 5px;padding-right: 5px; font-size: 20px;"></label>
+                <a href="Register.html" class="btn-dtl"><span>ĐĂNG KÝ</span></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown" id="AccountInfo">
+              <a class="nav-link dropdown-toggle" href="#" id="AccountName" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Thông tin tài khoản</a>
+                <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                <a class="dropdown-item" href="#">Thiết lập</a>
+                <a class="dropdown-item" href="#" onclick="LogOut()">Đăng xuất</a>
+              </div>
+            </li>
+            <li>
+              <a href="bag.html"><i class="fa-solid fa-cart-shopping" style="color: #576574;"></i></a>
+            </li>
+          </ul>
+  
         </nav>
-
-    </header>
+  
+      </header>
     <!-- body -->
-
-    <div class="grid wide" style="margin-top: 80px;">
-        <div id="toast"></div>
-        <div class="row link_path">
-            <div class="col l-12 m-12 c-12" style="text-align:left;
-                    margin-top:10px;">
+      
+   <div class="grid wide" style="margin-top: 80px;">
+    <div id="toast"></div>
+    <div class="row link_path">
+            <div class="col l-12 m-12 c-12" style="text-align:left; margin-top:10px;">
                 <p><a href="./index.html"></a>
-                    <span class="separator"> » </span><a href="" id="brands-detail">ĐỒNG HỒ PIERRE LANNIER</a><span
-                        class="separator"> » </span><a href="" id="name-product-detail">Đồng Hồ PIERRE LANNIER Nữ</a>
-                </p>
+                    <span class="separator"> » </span><a href="" id="brands-detail">ĐỒNG HỒ PIERRE LANNIER</a><span class="separator"> » </span><a href="" id="name-product-detail">Đồng Hồ PIERRE LANNIER Nữ</a></p>
             </div>
         </div>
         <div class="row img-container">
-            <div class="col l-6 m-12 c-12 v1" style="position:
-                    relative;overflow: hidden;">
-                <div class="row no-gutters main_scree n" style=" overflow:
-                        hidden;">
+            <div class="col l-6 m-12 c-12 v1" style="position: relative;overflow: hidden;">
+                <div class="row no-gutters main_scree   n" style=" overflow: hidden;">
                     <div class="row no-gutters img-container-list">
                         <!-- <div class="col l-12 m-12 c-12 img-container-item"><img  src="https://media.shopdongho.com/2020/03/rhythm-S1413S01-MSB.jpg" alt=""></div>
                         <div class="col l-12 m-12 c-12 img-container-item"><img  src="https://media.shopdongho.com/2020/03/rhythm-S1413S01-MSB.jpg" alt=""></div>
@@ -145,24 +133,22 @@
                         <div class="col l-12 m-12 c-12 img-container-item"><img  src="https://media.shopdongho.com/2020/03/rhythm-S1413S01-MSB.jpg" alt=""></div> -->
                     </div>
                 </div>
-                <button class="move-left-main"> <i class="fa-solid
-                            fa-angle-left"></button></i>
-                <button class="move-right-main"> <i class="fa-solid
-                            fa-angle-right"></i> </button>
-
+                <button class="move-left-main"> <i class="fa-solid fa-angle-left"></button></i>
+                    <button class="move-right-main"> <i class="fa-solid fa-angle-right"></i> </button>                
+    
                 <div class="product-sale detail-cart">
                     HOT
                 </div>
-                <div class="row img-detail-product">
-                    <!-- <ul class="slider-dots">
+            <div class="row img-detail-product">
+                <!-- <ul class="slider-dots">
                     <li class="slider-dots-item"></li>
                     <li class="slider-dots-item"></li>
                     <li class="slider-dots-item"></li>
                     <li class="slider-dots-item"></li>
                     <li class="slider-dots-item"></li>
                 </ul> -->
-                    <div class="row no-gutters sliderMain">
-                        <!-- <div class="col l-3 m-3 c-3 slider-item">
+               <div class="row no-gutters sliderMain">
+                <!-- <div class="col l-3 m-3 c-3 slider-item">
                     <img src="./img/casio-ltp-v300l-4audf.jpg" alt="">
                 </div>
                 <div class="col l-3 m-3 c-3 slider-item">
@@ -180,62 +166,44 @@
                 <div class="col l-3 m-3 c-3 slider-item">
                     <img src="./img/treoTuong3.jpg" alt="">
                 </div> -->
-                    </div>
-                    <button class="move-left"> <i class="fa-solid
-                                fa-angle-left"></button></i>
-                    <button class="move-right"> <i class="fa-solid
-                                fa-angle-right"></i> </button>
+               </div>
+                <button class="move-left"> <i class="fa-solid fa-angle-left"></button></i>
+                <button class="move-right"> <i class="fa-solid fa-angle-right"></i> </button>                
 
-                </div>
+            </div>
             </div>
             <div class="col l-6 m-12 c-12">
-
+                
                 <div class="price-detail" style="margin-top: 20px;">
-                    <div style="margin-bottom:30px;">
-                        <h1 style="font-size:
-                                24px; text-align: center;" id="name_detail">Pierre
-                            Lannier 363J688 Nữ Quartz</h1>
-                    </div>
+                    <div style="margin-bottom:30px;"> <h1 style="font-size: 24px; text-align: center;" id="name_detail">Pierre Lannier 363J688 Nữ Quartz</h1></div>
                     <div class="rate-product">
-                        <div class="star-rating star-rating--inline" role="img" style="text-align: left;">
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <span>(4 đánh giá của khách hàng)</span>
-                        </div>
+                         <div class="star-rating star-rating--inline" role="img" style="text-align: left;">
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <span>(4 đánh giá của khách hàng)</span>
+                                </div>
 
                     </div>
                     <div class="detail">
-                        <div style="font-size: 25px;"><span style="display:
-                                    none;margin-right: 20px; text-decoration:
-                                    line-through;">4.500.000VND</span> <span style="font-weight: bold;"><span
-                                    class="price-detail-info"> 4.050.000</span>VND</span></div>
-                        <!-- <br> -->
-                        <!-- <span style="margin-top: 14px; font-size: 18px; font-weight: bold;">(Giá bạn tiết kiệm:<span style="color: red;">450.000VND</span>)</span> -->
-                    </div>
+                        <div style="font-size: 25px;"><span style="display: none;margin-right: 20px; text-decoration: line-through;">4.500.000VND</span> <span style="font-weight: bold;"><span  class="price-detail-info"> 4.050.000</span>VND</span></div>
+                    <!-- <br> -->
+                    <!-- <span style="margin-top: 14px; font-size: 18px; font-weight: bold;">(Giá bạn tiết kiệm:<span style="color: red;">450.000VND</span>)</span> -->
+                    </div>   
                     <div class="condition">
                         <img src="../img/check-mark.png" alt="" width="30px" style="margin-right: 4px;">
                         <span style="font-weight: bold;">Sẵn hàng</span>
-                    </div>
+                    </div>     
                 </div>
                 <div>
-                    <button class="button-detail" id="addCart-btn" style="width: 100%;">
-                        <p>Thêm vào giỏ hàng <span></span></p>
-                    </button>
+                    <button class="button-detail" id="addCart-btn" style="width: 100%;"><p>Thêm vào giỏ hàng <span></span></p></button>
                 </div>
-
+                
                 <div class="list-addr">
                     <ul>
-                        <li><img src="../img/shop.detail.png" alt="" width="20px" height="20px"
-                                style="margin-right: 3px;"> Hệ thống Cửa
-                            Hàng Shop Đồng Hồ</li>
+                        <li><img src="../img/shop.detail.png" alt="" width="20px" height="20px" style="margin-right: 3px;"> Hệ thống Cửa Hàng Shop Đồng Hồ</li>
                         <hr style="width: 96%;">
                         <li>202 Phan Xích Long,P.7,Q.Phú Nhuận,TP HCM </li>
                         <hr style="width: 96%;">
@@ -255,18 +223,17 @@
                 <div class="chungnhan">
                     <div class="center">
                         <img src="../img/chungnhan.png" alt="">
-                        <span style="font-size: 20px; margin-left: 3px;">Chứng
-                            nhận đại lý</span>
+                        <span style="font-size: 20px; margin-left: 3px;">Chứng nhận đại lý</span>
                     </div>
                 </div>
                 <div class="row baohanh">
                     <div class="col l-3 m-6 c-6">
-                        <div class="img-box">
-                            <img src="../img/giaoHang.svg" alt="" width="40px" height="40px">
-                        </div>
-                        <div class="detail-logo">
-                            <p> <span>Miễn phí vận chuyển</span></p>
-                        </div>
+                     <div class="img-box">
+                        <img src="../img/giaoHang.svg" alt="" width="40px" height="40px">
+                     </div>
+                     <div class="detail-logo">
+                       <p> <span>Miễn phí vận chuyển</span></p>
+                     </div>
                     </div>
                     <div class="col l-3 m-6 c-6">
                         <div class="img-box">
@@ -274,28 +241,28 @@
                         </div>
                         <div class="detail-logo">
                             <p> <span>Đổi trả hàng 7 ngày*</span></p>
-                        </div>
+                          </div>
                     </div>
                     <div class="col l-3 m-6 c-6">
-                        <div class="img-box">
-                            <img src="../img/100-hang-chinh-hang.svg" alt="" width="40px" height="40px">
-                        </div>
-                        <div class="detail-logo">
-                            <p> <span>100% hàng chính hãng</span></p>
-                        </div>
+                      <div class="img-box">
+                        <img src="../img/100-hang-chinh-hang.svg" alt="" width="40px" height="40px">
+                      </div>
+                      <div class="detail-logo">
+                        <p> <span>100% hàng chính hãng</span></p>
+                      </div>
                     </div>
                     <div class="col l-3 m-6 c-6">
-                        <div class="img-box">
-                            <img src="../img/damBao.svg" alt="" width="40px" height="40px">
-                        </div>
-                        <div class="detail-logo">
-                            <p> <span>Bảo hành chính hãng</span></p>
-                        </div>
+                     <div class="img-box">
+                        <img src="../img/damBao.svg" alt="" width="40px" height="40px">
+                     </div>
+                     <div class="detail-logo">
+                        <p> <span>Bảo hành chính hãng</span></p>
+                      </div>
                     </div>
-                </div>
+                  </div>
 
+                  </div>
             </div>
-        </div>
         <!-- </div> -->
         <!-- additional  infomation  -->
         <div class="row information-intro">
@@ -303,258 +270,169 @@
                 <h5 class="upppercase mt">Thông tin bổ sung</h5>
             </div>
         </div>
-        <div class="row infomation-disc">
+         <div class="row infomation-disc">
             <div class="col l-7 m-8 c-12 v1">
                 <div class="inner-list" style="position: relative;">
-                    <div class="table" style="z-index: 1; margin-bottom:
-                            10px; overflow: hidden;max-height:616px;">
+                    <div class="table" style="z-index: 1; margin-bottom: 10px; overflow: hidden;max-height:616px;">
                         <table style="width: 100%; height: auto;">
                             <tr>
-                                <th>
-                                    <p>Thương Hiệu</p>
-                                </th>
-                                <td>
-                                    <p id="brand-ip">Orient</p>
-                                </td>
+                                <th><p>Thương Hiệu</p></th>
+                                <td><p id="brand-ip">Orient</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Số Hiệu Sản Phẩm</p>
-                                </th>
-                                <td>
-                                    <p id="code-input">FGW0100AW0</p>
-                                </td>
+                                <th><p>Số Hiệu Sản Phẩm</p></th>
+                                <td><p id="code-input">FGW0100AW0</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Xuất Xứ</p>
-                                </th>
-                                <td>
-                                    <p id="xuatXu-input">Nhật Bản</p>
-                                </td>
+                                <th><p>Xuất Xứ</p></th>
+                                <td><p id="xuatXu-input">Nhật Bản</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Giới Tính</p>
-                                </th>
-                                <td>
-                                    <p id="gioiTinh-input">Nam</p>
-                                </td>
+                                <th><p>Giới Tính</p></th>
+                                <td><p id="gioiTinh-input">Nam</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Kính</p>
-                                </th>
-                                <td>
-                                    <p id="kinh-input">Sapphire (Kính Chống
-                                        Trầy)</p>
-                                </td>
+                                <th><p>Kính</p></th>
+                                <td><p id="kinh-input">Sapphire (Kính Chống Trầy)</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Máy</p>
-                                </th>
-                                <td>
-                                    <p id="may-input">Quartz (Pin)</p>
-                                </td>
+                                <th><p>Máy</p></th>
+                                <td><p id="may-input">Quartz (Pin)</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Bảo Hành Quốc Tế</p>
-                                </th>
-                                <td>
-                                    <p id="baohanh-input">1 Năm</p>
-                                </td>
+                                <th><p>Bảo Hành Quốc Tế</p></th>
+                                <td><p id="baohanh-input">1 Năm</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Đường Kính Mặt Số</p>
-                                </th>
-                                <td>
-                                    <p id="duongKinh-input">38mm</p>
-                                </td>
+                                <th><p>Đường Kính Mặt Số</p></th>
+                                <td><p id="duongKinh-input">38mm</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Bề Dày Mặt Số</p>
-                                </th>
-                                <td>
-                                    <p id="beday-input">7mm</p>
-                                </td>
+                                <th><p>Bề Dày Mặt Số</p></th>
+                                <td><p id="beday-input">7mm</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Niềng</p>
-                                </th>
-                                <td>
-                                    <p id="nieng-input">Thép Không Gỉ</p>
-                                </td>
+                                <th><p>Niềng</p></th>
+                                <td><p id="nieng-input">Thép Không Gỉ</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Dây Đeo</p>
-                                </th>
-                                <td>
-                                    <p id="daydeo-input">Dây Da Chính Hãng</p>
-                                </td>
+                                <th><p>Dây Đeo</p></th>
+                                <td><p id="daydeo-input">Dây Da Chính Hãng</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Màu Mặt Số</p>
-                                </th>
-                                <td>
-                                    <p id="mauso-input">Trắng</p>
-                                </td>
+                                <th><p>Màu Mặt Số</p></th>
+                                <td><p id="mauso-input">Trắng</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Chống Nước</p>
-                                </th>
-                                <td>
-                                    <p id="chongNuoc-input">5 ATM</p>
-                                </td>
+                                <th><p>Chống Nước</p></th>
+                                <td><p id="chongNuoc-input">5 ATM</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Chức Năng</p>
-                                </th>
-                                <td>
-                                    <p id="chucNang-input">Lịch Ngày</p>
-                                </td>
+                                <th><p>Chức Năng</p></th>
+                                <td><p id="chucNang-input">Lịch Ngày</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Nơi sản xuất(tùy lô hàng)</p>
-                                </th>
-                                <td>
-                                    <p id="noiSX-input">Trung Quốc</p>
-                                </td>
+                                <th><p>Nơi sản xuất(tùy lô hàng)</p></th>
+                                <td><p id="noiSX-input">Trung Quốc</p></td>
                             </tr>
                             <tr>
-                                <th>
-                                    <p>Chất lượng</p>
-                                </th>
-                                <td>
-                                    <p>Cực phẩm</p>
-                                </td>
+                                <th><p>Chất lượng</p></th>
+                                <td><p>Cực phẩm</p></td>
                             </tr>
-                        </table>
+                        </table>   
                     </div>
                     <div class="blur-bottom"></div>
                     <div class="more-collapse" style="z-index: 10;">
                         Thu gọn
-                    </div>
+                    </div> 
                 </div>
-
+                 
             </div>
             <div class="col l-5 m-4 c-12 v2" style="text-align: center;">
-                <div class="inner">
-                    <ul>
-                        <li style="margin: 0; padding: 20px; border-right:
-                                none;">
-                            <img src="../img/damBao.svg" alt="">
-                            <div style="margin-top: 10px;">
-                                Bảo hành <span>5 năm</span>
-                            </div>
-                        </li>
-                        <li style="border-right:none; margin: 0; padding:
-                                20px; border: 1px #ebeaea solid; text-align:
-                                center;box-sizing: border-box;">
-                            <img src="../img/100-hang-chinh-hang.svg" alt="">
-                            <div>
-                                <span>100% </span>Chính hãng
-                            </div>
-                        </li>
-                        <li style="border-top: none; border-right: none;
-                                padding: 20px; display: list-item;">
-                            <img src="../img/giaoHang.svg" alt="">
-                            <div>
-                                <span>Miễn phí</span> Vận chuyển
-                            </div>
-                        </li>
-                        <li style="border-top: none;
-                                padding: 20px; display: list-item;">
-                            <img src="../img/icon-da-dang-sp.svg" alt="" style="border-top: none;">
-                            <div>
-                                Sản phẩm <span>Đa dạng</span>
-                            </div>
-                        </li style="border-top: none; border-right: none;
-                                padding: 20px; display: list-item;">
-                        <li style="border-top: none; border-right: none;
-                                padding: 20px; display: list-item;">
-                            <img src="../img/icon-cham-soc-khach-hang.svg" alt="">
-                            <div>
-                                Nhân viên <span>nhiệt tình</span>
-                            </div>
-                        </li>
-                        <li style="border-top: none;
-                                padding: 20px; display: list-item;">
-                            <img src="../img/return-ic.svg" alt="">
-                            <div>
-                                Đổi trả hàng <span>7 ngày*</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+               <div class="inner">
+                <ul>
+                    <li style="margin: 0; padding: 20px; border-right: none;">
+                        <img src="../img/damBao.svg" alt="">
+                        <div style="margin-top: 10px;">
+                            Bảo hành <span>5 năm</span>
+                        </div>
+                    </li>
+                    <li style="border-right:none; margin: 0; padding: 20px; border: 1px #ebeaea solid; text-align: center;box-sizing: border-box;">
+                        <img src="../img/100-hang-chinh-hang.svg" alt="" >
+                        <div>
+                             <span>100% </span>Chính hãng
+                        </div>
+                    </li>
+                    <li style="border-top: none; border-right: none;
+                    padding: 20px; display: list-item;">
+                        <img src="../img/giaoHang.svg" alt="" >
+                        <div>
+                            <span>Miễn phí</span> Vận chuyển
+                        </div>
+                    </li>
+                    <li style="border-top: none;
+                    padding: 20px; display: list-item;">
+                        <img src="../img/icon-da-dang-sp.svg" alt="" style="border-top: none;">
+                       <div>
+                        Sản phẩm <span>Đa dạng</span>
+                       </div>
+                    </li style="border-top: none; border-right: none;
+                    padding: 20px; display: list-item;">
+                    <li style="border-top: none; border-right: none;
+                    padding: 20px; display: list-item;">
+                        <img src="../img/icon-cham-soc-khach-hang.svg" alt="">
+                        <div>
+                            Nhân viên <span>nhiệt tình</span>
+                        </div>
+                    </li>
+                    <li style="border-top: none;
+                    padding: 20px; display: list-item;">
+                        <img src="../img/return-ic.svg" alt="">
+                        <div>
+                            Đổi trả hàng <span>7 ngày*</span>
+                        </div>
+                    </li>
+                </ul>
+               </div>
             </div>
 
-        </div>
-        <div class="row btn-QA">
+         </div>
+         <div class="row btn-QA">
             <div class="col l-12 m-12 c-12" style="text-align: left;">
                 <div class="intro-QA mt upppercase">
-                    <h5>Mô tả</h5>
+                    <h5>Mô tả</h5>  
                 </div>
-            </div>
-            <div class="col l-12 m-12 c-12 disc" style="text-align: left;
-                    position: relative;">
-                <p>Khám phá bộ sưu tập Nova của Pierre Lannier: những chiếc
-                    đồng hồ đẹp và nữ tính dành cho phụ nữ, mang đến tất cả
-                    sự tinh tế mà cổ tay của bạn xứng đáng có được. Đồng Hồ
-                    Pierre Lannier 023L928 là một trong những mẫu đồng hồ
-                    mỏng nhất đến từ thương hiệu này.</p>
-                <p>Nó được trang bị một vỏ máy bằng thép không gỉ, màu vàng
-                    hồng. Mặt số nhỏ có đường kính 26mm tạo nên một chiếc
-                    đồng hồ rất nữ tính và nhỏ gọn. Mặt số trắng điểm xuyết
-                    hài hòa với kim và chỉ số màu vàng hồng, tạo nên sự tinh
-                    tế và trang nhã. Ngoài ra, vòng bezel của mẫu đồng hồ
-                    này được trang trí bằng những viên đá bao quanh, mang
-                    lại sự quyến rũ và nữ tính.</p>
-                <p>Đồng hồ Pierre Lannier 023L928 Nữ Quart có dây đeo giúp
-                    bạn có thể tự điều chỉnh dễ dàng. Ngoài ra, nhờ hệ thống
-                    dây đeo có thể hoán đổi cho nhau của chúng tôi, hãy thay
-                    đổi phong cách đồng hồ của bạn bất cứ khi nào bạn muốn!</p>
-                <p>Mẫu Đồng hồ nữ 023L928 của chúng tôi có khả năng chống
-                    thấm nước: bạn có thể bơi ở độ sâu 30 mét với chiếc đồng
-                    hồ Pierre Lannier của mình. Đồng Hồ Pierre Lannier
-                    023L928 Nữ Quartz của bạn sẽ được giao kèm với hộp đựng
-                    đồng hồ Pierre Lannier và được bảo hành 2 năm.</p>
+              </div>
+            <div class="col l-12 m-12 c-12 disc" style="text-align: left; position: relative;">
+                <p>Khám phá bộ sưu tập Nova của Pierre Lannier: những chiếc đồng hồ đẹp và nữ tính dành cho phụ nữ, mang đến tất cả sự tinh tế mà cổ tay của bạn xứng đáng có được. Đồng Hồ Pierre Lannier 023L928 là một trong những mẫu đồng hồ mỏng nhất đến từ thương hiệu này.</p>
+                <p>Nó được trang bị một vỏ máy bằng thép không gỉ, màu vàng hồng. Mặt số nhỏ có đường kính 26mm tạo nên một chiếc đồng hồ rất nữ tính và nhỏ gọn. Mặt số trắng điểm xuyết hài hòa với kim và chỉ số màu vàng hồng, tạo nên sự tinh tế và trang nhã. Ngoài ra, vòng bezel của mẫu đồng hồ này được trang trí bằng những viên đá bao quanh, mang lại sự quyến rũ và nữ tính.</p>
+                <p>Đồng hồ Pierre Lannier 023L928 Nữ Quart có dây đeo giúp bạn có thể tự điều chỉnh dễ dàng. Ngoài ra, nhờ hệ thống dây đeo có thể hoán đổi cho nhau của chúng tôi, hãy thay đổi phong cách đồng hồ của bạn bất cứ khi nào bạn muốn!</p>
+                <p>Mẫu Đồng hồ nữ 023L928 của chúng tôi có khả năng chống thấm nước: bạn có thể bơi ở độ sâu 30 mét với chiếc đồng hồ Pierre Lannier của mình. Đồng Hồ Pierre Lannier 023L928 Nữ Quartz của bạn sẽ được giao kèm với hộp đựng đồng hồ Pierre Lannier và được bảo hành 2 năm.</p>
             </div>
 
             <div class="blur-bottom"></div>
             <div class="more-collapse" style="z-index: 10;">
                 Thu gọn
-            </div>
+            </div> 
         </div>
         <div class="row btn-QA" style="text-align: center;">
             <div class="col l-12 m-12 c-12" style="text-align: left;">
                 <div class="intro-QA mt upppercase">
-                    <h5>ĐÁNH GIÁ (5)</h5>
+                    <h5>ĐÁNH GIÁ (5)</h5>  
                 </div>
-            </div>
-            <div class="col l-12 m-12 c-12 input-rating" style="text-align:
-                    center;">
+              </div>
+              <div class="col l-12 m-12 c-12 input-rating" style="text-align: center;">
                 <div class="inner-container">
                     <h1>4,6</h1>
-                    <div class="star-rating star-rating--inline" role="img">
-                        <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
-                        <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
-                        <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
-                        <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
-                        <i class="fa-solid fa-star-half" style="color:
-                                #dd0e0e;"></i>
-                    </div>
-                    <p><span>Có 5 đánh giá khách hàng</span></p><br>
-                    <button id="add-cmt"><img src="../img/icon-btn.png" alt=""> Thêm đánh giá</button>
+                     <div class="star-rating star-rating--inline" role="img">
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                    <i class="fa-solid fa-star-half" style="color: #dd0e0e;"></i>
+                                </div>
+                                <p><span>Có 5 đánh giá khách hàng</span></p><br>
+                                <button id="add-cmt"><img src="../img/icon-btn.png" alt="" > Thêm đánh giá</button>
                 </div>
                 <div class="comment">
                     <div class="cr-count-row">
@@ -574,16 +452,11 @@
                             <h4>Minh Anh Hà </h4>
                         </div>
                         <div class="star-rating star-rating--inline" role="img">
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                         </div>
                         <div class="text-cmt_by_user">
                             <span>Hàng đẹp giá tốt</span>
@@ -595,16 +468,11 @@
                             <h4>Minh Anh Hà </h4>
                         </div>
                         <div class="star-rating star-rating--inline" role="img">
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                         </div>
                         <div class="text-cmt_by_user">
                             <span>Hàng đẹp giá tốt</span>
@@ -616,16 +484,11 @@
                             <h4>Minh Anh Hà </h4>
                         </div>
                         <div class="star-rating star-rating--inline" role="img">
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                         </div>
                         <div class="text-cmt_by_user">
                             <span>Hàng đẹp giá tốt</span>
@@ -637,16 +500,11 @@
                             <h4>Minh Anh Hà </h4>
                         </div>
                         <div class="star-rating star-rating--inline" role="img">
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                         </div>
                         <div class="text-cmt_by_user">
                             <span>Hàng đẹp giá tốt</span>
@@ -658,20 +516,14 @@
                             <h4>Minh Anh Hà </h4>
                         </div>
                         <div class="star-rating star-rating--inline" role="img">
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
-                            <i class="fa-solid fa-star" style="color:
-                                    #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                            <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                         </div>
                         <div class="text-cmt_by_user">
-                            <span>nhìn thì đúng như quảng cáo mẫu mã đẹp còn
-                                sai thì chưa biết như nào cho tạm 5xeo🤣🤣</span>
+                            <span>nhìn thì đúng như quảng cáo mẫu mã đẹp còn sai thì chưa biết như nào cho tạm 5xeo🤣🤣</span>
                         </div>
 
                     </li>
@@ -680,18 +532,17 @@
 
 
                 <!-- Form người dùng nhập thông tin đánh giá tiêu dung -->
+                
             </div>
             <div id="review_form" class="col l-12 m-12 c-12" style="text-align:center; display:none;">
                 <div class="col l-12 c-12 m-12 respond" class="cmt-respon">
                     <div id="reply-title" class="cmt-reply-title" style="text-align: left;">
-                        <span>Thêm đánh giá</span>
+                            <span>Thêm đánh giá</span>
                     </div>
                     <form action="" id="form-input-cmt">
                         <p class="note-cmt">
-                            <span class="email-notes">Email của bạn sẽ không
-                                được hiển thị công khai.</span>
-                            <span class="required-field-message">Các trường
-                                bắt buộc đánh dấu</span>
+                            <span class="email-notes">Email của bạn sẽ không được hiển thị công khai.</span>
+                            <span class="required-field-message">Các trường bắt buộc đánh dấu</span>
                             <span class="required">*</span>
                         </p>
                         <div class="cmt-form-rating">
@@ -699,67 +550,49 @@
                             <p class="stars selected">
                                 <span>
                                     <span class="star-rating-cmt">
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
                                     </span>
                                     <span class="star-rating-cmt">
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
                                     </span>
                                     <span class="star-rating-cmt">
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
                                     </span>
                                     <span class="star-rating-cmt">
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
                                     </span>
                                     <span class="star-rating-cmt">
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
-                                        <i class="fa-solid fa-star
-                                                grayColor"></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
+                                        <i class="fa-solid fa-star grayColor" ></i>
                                     </span>
                                 </span>
-                            </p>
+                            </p> 
                         </div>
                     </form>
                 </div>
                 <div class="col l-12 c-12 m-12 input-value-frm">
                     <div class="row cmt-form-cmt">
                         <div class="col l-6 m-12 c-12 text-input-frm" style="text-align: left;">
-                            <label for=""><span style="font-weight:
-                                        700;font-size: 18px;">Nhận xét của bạn
-                                </span><span class="required">*</span></label>
+                            <label for=""><span style="font-weight: 700;font-size: 18px;">Nhận xét của bạn </span><span class="required">*</span></label>
                             <br>
                             <br>
                             <textarea name="" id="" cols="30" rows="10" style="width: 100%; height: 120px;"></textarea>
+
                         </div>
                         <div class="col l-6 m-12 c-12 file-input-frm">
                             <div style="text-align: left;">
-                                <h4 style="margin-bottom: 20px;">Upload up
-                                    to 4 images or video</h4>
-                                <input type="file" name="" id="" placeholder="Chọn tệp" accept="image/*,
-                                        video/*" multiple="multiple">
-                                <!-- <div class="img-or-video"></div> -->
+                                <h4 style="margin-bottom: 20px;">Upload up to 4 images or video</h4>
+                            <input type="file" name="" id="" placeholder="Chọn tệp" accept="image/*, video/*" multiple="multiple">
+                            <!-- <div class="img-or-video"></div> -->
                             </div>
                         </div>
 
@@ -768,32 +601,23 @@
                 <div class="col l-12 c-12 m-12 input-info-user">
                     <div class="row input-info">
                         <div class="col l-6 m-6 c-6 input-name">
-                            <div style="text-align: left;"><label for=""><span style="line-height: 40px; font-size:
-                                            22px; font-weight: 700;">Tên <span
-                                            class="required">*</span></span></label><br>
-                                <input type="text" placeholder="Nhập họ và
-                                        tên" style="width: 100%;">
-                            </div>
+                            <div style="text-align: left;"><label for=""><span style="line-height: 40px; font-size: 22px; font-weight: 700;">Tên <span class="required">*</span></span></label><br>
+                                <input type="text" placeholder="Nhập họ và tên" style="width: 100%;"></div>
                         </div>
                         <div class="col l-6 m-6 c-6 input-email">
                             <div style="text-align: left;">
-                                <label for=""><span style="line-height:
-                                            40px; font-size: 22px; font-weight:
-                                            700;">Email <span class="required">*</span></span></label>
+                                <label for=""><span style="line-height: 40px; font-size: 22px; font-weight: 700;">Email <span class="required">*</span></span></label>
                                 <br>
-                                <input type="email" placeholder="Nhập email" style="width: 100%;">
+                            <input type="email" placeholder="Nhập email" style="width: 100%;">
                             </div>
-
+                            
                         </div>
 
                     </div>
                 </div>
                 <div class="col l-12 c-12 m-12 checked-by-user">
                     <div class="inner"><input type="checkbox" name="confirm" id="input-confirm-cmt-user">
-                        <label for="confirm" id="confirm-by-user"><span> Lưu
-                                tên của tôi, email, và trang web trong trình
-                                duyệt này cho lần bình luận kế tiếp của tôi.</span></label>
-                    </div>
+                    <label for="confirm" id="confirm-by-user"><span> Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp của tôi.</span></label></div>
                 </div>
                 <div class="col l-12 c-12 m-12 input-send">
                     <div class="row" style="text-align: left;">
@@ -805,67 +629,57 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
         </div>
-        <div class="row btn-QA">
+         <div class="row btn-QA">
             <div class="col l-12 m-12 c-12" style="text-align: left;">
                 <div class="intro-QA mt upppercase">
                     <h5>Q & A</h5>
                 </div>
-            </div>
+              </div>
             <div class="col l-12 m-12 c-12 btn-main">
                 <div class="panel entry-content">
                     <div id="cr_qna" class="cr-qna-block" data-attributes="cr_qna">
                         <h2>Q & A</h2>
                         <div class="cr-qna-search-block">
-
-                            <button type="button" class="cr-qna-ask-button">Ask
-                                a question</button>
+                            
+                            <button type="button" class="cr-qna-ask-button">Ask a question</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!--Sản phẩm liên quan -->
-        <div class="row" style="margin-top: 25px;">
+            </div>  
+         </div>
+         <!--Sản phẩm liên quan -->
+         <div class="row" style="margin-top: 25px;">
             <div class="col l-12 m-12 c-12">
                 <div class="label-dongho" style="text-align: left;">
-                    <h2 style="font-weight: 700; font-size: 1.8rem;">Có thể
-                        bạn thích....</h2>
+                    <h2 style="font-weight: 700; font-size: 1.8rem;">Có thể bạn thích....</h2>
                 </div>
                 <!-- <div class="vien" style="text-align: left;"></div> -->
-            </div>
+              </div>
         </div>
-        <div class="row product_container sp_favorite_products">
+          <div class="row product_container sp_favorite_products">
             <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     HOT
                 </div>
                 <div class="box-img">
-                    <a href="#" aria-label="Casio MTP-1374L-1AVDF Nam
-                            Quartz">
-                        <img src="../img/dong-ho-casio-mtp-1374l-1avdf-nam-pin-day-da-a.jpg" alt="">
+                    <a href="#" aria-label="Casio MTP-1374L-1AVDF Nam Quartz">
+                        <img  src="../img/dong-ho-casio-mtp-1374l-1avdf-nam-pin-day-da-a.jpg" alt="" >
                     </a>
-                    <div class="box-text text-center" style="height:
-                            122.287px;">
+                    <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio
-                                    MTP-1374L-1AVDF Nam Quartz</a>
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">Casio MTP-1374L-1AVDF Nam Quartz</a>
                             </p>
                         </div>
                         <div class="price-wrapper" style="height: 48.4px;">
                             <div class="star-rating star-rating--inline" role="img">
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
@@ -878,36 +692,28 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     HOT
                 </div>
                 <div class="box-img">
-                    <a href="#" aria-label="Casio AE-1200WHD-1AVDF Nam
-                            Quartz">
-                        <img src="../img/AE-1200WHD-1AVDF-3-1.jpg" alt="">
+                    <a href="#" aria-label="Casio AE-1200WHD-1AVDF Nam Quartz">
+                        <img  src="../img/AE-1200WHD-1AVDF-3-1.jpg" alt="" >
                     </a>
-                    <div class="box-text text-center" style="height:
-                            122.287px;">
+                    <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio
-                                    AE-1200WHD-1AVDF Nam Quartz</a>
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">Casio AE-1200WHD-1AVDF Nam Quartz</a>
                             </p>
                         </div>
                         <div class="price-wrapper" style="height: 48.4px;">
                             <div class="star-rating star-rating--inline" role="img">
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
@@ -920,40 +726,32 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <!-- <div class="product-sale">
                     HOT
                 </div> -->
                 <div class="box-img">
-                    <a href="#" aria-label="Casio MTP-1374D-1AVDF Nam
-                            Quartz">
-                        <img src="../img/casio-mtp-1374d-1avdf.jpg" alt="">
+                    <a href="#" aria-label="Casio MTP-1374D-1AVDF Nam Quartz">
+                        <img  src="../img/casio-mtp-1374d-1avdf.jpg" alt="" >
                     </a>
-                    <div class="box-text text-center" style="height:
-                            122.287px;">
+                    <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio
-                                    MTP-1374D-1AVDF Nam Quartz</a>
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">Casio MTP-1374D-1AVDF Nam Quartz</a>
                             </p>
                         </div>
                         <div class="price-wrapper" style="height: 48.4px;">
                             <div class="star-rating star-rating--inline" role="img">
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
-                                    2.177.000
+                                   2.177.000
                                     <span>
                                         VND
                                     </span>
@@ -962,36 +760,28 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <!-- <div class="product-sale">
                     HOT
                 </div> -->
                 <div class="box-img">
-                    <a href="#" aria-label="Casio LTP-V300L-4AUDF Nu
-                            Quanrtz">
-                        <img src="../img/casio-ltp-v300l-4audf.jpg" alt="">
+                    <a href="#" aria-label="Casio LTP-V300L-4AUDF Nu Quanrtz">
+                        <img  src="../img/casio-ltp-v300l-4audf.jpg" alt="" >
                     </a>
-                    <div class="box-text text-center" style="height:
-                            122.287px;">
+                    <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio
-                                    LTP-V300L-4AUDF Nu Quanrtz</a>
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">Casio LTP-V300L-4AUDF Nu Quanrtz</a>
                             </p>
                         </div>
                         <div class="price-wrapper" style="height: 48.4px;">
                             <div class="star-rating star-rating--inline" role="img">
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
@@ -1004,48 +794,39 @@
                         </div>
                     </div>
                 </div>
-            </div>
+              </div>
         </div>
         <!-- Sản phẩm tương tự -->
         <div class="row" style="margin-top: 25px;">
             <div class="col l-12 m-12 c-12">
                 <div class="label-dongho" style="text-align: left;">
-                    <h2 style="font-weight: 700; font-size: 1.8rem;">Sản
-                        phẩm tương tự</h2>
+                    <h2 style="font-weight: 700; font-size: 1.8rem;">Sản phẩm tương tự</h2>
                 </div>
                 <!-- <div class="vien" style="text-align: left;"></div> -->
-            </div>
+              </div>
         </div>
-        <div class="row product_container">
+          <div class="row product_container">
             <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     HOT
                 </div>
                 <div class="box-img">
-                    <a href="#" aria-label="Casio MTP-1374L-1AVDF Nam
-                            Quartz">
-                        <img src="../img/dong-ho-casio-mtp-1374l-1avdf-nam-pin-day-da-a.jpg" alt="">
+                    <a href="#" aria-label="Casio MTP-1374L-1AVDF Nam Quartz">
+                        <img  src="../img/dong-ho-casio-mtp-1374l-1avdf-nam-pin-day-da-a.jpg" alt="" >
                     </a>
-                    <div class="box-text text-center" style="height:
-                            122.287px;">
+                    <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio
-                                    MTP-1374L-1AVDF Nam Quartz</a>
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">Casio MTP-1374L-1AVDF Nam Quartz</a>
                             </p>
                         </div>
                         <div class="price-wrapper" style="height: 48.4px;">
                             <div class="star-rating star-rating--inline" role="img">
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
@@ -1058,36 +839,28 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <div class="product-sale">
                     HOT
                 </div>
                 <div class="box-img">
-                    <a href="#" aria-label="Casio AE-1200WHD-1AVDF Nam
-                            Quartz">
-                        <img src="../img/AE-1200WHD-1AVDF-3-1.jpg" alt="">
+                    <a href="#" aria-label="Casio AE-1200WHD-1AVDF Nam Quartz">
+                        <img  src="../img/AE-1200WHD-1AVDF-3-1.jpg" alt="" >
                     </a>
-                    <div class="box-text text-center" style="height:
-                            122.287px;">
+                    <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio
-                                    AE-1200WHD-1AVDF Nam Quartz</a>
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">Casio AE-1200WHD-1AVDF Nam Quartz</a>
                             </p>
                         </div>
                         <div class="price-wrapper" style="height: 48.4px;">
                             <div class="star-rating star-rating--inline" role="img">
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
@@ -1100,40 +873,32 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <!-- <div class="product-sale">
                     HOT
                 </div> -->
                 <div class="box-img">
-                    <a href="#" aria-label="Casio MTP-1374D-1AVDF Nam
-                            Quartz">
-                        <img src="../img/casio-mtp-1374d-1avdf.jpg" alt="">
+                    <a href="#" aria-label="Casio MTP-1374D-1AVDF Nam Quartz">
+                        <img  src="../img/casio-mtp-1374d-1avdf.jpg" alt="" >
                     </a>
-                    <div class="box-text text-center" style="height:
-                            122.287px;">
+                    <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio
-                                    MTP-1374D-1AVDF Nam Quartz</a>
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">Casio MTP-1374D-1AVDF Nam Quartz</a>
                             </p>
                         </div>
                         <div class="price-wrapper" style="height: 48.4px;">
                             <div class="star-rating star-rating--inline" role="img">
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
-                                    2.177.000
+                                   2.177.000
                                     <span>
                                         VND
                                     </span>
@@ -1142,36 +907,28 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col l-3 m-3 c-6 product-item">
+              </div>
+              <div class="col l-3 m-3 c-6 product-item">
                 <!-- <div class="product-sale">
                     HOT
                 </div> -->
                 <div class="box-img">
-                    <a href="#" aria-label="Casio LTP-V300L-4AUDF Nu
-                            Quanrtz">
-                        <img src="../img/casio-ltp-v300l-4audf.jpg" alt="">
+                    <a href="#" aria-label="Casio LTP-V300L-4AUDF Nu Quanrtz">
+                        <img  src="../img/casio-ltp-v300l-4audf.jpg" alt="" >
                     </a>
-                    <div class="box-text text-center" style="height:
-                            122.287px;">
+                    <div class="box-text text-center" style="height: 122.287px;">
                         <div class="title-wrapper">
-                            <p style="height: 40.7875px;">
-                                <a href="" class="product__link">Casio
-                                    LTP-V300L-4AUDF Nu Quanrtz</a>
+                            <p  style="height: 40.7875px;">
+                                <a href="" class="product__link">Casio LTP-V300L-4AUDF Nu Quanrtz</a>
                             </p>
                         </div>
                         <div class="price-wrapper" style="height: 48.4px;">
                             <div class="star-rating star-rating--inline" role="img">
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
-                                <i class="fa-solid fa-star" style="color:
-                                        #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
+                                <i class="fa-solid fa-star" style="color: #dd0e0e;"></i>
                             </div>
                             <span class="price">
                                 <span class="amount">
@@ -1184,24 +941,23 @@
                         </div>
                     </div>
                 </div>
-            </div>
+              </div>
         </div>
-    </div>
-    <script src="../js-fix/productdetail.js"></script>
-    <script src="../js-fix/starter.js"></script>
-    <script src="../js-fix/toast.js"></script>
-    <script>
-        function showSuccessToast() {
-            toast({
-                title: "Thành công!",
-                message: "Bạn đã thêm sản phẩm vào giỏ hàng!",
-                type: "success",
-                duration: 5000
-            });
-        }
-
-
-    </script>
+   </div>
+   <script src="../js-fix/productdetail.js"></script>
+   <script src="../js-fix/starter.js"></script>
+   <script src="../js-fix/toast.js"></script>
+   <script>
+    function showSuccessToast() {
+      toast({
+        title: "Thành công!",
+        message: "Bạn đã thêm sản phẩm vào giỏ hàng!",
+        type: "success",
+        duration: 5000
+      });
+    }
+  
+    
+   </script>
 </body>
-
 </html>
