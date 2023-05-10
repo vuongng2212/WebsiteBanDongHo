@@ -496,7 +496,7 @@ th{
     position: relative;
     padding: 0 20px;
 }
-.row.infomation-disc .more-collapse::after{
+/* .row.infomation-disc .more-collapse::after{
     position: absolute;
     content: "";
     border-right:1px  #02277c solid;
@@ -506,7 +506,7 @@ th{
     transform: rotate(-135deg);
     right: 0;
     top: 8px;
-}
+} */
 .infomation-disc .col.v2 .inner{
     display: inline-block;
     text-align: center;
@@ -725,7 +725,7 @@ input[type=text]{
     color: #fff;
     animation: fadeIn ease-in-out .5s;
 }
-.row.infomation-disc::after{
+/* .row.infomation-disc::after{
     position: absolute;
     content: "";
     background: #eeeeee;
@@ -733,7 +733,7 @@ input[type=text]{
     height: 2px;
     left: 0px;
     bottom: -8px;
-}
+} */
 .row.link_path{
     color: #222;
     font-weight: 700;

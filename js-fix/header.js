@@ -166,6 +166,38 @@ function valid_EmailTT() {
     }
 }
 
+function check_radio(){
+    if (document.getElementById('payment_method_cod').checked) {
+        return true;
+    } else if (document.getElementById('payment_method_bacs').checked) {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function check_empty_city(){
+    let tp = $("#city-user").val();
+    if (tp === '') {
+        $("#errCity-user").html("Thành phố không được trống!");
+        return false;
+    }
+    else {
+        $("#errCity-user").html("");
+        return true;
+    }
+}
+function check_empty_add() {
+    let add = $("#address-user").val();
+    if (add === '') {
+        $("#errAdd-user").html("Địa chỉ không được trống!");
+        return false;
+    }
+    else {
+        $("#errAdd-user").html("");
+        return true;
+    }
+}
 // localStorage
 var storageKeyUser = 'User';
 var storageKeyPwd = 'Password';
@@ -241,11 +273,19 @@ $(document).ready(function () {
     //Sự kiện click đặt hàng
     $("#chotDon").click(function (e) { 
         e.preventDefault();
-        if(valid_TenTT() && valid_Phone() && valid_EmailTT()){
-            return true;
+        if (check_radio()){
+            if (valid_TenTT() && valid_Phone() && valid_EmailTT() && check_empty_add() && check_empty_city()) {
+                alert("Đăng ký thành công!");
+                return true;
+            }
+            else {
+                alert("Đăng ký thất bại!");
+                return false;
+            }
         }
         else{
-            return false;
+            alert("Vui lòng chọn phương thức thanh toán");
         }
+        
     });
 });
