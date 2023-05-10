@@ -207,8 +207,8 @@ embed,iframe,object {
 }
 
 .col,.columns,.gallery-item {
-    margin: 0;
-    padding: 0 15px 30px;
+    margin: 0 auto;
+    padding: 0 15px 0px;
     position: relative;
     width: 100%
 }
