@@ -3,7 +3,10 @@
     margin: 0 auto;
     padding: 0;
 }
-
+.wrapper{
+    width: 100%;
+    height: auto;
+}
 html {
     background-color: #ffffff;
 }
